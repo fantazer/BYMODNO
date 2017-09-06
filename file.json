@@ -1,0 +1,11 @@
+{
+	"block":{
+		"header":"header",
+		"footer":"footer"
+	},
+	"page":{
+		"index":"index",
+		"list":"list",
+		"card":"card"
+	}
+}

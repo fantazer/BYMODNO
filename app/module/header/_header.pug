@@ -1,0 +1,40 @@
+mixin header()
+	//block header
+	//head-top
+	.head-top-wrap
+		.main-cont
+			.head-top
+				.head-town
+					+icon("map","icon")
+					.head-town__name Новосибирск
+				.head-nav
+					a(href="#").head-nav__el О нас
+					a(href="#").head-nav__el Новости
+					a(href="#").head-nav__el Магазины
+				.head-phone
+					+icon("phone","icon")
+					a(href="tel:+7 916 914 08 08") +7 916 914 08 08
+				.head-mail
+					+icon("mail","icon")
+					a(href="mailto:modno.rabota@mail.ru") modno.rabota@mail.ru
+	.menu-wrap
+		.main-cont
+			.menu
+				.menu-cont
+					-
+						var items = [
+							'Платья',
+							'Юбки',
+							'Брюки',
+							'Топы',
+							'Блузы и рубашки',
+							'Жакеты',
+							'Аксессуары',
+							'Верхняя одежда'
+							];
+					each item in items
+						a(href="#").menu__el #{item}
+				a(href="#").menu-get Выбрать образ
+
+	//head-top-end
+	//block header end

@@ -1,0 +1,51 @@
+mixin footer()
+	//block footer
+	.subscribe
+		.subscribe__title Подпишитесь на новости <br> и получите скидку
+		form(action="#").subscribe-form
+			.subscribe-form__row
+				input(type="text" placeholder="Ваш Email")
+				button(type="submit").subscribe-form__get Подписаться
+	.footer-menu
+		.footer-menu__wrap
+			-
+				var items = [
+					'Доставка и оплата',
+					'Акции',
+					'Помощь',
+					'О компании',
+					'Адреса магазинов'
+					];
+			each item in items
+				a(href="#").footer-menu__el #{item}
+	.footer-wrap
+		.main-cont
+			.footer
+				.footer__about
+					.footer-title О нас
+					.footer-type.footer-type--black ByModno 2017
+					.footer-type Проект byModno - это больше чем интернет магазин. Это сеть магазинов, имеющих интернет-площадкудля продажи своей продукции.
+					.footer-contact +7 916 914 08 08; modno.rabota@mail.ru
+				.footer__soc
+					.footer__soc-cont
+						.footer-title Мы в соц. сетях
+						.footer-type Подписывайтесь, будьте вкурсе последних новостей
+						.soc-row
+							a(href="#").soc-el
+								+icon("soc-instagram","icon")
+							a(href="#").soc-el
+								+icon("soc-twitter","icon")
+							a(href="#").soc-el
+								+icon("soc-facebook","icon")
+							a(href="#").soc-el
+								+icon("soc-vk","icon")
+				.footer__pay
+					.footer-title Способы оплаты
+					.pay-row
+						.pay-el
+							+icon("mastercard","icon icon--master")
+						.pay-el
+							+icon("visa","icon")
+					.footer-type Вы можете оплатить покупки наличными при получении, либо выбрать другой способ оплаты.
+
+	//block footer end
