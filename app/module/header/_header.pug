@@ -17,6 +17,27 @@ mixin header()
 				.head-mail
 					+icon("mail","icon")
 					a(href="mailto:modno.rabota@mail.ru") modno.rabota@mail.ru
+	.head
+		.main-cont
+			.head-wrap
+				.head-search
+					+icon("search","icon")
+					form(action="#")
+						input(type="text" placeholder="Поиск").head-search__input.input
+				.head-logo
+					a(href="#").head-logo__icon
+						+icon("Logo--color","icon")
+					.head-logo__text Первый женский интернет-магазин <br> с онлайн стилистом и твоим образом
+				.head-tool
+					.head-tool__wrap
+						.head-tool__icon.head-tool__icon--profile
+							+icon("profile","icon")
+						.head-tool__icon.head-tool__like
+							+icon("like","icon")
+						.head-tool__icon.head-tool__cart
+							.head-cart__val 10
+							+icon("сart","icon")
+
 	.menu-wrap
 		.main-cont
 			.menu

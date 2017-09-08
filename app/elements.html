@@ -45,6 +45,7 @@
 		<!--link(rel="stylesheet", href="bower/flexbox-grid-stylus/dist/flexbox-grid.min.css")-->
 		<!--link(rel="stylesheet", href="bower/components-font-awesome/css/font-awesome.css")-->
 		<link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css" />
+		<link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
 		<!--endbuild-->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-edit.css" />
@@ -197,14 +198,13 @@
 				</div>
 				<br/>
 			</div>
-			<div class="element-select">
-				<select class="select-beauty select">
-					<option value="1" data-display="Выберите налог">Нет</option>
-					<option value="2">Новый налог 1</option>
-					<option value="3">Новый налог 2</option>
-					<option value="4">Новый налог 3</option>
-				</select>
-			</div>
+			<select class="select-beauty select--order">
+				<option>По популярности</option>
+				<option>По цене</option>
+				<option>По размеру</option>
+			</select>
+			<br/>
+			<br/>
 			<div class="elements-hr"></div>
 			<div class="element-list-svg">
 				<div class="element-list-svg__icon">
@@ -248,6 +248,12 @@
 						<use xlink:href="#like"></use>
 					</svg>
 					<div class="element-list-svg__name">like</div>
+				</div>
+				<div class="element-list-svg__icon">
+					<svg class="icon-el">
+						<use xlink:href="#Logo--color"></use>
+					</svg>
+					<div class="element-list-svg__name">Logo--color</div>
 				</div>
 				<div class="element-list-svg__icon">
 					<svg class="icon-el">
@@ -323,12 +329,6 @@
 				</div>
 				<div class="element-list-svg__icon">
 					<svg class="icon-el">
-						<use xlink:href="#sprite"></use>
-					</svg>
-					<div class="element-list-svg__name">sprite</div>
-				</div>
-				<div class="element-list-svg__icon">
-					<svg class="icon-el">
 						<use xlink:href="#visa"></use>
 					</svg>
 					<div class="element-list-svg__name">visa</div>
@@ -346,6 +346,7 @@
 		<script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
 		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
 		<script src="js/jquery.smoothscroll.js"></script>
+		<script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
 		<!-- endbuild-->
 		<script src="js/script.js"></script>
 		<script src="js/script-edit.js"></script>

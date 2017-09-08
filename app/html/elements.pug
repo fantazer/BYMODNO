@@ -94,12 +94,13 @@ include block_html/_svg.pug
 		+radio('Наименование услуги','disable')
 		br
 
-	.element-select
-		select.select-beauty.select
-			option(value="1" data-display="Выберите налог") Нет
-			option(value="2") Новый налог 1
-			option(value="3") Новый налог 2
-			option(value="4") Новый налог 3
+	select.select-beauty.select--order
+		option По популярности
+		option По цене
+		option По размеру
+
+	br
+	br
 
 	.elements-hr
 	.element-list-svg

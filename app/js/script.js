@@ -1,5 +1,91 @@
 $(document).ready(function(){
 
+	//select
+	$('.select-beauty').niceSelect()
+
+	$('.item').hover(function(){
+		$(this).toggleClass('item--active')
+	});
+
+	//filter color control
+		//lighten color
+		var shadeColor = function (color, percent) {
+
+			var R = parseInt(color.substring(1,3),16);
+			var G = parseInt(color.substring(3,5),16);
+			var B = parseInt(color.substring(5,7),16);
+
+			R = parseInt(R * (100 + percent) / 100);
+			G = parseInt(G * (100 + percent) / 100);
+			B = parseInt(B * (100 + percent) / 100);
+
+			R = (R<255)?R:255;
+			G = (G<255)?G:255;
+			B = (B<255)?B:255;
+
+			var RR = ((R.toString(16).length==1)?"0"+R.toString(16):R.toString(16));
+			var GG = ((G.toString(16).length==1)?"0"+G.toString(16):G.toString(16));
+			var BB = ((B.toString(16).length==1)?"0"+B.toString(16):B.toString(16));
+
+			return "#"+RR+GG+BB;
+	}
+
+		//convert rgb - hex
+		var rgb2hex =function (rgb) {
+				rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+				function hex(x) {
+						return ("0" + parseInt(x).toString(16)).slice(-2);
+				}
+				return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+		}
+
+		//hover box-shadow
+		$('.filter__color-el').mouseover(function(){
+			if(!$(this).hasClass('filter__color-el--white')) {
+				var currentColor = $(this).css('backgroundColor');
+				var lightenColor = shadeColor(rgb2hex(currentColor), -40);
+				$(this).css('boxShadow', '0 9px 13px' + lightenColor);
+			} else {
+				$(this).css('boxShadow', '0 9px 13px #d4c8c8');
+			}
+		});
+		$('.filter__color-el').mouseout(function () {
+			$(this).css('boxShadow','none');
+		});
+
+		//active color
+		$('.filter__color-el').click(function(){
+			$(this).toggleClass('filter__color-el--active')
+		});
+
+		var removeColor = function(){
+			$('.filter__color-el').removeClass('filter__color-el--active')
+		}
+	//filter color control end
+
+	//filter size
+	$('.filter__size-el').click(function(){
+		$(this).toggleClass('filter__size-el--active')
+	});
+	var removeSize = function(){
+			$('.filter__size-el').removeClass('filter__size-el--active')
+	}
+	//filter size-end
+
+	//control filter
+	$('.filter__head').click(function(){
+		$(this).find('.filter__open').toggleClass('filter__open--active');
+		$(this)
+		.closest('.filter__el')
+		.find('.filter__content')
+		.slideToggle()
+  });
+
+  $('.filter-clear').click(function(){
+  	removeColor();
+  	removeSize();
+  });
+	//control filter-end
 
 	/* ###### For only ies  ######*/
 	//if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){

@@ -28,12 +28,396 @@ init($breakpoints, $columns)
 body
 	@extend .type--main
 	font-family $v-font
-	color $main-text-color
+	//color $main-text-color
 	line-height 1.2
 	letter-spacing 0.01em
 	
 .main-cont
 	center(1200px,10px)
 
+//==== content-tool ====
+.content-tool
+	padding: 40px 0
+	flex(between)
 
+.breadcrumbs
+	f()
+
+.breadcrumbs__el
+	margin-right: 20px
+	position: relative
+	&:last-child
+		margin-right: 0
+		&:after
+			content ''
+			display: none
+	&:after
+		content '>'
+		position: absolute
+		right: -15px
+.back
+	f()
+	justify-content: center
+	.icon
+		size 17px
+		fill #2f2f2f
+		margin-right: 10px
+//.back__text
+// ==== content-tool-end ====
+
+.page-title
+	@extend .type--xl
+	font-weight 500
+	color black
+	text-align: center
+	margin-bottom: 70px
+
+.list-cont
+	f()
+	justify-content: space-between
+	align-items: flex-start
+
+.list-tool
+	width: 240px
+
+.filter
+	margin-bottom: 30px
+
+.filter-clear
+	f()
+	justify-content: flex-end
+	align-items: center
+	color $red
+	margin-bottom: 70px
+	cp()
+	.icon
+		margin-left: 5px
+		transform rotate(45deg)
+		size 10px
+		fill $red
+
+.filter__el
+	border 1px solid #ebebeb
+	margin-top: -1px
+	//background: #f9f9f9
+
+.filter__head
+	flex(between)
+	cp()
+	padding: 20px
+
+.filter__title
+	color #070707
+
+.filter__open
+	flex(mid)
+	cp()
+	tr(all)
+	.icon
+		size 18px
+		fill black
+.filter__open--active
+	transform rotate(315deg)
+
+.filter__content
+	margin-top: 20px
+	display: none
+	padding: 0 20px 20px 20px
+
+.filter__size
+	f()
+	fw()
+
+.filter__size-el
+	flex(mid)
+	item(4,10px)
+	tr(all)
+	width: 40px
+	height: 30px
+	border 1px solid #e1e1e1
+	background-color white
+	&:hover
+		color white
+		cursor: pointer
+		border 0px
+		background: black
+
+.filter__size-el--active
+	color white
+	cursor: pointer
+	border 0px
+	background: black
+
+.filter__color
+	f()
+	fw()
+
+.filter__color-el--active
+	.filter__color-ico
+			opacity 1
+
+.filter__color-ico
+	tr(all)
+	.icon
+		size 17px
+		fill white
+	opacity 0
+
+.filter__color-el--white
+	border 1px solid #e1e1e1
+	.icon
+		fill black
+.filter__color-el
+	flex(mid)
+	item(4,10px)
+	tr(all)
+	size 42px
+	round()
+	cp()
+	&:hover
+		.filter__color-ico
+			opacity 1
+//.filter__season
+//.filter__collect
+.list-content
+	width:calc(100% - 280px)
+
+.list-category-title
+	@extend .type--md
+	font-weight 600
+	margin-bottom: 40px
+	color black
+
+.list-category__el
+	margin-bottom: 20px
+	color black
+	line-height: 1.6
+	display: block
+	span
+		display: inline-block
+		color #828282
+
+.nice-select
+	br(0)
+	display: block
+	color #000000
+	font-size 14px
+	outline-color white!important
+	box-shadow 0 1px 2px rgba(0, 0, 0, 0.21)
+	border 1px solid #e9e9e9
+	.list
+		width: calc(100% )
+		left 0px
+		br(0)
+		border 1px solid #dfdfdf
+		border-top 0
+		margin-top: 0
+		li
+			max-width: 100%
+			text-overflow: ellipsis
+			padding-right: 10px
+			overflow hidden
+
+.element-select
+	padding: 10px 0
+
+.nice-select:active, .nice-select.open, .nice-select:focus
+	border 1px solid #dfdfdf
+
+.nice-select.open
+	border 0!important
+	box-shadow 0 5px 24px rgba(0, 0, 0, 0.04)
+	.list
+		border 0!important
+		box-shadow 0 5px 24px rgba(0, 0, 0, 0.04)
+
+.select--order
+	width 240px
+
+.current
+	display: inline-block
+	max-width: 100%
+	overflow: hidden
+	text-overflow: ellipsis
+	padding-right: 20px
+
+//.list-content
+.list-head
+	f()
+	align-items: center
+	margin-bottom: 15px
+.list-head__info
+	f()
+	align-items: center
+.list-head__type
+	margin-right: 10px
+.list-head__number
+	margin-left: auto
+	color #8f8f8f
+
+
+.list-first-row
+	f()
+	fw()
+	justify-content: space-between
+
+.list-wrap-item
+	flex(between)
+	fw()
+
+
+/*.item
+	width: 32%*/
+
+.item--big
+	height: 400px
+	bg-full()
+	grid-column: 1 / 3
+
+.item
+	cp()
+	position: relative
+	height: 400px
+	background: white
+	tr(all)
+.item--active
+	.item__content
+		padding: 20px
+		z-index 20
+		//overflow inherit
+		width:calc(100% + 40px)
+		height 600px
+		top -20px
+		left -20px
+		z-index 20
+		box-shadow 0 1px 2px rgba(0, 0, 0, 0.21)
+	.item__img--one
+		opacity 0
+		//transform translateY(-100%)
+	.item__img--two
+		opacity 1
+	.item__construct
+		height: auto
+		//transform translateY(0%)
+
+.item__content
+	//transition box-shadow, height .6s
+	transition box-shadow .6s
+	overflow hidden
+	height: 400px
+	background: white
+	position: absolute
+	top 0
+	left 0
+
+.item__construct
+	tr(all)
+	height: 0
+	width: 100%
+	background: white
+
+.item__img--two
+	opacity 0
+	//transform translateY(-100%)
+
+.item__img
+	width: 100%
+	height: 280px
+	bg-full()
+	margin-bottom: 20px
+	position: absolute
+	top 0
+	left 0
+	transition all .8s
+//.item__info
+
+.item__price
+	margin-bottom: 20px
+	f()
+	align-items: center
+
+.item__price-false
+	@extend .type--md
+	opacity 0.4
+	color #070707
+	text-decoration line-through
+	margin-right: 20px
+
+.item__price-true
+	@extend .type--md
+
+.item__descr
+	color #070707
+	margin-bottom: 30px
+
+
+
+.item__img-wrap
+	position: relative
+	overflow hidden
+	height: 280px
+	margin-bottom: 30px
+
+.list-wrap
+	display grid
+	grid-template-columns: 1fr 1fr 1fr
+	grid-gap 20px
+
+.rub
+	display: inline-block
+	margin-left: 3px
+
+.item-label
+	position: absolute
+	top 20px
+	z-index 10
+	padding: 5px 10px
+	text-align: center
+	color white
+
+
+.item-label--sale
+	background: $red
+
+.item-label--time
+	background: #2c9cc0
+
+//.item-head
+
+
+
+.item__construct-title
+	text-align: center
+	color #878787
+	margin-bottom: 10px
+.item-size
+	f()
+	margin-bottom: 20px
+.item-size__el
+	width: 100%
+	padding: 10px
+	border 1px solid $border-color
+	text-align: center
+	margin-left: -1px
+.item-size__el--disable
+	color rgba(7, 7, 7, 0.47)
+.item-get
+	flex(between)
+.item-get__btn
+	@extend .btn--mark
+	@extend .btn--md
+	width: 100%
+	padding: 15px 50px
+.item-get__like
+	padding: 10px 15px
+	border 1px solid $border-color
+	margin-left: 10px
+	tr(all)
+	&:hover
+		border 1px solid $red
+		.icon
+			fill $red
+	.icon
+		tr(all)
+		size 24px
 @import "../module/**/*"

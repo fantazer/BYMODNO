@@ -16,19 +16,26 @@
 	input
 		@extend .input
 		br(0)
+		tr(all)
 		background: none
-		border 1px solid
+		border 1px solid #605e68
 		padding: 20px 25px
 		margin-right: 10px
 		width: 400px
 		color white
+		&:focus
+			border 1px solid white
 .subscribe-form__row
 	flex(between)
 .subscribe-form__get
 	@extend .btn
+	tr(all)
 	background: $red
 	color white
 	padding: 22px 25px
+	&:hover
+		background: lighten($red,5)
+		color white
 
 .footer-menu
 	flex(mid)

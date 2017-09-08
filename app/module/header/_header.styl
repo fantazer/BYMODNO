@@ -17,7 +17,7 @@
 
 .head-nav
 	flex(between)
-	width: 22%
+	width: 19%
 //.head-nav__el
 
 .head-phone
@@ -46,17 +46,96 @@
 .menu-cont
 	flex(between)
 	width: calc(100% - 270px)
+
 .menu__el
 	up()
 	font-weight 600
 	padding: 20px 0px
 	color white
 	flex-grow 1
+	text-align: center
+	tr(all)
+	&:hover
+		background: white
+		color black
 
 .menu-get
-	background: $red
 	up()
+	tr(all)
+	background: $red
 	color white
 	padding: 20px 35px
 	width: 200px
 	text-align: center
+	&:hover
+		background: lighten($red,5)
+		color white
+
+.head
+	padding: 40px 0
+//.main-cont
+.head-wrap
+	flex(between)
+.head-search
+	width: 30%
+	f()
+	align-items: center
+	form
+		width: 100%
+	.icon
+		size 26px
+		margin-right: 25px
+		cp()
+.head-search__input
+	br(0)
+	border 0
+	width: 100%
+	padding: 10px 0
+	background: white
+	&:focus
+		border-bottom 1px solid #cecece
+	&:active
+		border-bottom 1px solid #cecece
+
+.head-logo
+	flex(mid)
+	fl()
+	width: 40%
+.head-logo__icon
+	margin-bottom: 20px
+	.icon
+		width 240px
+		max-height 30px
+.head-logo__text
+	text-align: center
+	font-size: 12px
+.head-tool
+	width: 30%
+	f()
+	justify-content: flex-end
+.head-tool__wrap
+	flex(between)
+	width: 160px
+.head-tool__icon
+	.icon
+		tr(all)
+		&:hover
+			fill $red
+		cp()
+		size 28px
+//.head-tool__icon--profile
+//.head-tool__like
+.head-tool__cart
+	position: relative
+
+.head-cart__val
+	round()
+	flex(mid)
+	color white
+	position: absolute
+	box-shadow 0 3px 9px rgba(242, 0, 34, 0.65)
+	background-color $red
+	font-size: 10px
+	size 22px
+	top -5px
+	right: -10px
