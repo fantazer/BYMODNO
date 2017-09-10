@@ -298,27 +298,28 @@ button
 		top 0
 		left -9999px
 	.sytle-input-element
-		width 30px
-		height 30px
+		width 24px
+		height 24px
 		position relative
 		display inline-block
 		margin-right 10px
 		background white
-		border 1px solid #cfcfcf
-		br(8px)
+		border 1px solid #b6b6b6
 		cp()
 		tr(all)
 		&:hover
-			border 1px solid #8d8d8d
+			border 1px solid black
 	.icon-check
 		display none
 	.sytle-input
 		&:checked + .sytle-input-element
 			flex(mid)
+			border 1px solid black
 			color white
+			background: black
 			.icon-check
 				display block
-				fill #000000
+				fill white
 				size 16px
 
 .style-label--radio
@@ -327,8 +328,8 @@ button
 		top 0
 		left -9999px
 	.sytle-input-element
-		width 22px
-		height 22px
+		width 24px
+		height 24px
 		position relative
 		display inline-block
 		margin-right 10px
@@ -345,4 +346,4 @@ button
 			.icon-radio
 				round()
 				size 14px
-				background blue;
+				background white;

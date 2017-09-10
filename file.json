@@ -1,7 +1,9 @@
 {
 	"block":{
 		"header":"header",
-		"footer":"footer"
+		"footer":"footer",
+		"item":"item",
+		"pagination":"pagination"
 	},
 	"page":{
 		"index":"index",

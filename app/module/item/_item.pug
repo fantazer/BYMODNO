@@ -1,0 +1,32 @@
+mixin item()
+	//block item
+	.item
+		.item__content
+			.item-wrap
+				.item-head
+					.item__img-wrap
+						.item-label.item-label--sale -20%
+						// use for new item <div class="item-label item-label--time">new</div>
+						.item__img.item__img--one(style="background-image:url('img/item-1.jpg')")
+						.item__img.item__img--two(style="background-image:url('img/item-2.jpg')")
+					.item__info
+						.item__price
+							.item__price-false
+								span 6 200
+								.rub a
+							.item__price-true
+								span 4 960
+								.rub a
+						.item__descr Perfect Mango Черный пиджак из шерсти с ремнем
+			.item__construct
+				.item__construct-title Доступные размеры
+				.item-size
+					-  var items = ['XXS','XS','S','XXS','L','XL'];
+					each item in items
+						.item-size__el #{item}
+					.item-size__el.item-size__el--disable XXL
+				.item-get
+					.item-get__btn Подробнеее
+					.item-get__like
+						+icon("like","icon")
+	//block item end

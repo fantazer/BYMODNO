@@ -43,6 +43,9 @@ body
 .breadcrumbs
 	f()
 
+.content
+	position: relative
+
 .breadcrumbs__el
 	margin-right: 20px
 	position: relative
@@ -123,7 +126,10 @@ body
 	margin-top: 20px
 	display: none
 	padding: 0 20px 20px 20px
-
+	.check-el
+		margin-bottom: 15px
+		&:last-child()
+			margin-bottom: 0px
 .filter__size
 	f()
 	fw()
@@ -246,15 +252,17 @@ body
 	f()
 	align-items: center
 	margin-bottom: 15px
+
 .list-head__info
 	f()
 	align-items: center
+
 .list-head__type
 	margin-right: 10px
+
 .list-head__number
 	margin-left: auto
 	color #8f8f8f
-
 
 .list-first-row
 	f()
@@ -265,150 +273,130 @@ body
 	flex(between)
 	fw()
 
+.rub
+	display: inline-block
+	margin-left: 3px
 
-/*.item
-	width: 32%*/
+.links-el
+	display: inline-block
+	margin-bottom: 25px
+	margin-right: 20px
 
-.item--big
-	height: 400px
-	bg-full()
-	grid-column: 1 / 3
+.links
+	margin: 70px 0 30px 0
 
-.item
-	cp()
+.block-info-wrap
+	padding: 70px 0
+	border-top 1px solid $border-color
+
+.block-info__title
+	@extend .type--md
+	margin-bottom: 25px
+	font-weight: 600
+
+.block-info__text
+	line-height:1.6
+
+
+.canlike-wrap
+	display grid
+	grid-template-columns: 1fr 1fr 1fr 1fr
+	grid-gap 20px
+
+.canlike
+	border-bottom:1px solid $border-color
+	border-top:1px solid $border-color
+	padding: 50px 0
+
+.cont-gray
+	background: #efefef
+	position: absolute
+	top:0
+	left: 0px
+	width: 100%
+	height: 500px
+
+.cont-gray-border
 	position: relative
-	height: 400px
-	background: white
-	tr(all)
-.item--active
-	.item__content
-		padding: 20px
-		z-index 20
-		//overflow inherit
-		width:calc(100% + 40px)
-		height 600px
-		top -20px
-		left -20px
-		z-index 20
-		box-shadow 0 1px 2px rgba(0, 0, 0, 0.21)
-	.item__img--one
-		opacity 0
-		//transform translateY(-100%)
-	.item__img--two
-		opacity 1
-	.item__construct
-		height: auto
-		//transform translateY(0%)
-
-.item__content
-	//transition box-shadow, height .6s
-	transition box-shadow .6s
-	overflow hidden
-	height: 400px
-	background: white
-	position: absolute
-	top 0
-	left 0
-
-.item__construct
-	tr(all)
-	height: 0
 	width: 100%
-	background: white
-
-.item__img--two
-	opacity 0
-	//transform translateY(-100%)
-
-.item__img
-	width: 100%
-	height: 280px
-	bg-full()
-	margin-bottom: 20px
-	position: absolute
-	top 0
-	left 0
-	transition all .8s
-//.item__info
-
-.item__price
-	margin-bottom: 20px
+	height: 100%
+	&:after
+		content ''
+		position: absolute
+		bottom -60px
+		left 0px
+		width: 100%
+		height: 1px
+		background: $border-color
+.card-head
 	f()
+	justify-content: space-between
+	margin-bottom: 50px
+
+.card-head__slider
+	position: relative
+	width: 46%
+.card-head__img
+	/*position: absolute
+	top 0
+	left 0*/
+	width: 100%
+
+.card-head__info
+	width: 46%
+
+.card-title
+	@extend .type--xl
+	margin-bottom: 20px
+
+.card-price
+	f()
+	margin-bottom: 50px
 	align-items: center
 
-.item__price-false
-	@extend .type--md
+.card-price--false
+	@extend .type--lg
 	opacity 0.4
 	color #070707
 	text-decoration line-through
 	margin-right: 20px
 
-.item__price-true
-	@extend .type--md
+.card-price--true
+	@extend .type--lg
+	color $red
 
 .item__descr
 	color #070707
 	margin-bottom: 30px
 
+.card-img__main
+	width: 100%
+.card-img__lg
+	bg-full()
+	height: 700px
+	background-position: top center
+	border solid 20px white
 
-
-.item__img-wrap
-	position: relative
-	overflow hidden
-	height: 280px
-	margin-bottom: 30px
-
-.list-wrap
-	display grid
-	grid-template-columns: 1fr 1fr 1fr
-	grid-gap 20px
-
-.rub
-	display: inline-block
-	margin-left: 3px
-
-.item-label
-	position: absolute
-	top 20px
-	z-index 10
-	padding: 5px 10px
-	text-align: center
-	color white
-
-
-.item-label--sale
-	background: $red
-
-.item-label--time
-	background: #2c9cc0
-
-//.item-head
-
-
-
-.item__construct-title
-	text-align: center
-	color #878787
-	margin-bottom: 10px
-.item-size
+.card-filter
 	f()
 	margin-bottom: 20px
-.item-size__el
-	width: 100%
-	padding: 10px
-	border 1px solid $border-color
-	text-align: center
-	margin-left: -1px
-.item-size__el--disable
-	color rgba(7, 7, 7, 0.47)
-.item-get
-	flex(between)
-.item-get__btn
+	.select--order
+		width: 190px
+
+.card-filter__size
+	margin-right: 20px
+
+.card-get
+	f()
+	margin-bottom: 55px
+
+.card-get__btn
 	@extend .btn--mark
 	@extend .btn--md
 	width: 100%
 	padding: 15px 50px
-.item-get__like
+
+.card-get__like
 	padding: 10px 15px
 	border 1px solid $border-color
 	margin-left: 10px
@@ -420,4 +408,132 @@ body
 	.icon
 		tr(all)
 		size 24px
+
+.card-tool
+	width: 400px
+	padding-bottom: 45px
+
+.card-size
+	cp()
+	color #5a5a5a
+	margin-bottom: 20px
+	border-bottom 1px dashed #302c2b
+	display: inline-block
+
+.card-isset
+	cp()
+	color #5a5a5a
+
+.card-descr-warp
+	margin-bottom: 100px
+
+/*.card-descr-cont
+	f()
+	justify-content:flex-end
+
+.card-descr
+	width: 46%*/
+
+.card-tab-head
+	flex(between)
+	margin-bottom: 40px
+	height: 62px
+
+.card-tab__el
+	up()
+	cp()
+	text-align: center
+	width: 100%
+	padding: 20px 0
+	color #5a5a5a
+
+.card-tab__el--active
+	color black
+	border-bottom:1px solid black
+
+/*.card-attr-title, .card-attr-dot
+	display table-cell
+
+.card-attr-title
+	white-space nowrap
+
+.card-attr-dot
+	border-bottom 1px dotted gray
+	width 100%
+
+.card-attr-row
+	display table
+	width: 100%
+
+.card-attr-value
+	display table-cell
+	white-space nowrap
+	width: 245px*/
+
+.card-attr
+	display: none
+
+.card-attr--active
+	display: block
+
+.card-attr__text
+	margin-bottom: 40px
+
+.card-attr-row
+	f()
+	align-items: flex-end
+	margin-bottom: 20px
+
+.card-attr-title
+	padding-right: 5px
+	display table-cell
+	white-space nowrap
+
+.card-attr-row__cont
+	display: table
+	width: 55%
+	align-items: flex-end
+
+.card-attr-dot
+	display table-cell
+	width: 100%
+	border-bottom .5px dashed gray
+
+.card-attr-value
+	width: 45%
+	padding-left: 5px
+
+.card-img-row
+	margin-top: 20px
+	padding: 0 20px
+	display grid
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+	grid-gap 20px
+	margin-bottom: 150px
+
+.card-img__el
+	bg-full()
+	cp()
+	position: relative
+	height: 100px
+	background-position: top center
+	&:hover
+		.card-img__filter
+			opacity .3
+.canlike--title
+	@extend .type--lg
+	up()
+	text-align: center
+	margin-bottom: 50px
+
+.card-img__filter
+	position: absolute
+	top 0
+	left 0
+	tr(all)
+	width: 100%
+	height: 100%
+	background: black
+	z-index 5
+	opacity 0
 @import "../module/**/*"

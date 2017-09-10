@@ -1,0 +1,12 @@
+mixin pagination()
+	//block pagination
+	.pagination-wrap
+		.pagination
+			a(href="#").pagination-arrow
+				+icon("arrow-left","icon")
+			.pagination-cont
+				- for (var i=0;i<5;i++)
+					a(href="#").pagination__el #{i+1}
+			a(href="#").pagination-arrow
+				+icon("arrow-right","icon")
+	//block pagination end

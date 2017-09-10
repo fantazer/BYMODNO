@@ -3,7 +3,9 @@ include block_html/_include.pug
 
 +header()
 .content
-	.main-cont
+	.cont-gray
+		.cont-gray-border
+	.main-cont.main-cont--bread
 		.content-tool
 			.breadcrumbs
 				-
@@ -20,6 +22,130 @@ include block_html/_include.pug
 				+icon("dirrect","icon")
 				.back__text Вернуться в каталог
 
-+footer()
 
+	.main-cont
+		.card-head
+			.card-head__slider
+				.card-head__img
+					.card-img
+						.card-img__main
+							.card-img__lg(style="background-image:url('img/item-1.jpg')")
+						.card-img-row
+							- for (var i=0;i<2;i++)
+								.card-img__el(style="background-image:url('img/item-2.jpg')")
+									.card-img__filter
+								.card-img__el(style="background-image:url('img/item-3.jpg')")
+									.card-img__filter
+								.card-img__el(style="background-image:url('img/item-4.jpg')")
+									.card-img__filter
+								.card-img__el(style="background-image:url('img/item-5.jpg')")
+									.card-img__filter
+						.soc-row
+							a(href="#").soc-el
+								+icon("soc-instagram","icon")
+							a(href="#").soc-el
+								+icon("soc-twitter","icon")
+							a(href="#").soc-el
+								+icon("soc-facebook","icon")
+							a(href="#").soc-el
+								+icon("soc-vk","icon")
+			.card-head__info
+				.card-about
+					.card-title Жакет - PERFECT Mango
+					.card-tool
+						.card-price
+							.card-price--false
+								span 6 200
+								.rub a
+							.card-price--true
+								span 4 960
+								.rub a
+						.card-filter
+							.card-filter__size
+								select.select-beauty.select--order
+									option По популярности
+									option По цене
+									option По размеру
+							.card-filter__color
+								select.select-beauty.select--order
+									option По популярности
+									option По цене
+									option По размеру
+						.card-get
+							.card-get__btn Подробнеее
+							.card-get__like
+								+icon("like","icon")
+						.card-size Как выбрать размер
+						.card-isset Наличие в розничных магазинах
+				.card-descr-warp
+					.card-descr-cont
+							.card-descr
+								.card-tab-head
+									.card-tab__el.card-tab__el--active(data-tab="tab-one") Описание
+									.card-tab__el(data-tab="tab-two") Доставка
+									.card-tab__el(data-tab="tab-three") Оплата
+									.card-tab__el(data-tab="tab-four") Вопросы
+								.card-attr.card-attr--active(data-tab="tab-one")
+									.card-attr__text Асимметричная застежка на молнию. Подплечники. Длинные рукава. Подкладка. Новый фасон цвет и текстура
+									.card-attr__cont
+										- for (var i=0;i<5;i++)
+										mixin card-attr(name,val)
+											.card-attr-row
+												.card-attr-row__cont
+													.card-attr-title=name
+													.card-attr-dot
+												.card-attr-value=val
+										+card-attr('Состав:','Полиэстер - 100%')
+										+card-attr('Материал подкладки:','Полиэстер - 95%, Эластан - 5%')
+										+card-attr('Узор:','Однотонный')
+										+card-attr('Рост модели на фото:','177')
+										+card-attr('Длина:','56 см')
+										+card-attr('Цвет: :','Синий')
+										+card-attr('Застежка:','на молнии')
+										+card-attr('Детали одежды:','рюши/воланы')
+										+card-attr('Артикул:','MA002EWWFA76')
+								.card-attr(data-tab="tab-two")
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut aliquam illo sed tempora, unde veniam incidunt consequuntur placeat eligendi animi facere voluptate consectetur alias non impedit tenetur reprehenderit quaerat.
+								.card-attr(data-tab="tab-three")
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut aliquam illo sed tempora, unde veniam incidunt consequuntur placeat eligendi animi facere voluptate consectetur alias non impedit tenetur reprehenderit quaerat.
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut aliquam illo sed tempora, unde veniam incidunt consequuntur placeat eligendi animi facere voluptate consectetur alias non impedit tenetur reprehenderit quaerat.
+								.card-attr(data-tab="tab-four")
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut aliquam illo sed tempora, unde veniam incidunt consequuntur placeat eligendi animi facere voluptate consectetur alias non impedit tenetur reprehenderit quaerat.
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut aliquam illo sed tempora, unde veniam incidunt consequuntur placeat eligendi animi facere voluptate consectetur alias non impedit tenetur reprehenderit quaerat.
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut aliquam illo sed tempora, unde veniam incidunt consequuntur placeat eligendi animi facere voluptate consectetur alias non impedit tenetur reprehenderit quaerat.
+	.canlike
+		.main-cont
+			.canlike--title Вам так же может понравиться
+			.canlike-wrap
+				+item()
+				+item()
+				+item()
+				+item()
+	.main-cont
+		.links
+			-
+				var items = [
+				'Жакеты',
+				'Пиджаки',
+				'Длинные платья',
+				'Короткие платья',
+				'Юбки',
+				'Красные платья',
+				'Джинсы',
+				'Распродажа',
+				'Новинки',
+				'Тапочки',
+				'Шляпы',
+				'Сарафаны',
+				'Популярное',
+				'Скидки',
+				'Синий',
+				'Желтый',
+				'К лету',
+				'Большой размер'
+				];
+			each item in items
+				a(href="#").links-el.link--mark #{item}
+
++footer()
 include ./block_html/_script.pug
