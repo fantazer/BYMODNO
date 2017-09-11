@@ -20,6 +20,7 @@ $(document).ready(function(){
 			}
 		})
 	});
+
 	//get height cont-gray
 	var heightContGray = function(){
 		var bredCrumbs = $('.main-cont--bread').height();
@@ -29,6 +30,7 @@ $(document).ready(function(){
 		$('.cont-gray').css('height',bredCrumbs + cardAbout + 'px')
 	};
 	heightContGray();
+
 	//select
 	$('.select-beauty').niceSelect()
 

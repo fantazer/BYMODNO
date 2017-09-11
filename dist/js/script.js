@@ -1,11 +1,42 @@
 $(document).ready(function(){
+	
+	//slider on card
+	$('.card-img__el').click(function(){
+		var url = $(this).css('backgroundImage');
+		$('.card-img__lg').css('backgroundImage', url);
+	});
 
+	//tab on card
+	$('.card-tab__el').click(function(){
+		var current = $(this).data('tab');
+		$('.card-tab__el').removeClass('card-tab__el--active');
+		$(this).addClass('card-tab__el--active');
+		$('.card-attr').each(function () {
+			var tab = $(this).data('tab');
+			if(tab==current){
+				$(this).addClass('card-attr--active');
+			}else{
+				$(this).removeClass('card-attr--active');
+			}
+		})
+	});
+	//get height cont-gray
+	var heightContGray = function(){
+		var bredCrumbs = $('.main-cont--bread').height();
+		var cardAbout = $('.card-about').height();
+		console.log('bredCrumbs',bredCrumbs);
+		console.log('cardAbout',cardAbout);
+		$('.cont-gray').css('height',bredCrumbs + cardAbout + 'px')
+	};
+	heightContGray();
 	//select
 	$('.select-beauty').niceSelect()
 
 	$('.item').hover(function(){
 		$(this).toggleClass('item--active')
 	});
+
+	heightContGray();
 
 	//filter color control
 		//lighten color
