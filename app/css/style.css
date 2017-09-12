@@ -1282,6 +1282,14 @@ body {
   margin-top: 0;
 }
 .nice-select .list li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 100%;
   text-overflow: ellipsis;
   padding-right: 10px;
@@ -1308,13 +1316,12 @@ body {
 .select--order {
   width: 240px;
 }
-.current {
-  display: inline-block;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 20px;
-}
+/*.current
+	display: inline-block
+	max-width: 100%
+	overflow: hidden
+	text-overflow: ellipsis
+	padding-right: 20px*/
 .list-head {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1689,6 +1696,17 @@ body {
   background: #111;
   z-index: 5;
   opacity: 0;
+}
+.nice-select .order-select-name {
+  margin-right: 5px;
+}
+.order-select-color {
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
 }
 .subscribe {
   background: url("../img/bg-subscribe.png") no-repeat;

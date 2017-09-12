@@ -63,14 +63,23 @@ include block_html/_include.pug
 						.card-filter
 							.card-filter__size
 								select.select-beauty.select--order
-									option По популярности
-									option По цене
-									option По размеру
+									option
+										span.order-size-name Размер:
+										span XXL
+									option
+										span.order-size-name Размер:
+										span XL
+									option
+										span.order-size-name Размер:
+										span SM
+
 							.card-filter__color
 								select.select-beauty.select--order
-									option По популярности
-									option По цене
-									option По размеру
+									option(data-color="#f3141c" data-text="Цвет:") Красный
+									option(data-color="#5cd37c" data-text="Цвет:") Зеленый
+									option(data-color="#4592db" data-text=":") Синиий
+
+
 						.card-get
 							.card-get__btn Подробнеее
 							.card-get__like

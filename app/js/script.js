@@ -32,8 +32,25 @@ $(document).ready(function(){
 	heightContGray();
 
 	//select
-	$('.select-beauty').niceSelect()
+	$('.select-beauty').niceSelect();
+	$('.nice-select li').each(function(){
+		var selectColor = $(this).data('color');
+		if(selectColor ){
+			$(this)
+			.prepend('<span class="order-select-color" style=\"background-color:  ' +$(this).data('color')+" \" ></span>");
+		}
+	});
 
+/*	$('.nice-select').each(function(){
+		var selectText = $(this).find('li').data('text');
+		if(selectText) {
+					$(this).find('.current').remove('.order-select-name');
+						$(this).find('.current').prepend('<span class="order-select-name">' + selectText + '</span>');
+				}
+	});*/
+
+
+	//select-end
 	$('.item').hover(function(){
 		$(this).toggleClass('item--active')
 	});
