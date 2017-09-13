@@ -1,5 +1,23 @@
 $(document).ready(function(){
-	
+
+	var isMobile = true;
+	var resize = function(a,b){
+		$(window).resize(function(){
+			if($(window).width() < a && isMobile ){
+				b.apply({}, []);
+				return isMobile = false;
+			}
+			if($(window).width() > a){
+				return isMobile = true;
+			}
+		});
+	};
+
+	var foo = function(){
+		console.log("i am foo");
+	};
+	resize(768,foo);
+
 	//slider on card
 	$('.card-img__el').click(function(){
 		var url = $(this).css('backgroundImage');
@@ -204,6 +222,30 @@ $(document).ready(function(){
 	}
 	hideToggle('.icon-bars','.top-menu_link');*/
 
+	//resize function
+	var isMobile = true;
+	var resize = function(a,b){
+		$(window).resize(function(){
+			if($(window).width() < a && isMobile ){
+				b.apply({}, []);
+				return isMobile = false;
+			}
+			if($(window).width() > a){
+				return isMobile = true;
+			}
+		});
+	};
+
+	var foo = function(){
+		console.log("i am foo");
+	};
+	resize(768,foo);
+
+	$(window).resize(function(){
+		heightContGray();
+	});
+
+	//resize function end
 })
 
 //cash SVG

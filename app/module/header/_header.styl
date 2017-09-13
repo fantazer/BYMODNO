@@ -1,10 +1,13 @@
 .head-top-wrap
+	+below(1024px)
+		display: none
 	padding: 10px 0
 	border-bottom:1px solid $border-color
 //.main-cont
 .head-top
 	f()
 .head-town
+	cp()
 	f()
 	justify-content: center
 	margin-right: 6%
@@ -16,6 +19,8 @@
 //.head-town__name
 
 .head-nav
+	+below(1024px)
+		width: 25%
 	flex(between)
 	width: 19%
 //.head-nav__el
@@ -39,32 +44,83 @@
 		fill #5a5a5a
 
 .menu-wrap
+	+below(1024px)
+		display: none
 	background: #000
-//.main-cont 
+	position: relative
+	& > .main-cont
+		position static
+		+below(1024px)
+			padding: 0
 .menu
 	flex(between)
+
+.menu-sub
+	position: absolute
+	background: white
+	width: 100%
+	box-shadow 0 5px 5px rgba(0, 0, 0, 0.08)
+	padding: 50px 0
+	left 0px
+	top 100%
+	z-index 20
+	//opacity 0
+	//visibility hidden
+	display: none
+	transition all .6s
+
 .menu-cont
+	+below(1024px)
+		width: calc(100% - 180px)
 	flex(between)
 	width: calc(100% - 270px)
 
 .menu__el
-	up()
+	+below(1024px)
+		font-size: 12px
 	font-weight 600
-	padding: 20px 0px
-	color white
 	flex-grow 1
-	text-align: center
-	tr(all)
 	&:hover
 		background: white
-		color black
+		.menu__el-link
+			color black
+		& > .menu-sub
+			display: block
+			//opacity 1
+			//visibility visible
+
+.menu__el-link
+	text-align: center
+	width: 100%
+	up()
+	tr(all)
+	text-align: center
+	color white
+	padding: 21px 0px
+	display: inline-block
+
+.menu-sub__title
+	@extend .type--lg
+	margin-bottom: 40px
+
+.menu-sub__cont
+	f()
+	fw()
+
+.menu-sub__el
+	width: 24%
+	color #5a5a5a
+	margin-bottom: 25px
 
 .menu-get
+	+below(1024px)
+		width: 170px
+		padding: 20px 10px
 	up()
 	tr(all)
 	background: $red
 	color white
-	padding: 20px 35px
+	padding: 21px 35px
 	width: 200px
 	text-align: center
 	&:hover
@@ -72,12 +128,31 @@
 		color white
 
 .head
+	+below(1024px)
+		padding: 0
+		.main-cont
+			padding-left: 0
 	padding: 40px 0
+
+.head-toggle
+	+above(1024px)
+		display: none
+	cp()
+	padding: 10px
+	background: #000
+	margin-right: 10px
+	.icon
+		size 30px
+		fill white
 //.main-cont
 .head-wrap
 	flex(between)
+
 .head-search
 	width: 30%
+	f()
+
+.head-search__wrap
 	f()
 	align-items: center
 	form
@@ -102,20 +177,28 @@
 	fl()
 	width: 40%
 .head-logo__icon
+	+below(1024px)
+		margin-bottom: 0
 	margin-bottom: 20px
 	.icon
 		width 240px
 		max-height 30px
+
 .head-logo__text
+	+below(1024px)
+		display: none
 	text-align: center
 	font-size: 12px
+
 .head-tool
 	width: 30%
 	f()
 	justify-content: flex-end
+
 .head-tool__wrap
 	flex(between)
 	width: 160px
+
 .head-tool__icon
 	.icon
 		tr(all)

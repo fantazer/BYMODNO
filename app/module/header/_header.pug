@@ -21,9 +21,12 @@ mixin header()
 		.main-cont
 			.head-wrap
 				.head-search
-					+icon("search","icon")
-					form(action="#")
-						input(type="text" placeholder="Поиск").head-search__input.input
+					.head-toggle
+						+icon("menu","icon")
+					.head-search__wrap
+						+icon("search","icon")
+						form(action="#")
+							input(type="text" placeholder="Поиск").head-search__input.input
 				.head-logo
 					a(href="#").head-logo__icon
 						+icon("Logo--color","icon")
@@ -44,7 +47,6 @@ mixin header()
 				.menu-cont
 					-
 						var items = [
-							'Платья',
 							'Юбки',
 							'Брюки',
 							'Топы',
@@ -54,7 +56,32 @@ mixin header()
 							'Верхняя одежда'
 							];
 					each item in items
-						a(href="#").menu__el #{item}
+						.menu__el
+							a(href="#").menu__el-link #{item}
+							.menu-sub
+								.main-cont
+									.menu-sub__wrap
+										.menu-sub__title Женские платья
+										.menu-sub__cont
+											-
+												var subitems = [
+													'Вечерние платья ',
+													'Вязаные и трикотажные платья ',
+													'Джинсовые платья ',
+													'Коктейльные платья',
+													'Летние платья ',
+													'Офисные платья ',
+													'Платья-миди ',
+													'Платья-макси ',
+													'Платья-мини ',
+													'Пляжные платья и туники ',
+													'Повседневные платья ',
+													'Сарафаны ',
+													'Свадебные платья ',
+													'Спортивные платья'
+												];
+											each subitem in subitems
+												a(href="#").menu-sub__el #{subitem}
 				a(href="#").menu-get Выбрать образ
 
 	//head-top-end

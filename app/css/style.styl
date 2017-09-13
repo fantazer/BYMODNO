@@ -37,10 +37,19 @@ body
 
 //==== content-tool ====
 .content-tool
-	padding: 40px 0
+	+below(1024px)
+		padding: 20px 0
 	flex(between)
+	fw()
+	padding: 40px 0
 
 .breadcrumbs
+	+below(1024px)
+		width: 100%
+		margin-bottom: 20px
+		flex(mid)
+	+below(768px)
+		display: none
 	f()
 
 .content
@@ -59,6 +68,9 @@ body
 		position: absolute
 		right: -15px
 .back
+	+below(1024px)
+		flex(mid)
+		width: 100%
 	f()
 	justify-content: center
 	.icon
@@ -186,6 +198,8 @@ body
 //.filter__season
 //.filter__collect
 .list-content
+	+below(1024px)
+		width:calc(100% - 260px)
 	width:calc(100% - 280px)
 
 .list-category-title
@@ -301,16 +315,24 @@ body
 
 
 .canlike-wrap
+	+below(1200px)
+		grid-template-columns: 1fr 1fr 1fr
 	display grid
 	grid-template-columns: 1fr 1fr 1fr 1fr
 	grid-gap 20px
 
 .canlike
+	+below(1200px)
+		.main-cont
+			max-width 768px
 	border-bottom:1px solid $border-color
 	border-top:1px solid $border-color
 	padding: 50px 0
 
+
 .cont-gray
+	+below(1024px)
+		display: none
 	background: #efefef
 	position: absolute
 	top:0
@@ -331,27 +353,47 @@ body
 		height: 1px
 		background: $border-color
 .card-head
+	+below(1024px)
+		margin-bottom: 0
 	f()
+	fw()
 	justify-content: space-between
 	margin-bottom: 50px
 
 .card-head__slider
+	+below(1024px)
+		width: 100%
+		flex(mid)
+		margin-bottom: 0px
+		padding-bottom: 30px
+		background: #efefef
 	position: relative
 	width: 46%
 .card-head__img
+	+below(1024px)
+		width: 600px
 	/*position: absolute
 	top 0
 	left 0*/
 	width: 100%
 
 .card-head__info
+	+below(1024px)
+		width: 100%
 	width: 46%
 
 .card-title
+	+below(1024px)
+		width: 60%
+		min-width 400px
+		text-align: center
 	@extend .type--xl
 	margin-bottom: 20px
 
 .card-price
+	+below(1024px)
+		flex(mid)
+		margin-bottom: 30px
 	f()
 	margin-bottom: 50px
 	align-items: center
@@ -374,6 +416,8 @@ body
 .card-img__main
 	width: 100%
 .card-img__lg
+	+below(1024px)
+		height: 700px
 	bg-full()
 	height: 700px
 	background-position: top center
@@ -383,9 +427,13 @@ body
 	f()
 	margin-bottom: 20px
 	.select--order
+		+below(1024px)
+			width: 100%
 		width: 190px
 
 .card-filter__size
+	+below(1024px)
+		width: 48%
 	margin-right: 20px
 
 .card-get
@@ -412,8 +460,19 @@ body
 		size 24px
 
 .card-tool
+	+below(1024px)
+
+		min-width 400px
+		width: 60%
+
 	width: 400px
 	padding-bottom: 45px
+
+.card-about
+	+below(1024px)
+		background: #efefef
+		flex(mid)
+		fl()
 
 .card-size
 	cp()
@@ -427,16 +486,29 @@ body
 	color #5a5a5a
 
 .card-descr-warp
+	+below(1024px)
+		margin-bottom: 0
 	margin-bottom: 100px
 
 /*.card-descr-cont
 	f()
 	justify-content:flex-end
 
+.
 .card-descr
 	width: 46%*/
 
+.card-descr
+	+below(1024px)
+		background: white
+		padding: 0 10px 30px 10px
+.card-filter__color
+	+below(1024px)
+		width: 48%
 .card-tab-head
+	+below(1024px)
+		border-bottom 1px solid $border-color
+		height: auto
 	flex(between)
 	margin-bottom: 40px
 	height: 62px
@@ -506,6 +578,8 @@ body
 	padding-left: 5px
 
 .card-img-row
+	+below(1024px)
+		margin-bottom: 30px
 	margin-top: 20px
 	padding: 0 20px
 	display grid
@@ -513,7 +587,13 @@ body
 	grid-gap 20px
 	margin-bottom: 150px
 
+.card-img
+	+below(1024px)
+		.soc-row
+			flex(mid)
 .card-img__el
+	+below(1024px)
+		border 1px solid $border-color
 	bg-full()
 	cp()
 	position: relative
@@ -550,4 +630,13 @@ body
 	round()
 	display: inline-block
 	margin-right: 10px
+
+.main-cont--item
+	+below(1280px)
+		max-width 1024px
+
+.main-cont--gray
+	+below(1024px)
+		background: #efefef
+		padding: 0
 @import "../module/**/*"

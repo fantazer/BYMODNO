@@ -1,5 +1,23 @@
 $(document).ready(function(){
-	
+
+	var isMobile = true;
+	var resize = function(a,b){
+		$(window).resize(function(){
+			if($(window).width() < a && isMobile ){
+				b.apply({}, []);
+				return isMobile = false;
+			}
+			if($(window).width() > a){
+				return isMobile = true;
+			}
+		});
+	};
+
+	var foo = function(){
+		console.log("i am foo");
+	};
+	resize(768,foo);
+
 	//slider on card
 	$('.card-img__el').click(function(){
 		var url = $(this).css('backgroundImage');
@@ -20,6 +38,7 @@ $(document).ready(function(){
 			}
 		})
 	});
+
 	//get height cont-gray
 	var heightContGray = function(){
 		var bredCrumbs = $('.main-cont--bread').height();
@@ -29,9 +48,27 @@ $(document).ready(function(){
 		$('.cont-gray').css('height',bredCrumbs + cardAbout + 'px')
 	};
 	heightContGray();
-	//select
-	$('.select-beauty').niceSelect()
 
+	//select
+	$('.select-beauty').niceSelect();
+	$('.nice-select li').each(function(){
+		var selectColor = $(this).data('color');
+		if(selectColor ){
+			$(this)
+			.prepend('<span class="order-select-color" style=\"background-color:  ' +$(this).data('color')+" \" ></span>");
+		}
+	});
+
+/*	$('.nice-select').each(function(){
+		var selectText = $(this).find('li').data('text');
+		if(selectText) {
+					$(this).find('.current').remove('.order-select-name');
+						$(this).find('.current').prepend('<span class="order-select-name">' + selectText + '</span>');
+				}
+	});*/
+
+
+	//select-end
 	$('.item').hover(function(){
 		$(this).toggleClass('item--active')
 	});
@@ -185,6 +222,30 @@ $(document).ready(function(){
 	}
 	hideToggle('.icon-bars','.top-menu_link');*/
 
+	//resize function
+	var isMobile = true;
+	var resize = function(a,b){
+		$(window).resize(function(){
+			if($(window).width() < a && isMobile ){
+				b.apply({}, []);
+				return isMobile = false;
+			}
+			if($(window).width() > a){
+				return isMobile = true;
+			}
+		});
+	};
+
+	var foo = function(){
+		console.log("i am foo");
+	};
+	resize(768,foo);
+
+	$(window).resize(function(){
+		heightContGray();
+	});
+
+	//resize function end
 })
 
 //cash SVG
