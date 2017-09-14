@@ -131,11 +131,12 @@
 	+below(1024px)
 		padding: 0
 		.main-cont
-			padding-left: 0
+			padding: 0
 	padding: 40px 0
+	position: relative
 
 .head-toggle
-	+above(1024px)
+	+above(1025px)
 		display: none
 	cp()
 	padding: 10px
@@ -146,21 +147,42 @@
 		fill white
 //.main-cont
 .head-wrap
+	+below(1024px)
+		border-bottom:1px solid $border-color
 	flex(between)
 
 .head-search
+	+below(1024px)
+		width: 90px
 	width: 30%
 	f()
 
 .head-search__wrap
+	+below(1024px)
+		flex(mid)
 	f()
 	align-items: center
 	form
+		+below(1024px)
+			display: none
 		width: 100%
 	.icon
 		size 26px
 		margin-right: 25px
 		cp()
+
+.head-search__wrap--show
+	form
+		background: white
+		position: absolute
+		top 0px
+		left 53px
+		width:calc(100% - 53px)
+		z-index 10
+		height: calc(100% - 1px)
+		flex(mid)
+		padding: 0 10px
+
 .head-search__input
 	br(0)
 	border 0
@@ -179,8 +201,12 @@
 .head-logo__icon
 	+below(1024px)
 		margin-bottom: 0
+		flex(mid)
 	margin-bottom: 20px
 	.icon
+		+below(768px)
+			width: 30%
+			min-width 110px
 		width 240px
 		max-height 30px
 
@@ -191,6 +217,9 @@
 	font-size: 12px
 
 .head-tool
+	+below(1024px)
+		width: 70px
+		margin-right: 10px
 	width: 30%
 	f()
 	justify-content: flex-end
@@ -198,15 +227,21 @@
 .head-tool__wrap
 	flex(between)
 	width: 160px
+	+below(480px)
+		width: 55px
 
 .head-tool__icon
 	.icon
+		+below(480px)
+			size 20px
 		tr(all)
 		&:hover
 			fill $red
 		cp()
 		size 28px
-//.head-tool__icon--profile
+.head-tool__icon--profile
+	+below(1024px)
+		display: none
 //.head-tool__like
 .head-tool__cart
 	position: relative

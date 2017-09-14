@@ -1,10 +1,14 @@
 .subscribe
+	+below(768px)
+		padding: 30px 0
 	bgi('bg-subscribe.png')
 	bg-full()
 	flex(mid)
 	fl()
 	padding: 70px 0
 .subscribe__title
+	+below(768px)
+		margin-bottom: 30px
 	@extend .type--lg
 	font-weight 500
 	color white
@@ -13,7 +17,14 @@
 	up()
 	line-height:1.6
 .subscribe-form
+	+below(768px)
+		width: 100%
+		padding: 10px
 	input
+		+below(768px)
+			width: 100%
+			margin-bottom: 20px
+			margin-right: 0px
 		@extend .input
 		br(0)
 		tr(all)
@@ -25,9 +36,15 @@
 		color white
 		&:focus
 			border 1px solid white
+
 .subscribe-form__row
+	+below(768px)
+		fw()
 	flex(between)
+
 .subscribe-form__get
+	+below(768px)
+		width: 100%
 	@extend .btn
 	tr(all)
 	background: $red
@@ -43,11 +60,20 @@
 	border-bottom:1px solid $border-color
 
 .footer-menu__el
+	+below(768px)
+		text-align: center
+		width: 100%
 	font-weight: 600
+	margin-bottom: 10px
 	up()
 	color black
 
 .footer-menu__wrap
+	+below(768px)
+		flex(mid)
+		fw()
+		width: 100%
+		padding: 0 10px
 	min-width 620px
 	flex(between)
 	width: 40%

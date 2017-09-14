@@ -22,8 +22,13 @@ include block_html/_include.pug
 				.back__text Вернуться в каталог
 		.page-title Жакеты и пиджаки
 
-	.main-cont
+	.main-cont.main-cont--list
 		.list-cont
+			.list-toogle
+				.list-toogle__icon
+					+icon("filter","icon")
+				.list-toogle__text Фильтры
+
 			.list-tool
 				.filter
 					//filter size

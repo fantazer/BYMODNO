@@ -1,8 +1,17 @@
 /*! block pagination*/
 .pagination-wrap
+	+below(1024px)
+		flex(mid)
+	+below(768px)
+		margin-bottom: 30px
 	f()
 	justify-content: flex-end
 .pagination
+	+below(768px)
+		margin-bottom: 0px
+	+below(640px)
+		min-width auto
+		width: 100%
 	min-width 360px
 	flex(between)
 	width: 40%
@@ -14,6 +23,8 @@
 	flex(between)
 	width: 70%
 .pagination__el
+	+below(768px)
+		size 30px
 	&:hover
 		background: black
 		color white
