@@ -67,11 +67,15 @@
 //.item__info
 
 .item__price
+	+below(768px)
+		font-size: 16px
 	margin-bottom: 20px
 	f()
 	align-items: center
 
 .item__price-false
+	+below(768px)
+		font-size: 22px
 	@extend .type--md
 	opacity 0.4
 	color #070707
@@ -79,6 +83,8 @@
 	margin-right: 20px
 
 .item__price-true
+	+below(768px)
+		font-size: 22px
 	@extend .type--md
 
 .item__descr

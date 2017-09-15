@@ -1,22 +1,62 @@
 $(document).ready(function(){
 
-	var isMobile = true;
-	var resize = function(a,b){
-		$(window).resize(function(){
-			if($(window).width() < a && isMobile ){
-				b.apply({}, []);
-				return isMobile = false;
-			}
-			if($(window).width() > a){
-				return isMobile = true;
-			}
+	//===== Mobile slide-left menu =====
+	 var $menu = $("#mobile-menu").mmenu({
+			navbar: {
+				title: "Главное меню",
+				"content": [
+				"searchfield"
+				]
+			},
+			/*"searchfield": {
+			add: true,
+			search: true
+			},*/
+			extensions: [
+				//"effect-menu-slide",
+				"effect-listitems-slide",
+				"fullscreen"
+			],
+			offCanvas : {
+				position : "left", // changing this alters the position of the menu
+				zposition : "front"
+			},
 		});
-	};
 
-	var foo = function(){
-		console.log("i am foo");
-	};
-	resize(768,foo);
+	//Toggle header icon
+	if ($menu.data( "mmenu" )) {
+		var API = $menu.data( "mmenu" );
+		API.bind( "opening", function() {
+		  $('.head-toggle').toggleClass('header-mobile-togle--open');
+		});
+		API.bind( "closing", function() {
+		  $('.head-toggle').toggleClass('header-mobile-togle--open');
+		});
+		$('.modal-get').click(function() {
+         API.close();
+      });
+	}
+	//===== Mobile slide-left menu =====
+
+	//toggle mobile filter
+		$('.list-toogle').click(function(){
+			$('.list-tool').slideToggle();
+		});
+	//mobile search
+
+	$('.head-search__wrap .icon--mobile').click(function(){
+		event.stopPropagation();
+		$('.head-search__wrap').addClass('head-search__wrap--show');
+		$('.head-search__wrap').on("click", function (event) {
+			event.stopPropagation();
+		});
+		$(document).on("click", function () {
+				$('.head-search__wrap').removeClass('head-search__wrap--show');
+		});
+		$('.head-search__input').focus();
+	});
+
+
 
 	//slider on card
 	$('.card-img__el').click(function(){
@@ -43,8 +83,6 @@ $(document).ready(function(){
 	var heightContGray = function(){
 		var bredCrumbs = $('.main-cont--bread').height();
 		var cardAbout = $('.card-about').height();
-		console.log('bredCrumbs',bredCrumbs);
-		console.log('cardAbout',cardAbout);
 		$('.cont-gray').css('height',bredCrumbs + cardAbout + 'px')
 	};
 	heightContGray();
@@ -222,27 +260,17 @@ $(document).ready(function(){
 	}
 	hideToggle('.icon-bars','.top-menu_link');*/
 
-	//resize function
-	var isMobile = true;
-	var resize = function(a,b){
-		$(window).resize(function(){
-			if($(window).width() < a && isMobile ){
-				b.apply({}, []);
-				return isMobile = false;
-			}
-			if($(window).width() > a){
-				return isMobile = true;
-			}
-		});
-	};
 
-	var foo = function(){
-		console.log("i am foo");
-	};
-	resize(768,foo);
+	var resize = (function () {
+		if( $(this).width() > 1023 ) {
+			heightContGray();
+    }
+    if( $(this).width() < 1023 ) {
+    }
+	})();
 
 	$(window).resize(function(){
-		heightContGray();
+		resize
 	});
 
 	//resize function end

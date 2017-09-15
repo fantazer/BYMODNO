@@ -82,7 +82,9 @@ body
 
 .page-title
 	+below(1024px)
-		margin-bottom: 30px
+		margin-bottom: 25px
+	+below(768px)
+		font-size: 26px
 	@extend .type--xl
 	font-weight 500
 	color black
@@ -390,7 +392,7 @@ body
 	height: 100%
 	&:after
 		content ''
-		position: absolute
++		position: absolute
 		bottom -60px
 		left 0px
 		width: 100%
@@ -445,6 +447,8 @@ body
 	align-items: center
 
 .card-price--false
+	+below(768px)
+		font-size: 22px
 	@extend .type--lg
 	opacity 0.4
 	color #070707
@@ -452,6 +456,8 @@ body
 	margin-right: 20px
 
 .card-price--true
+	+below(768px)
+		font-size: 22px
 	@extend .type--lg
 	color $red
 
@@ -531,7 +537,6 @@ body
 		background: #efefef
 		flex(mid)
 		fl()
-
 
 .card-size
 	cp()
@@ -720,7 +725,7 @@ body
 	+above(1025px)
 		display: none
 	flex(mid)
-	padding: 12px 0
+	padding: 9px 0
 	box-shadow 0 1px 2px rgba(0, 0, 0, 0.21)
 	border 1px solid #e9e9e9
 	background-color #ffffff
@@ -732,9 +737,11 @@ body
 		margin-right: 20px
 
 .list-toogle__text
+	+below(768px)
+		font-size: 16px
 	up()
 	background-color #ffffff
-	font-weight:600px
+	font-weight:600
 
 .icon--desct
 	+below(1024px)

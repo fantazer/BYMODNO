@@ -138,6 +138,7 @@
 .head-toggle
 	+above(1025px)
 		display: none
+	height: 54px
 	cp()
 	padding: 10px
 	background: #000
@@ -149,6 +150,7 @@
 .head-wrap
 	+below(1024px)
 		border-bottom:1px solid $border-color
+		height: 54px
 	flex(between)
 
 .head-search
@@ -190,8 +192,12 @@
 	padding: 10px 0
 	background: white
 	&:focus
+		+below(768px)
+			border-bottom 0
 		border-bottom 1px solid #cecece
 	&:active
+		+below(768px)
+			border-bottom 0
 		border-bottom 1px solid #cecece
 
 .head-logo

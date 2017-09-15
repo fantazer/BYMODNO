@@ -17,12 +17,14 @@ mixin header()
 				.head-mail
 					+icon("mail","icon")
 					a(href="mailto:modno.rabota@mail.ru") modno.rabota@mail.ru
+
 	.head
 		.main-cont
 			.head-wrap
 				.head-search
-					.head-toggle
-						+icon("menu","icon")
+					a(href="#mobile-menu").head-toggle
+						+icon("menu","icon icon-menu")
+						+icon("close","icon icon-menu-close")
 					.head-search__wrap
 						+icon("search","icon icon--desct")
 						+icon("search","icon icon--mobile")

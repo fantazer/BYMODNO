@@ -3,7 +3,8 @@
 		"header":"header",
 		"footer":"footer",
 		"item":"item",
-		"pagination":"pagination"
+		"pagination":"pagination",
+		"mobile-menu":"mobile-menu"
 	},
 	"page":{
 		"index":"index",

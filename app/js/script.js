@@ -1,5 +1,43 @@
 $(document).ready(function(){
 
+	//===== Mobile slide-left menu =====
+	 var $menu = $("#mobile-menu").mmenu({
+			navbar: {
+				title: "Главное меню",
+				"content": [
+				"searchfield"
+				]
+			},
+			/*"searchfield": {
+			add: true,
+			search: true
+			},*/
+			extensions: [
+				//"effect-menu-slide",
+				"effect-listitems-slide",
+				"fullscreen"
+			],
+			offCanvas : {
+				position : "left", // changing this alters the position of the menu
+				zposition : "front"
+			},
+		});
+
+	//Toggle header icon
+	if ($menu.data( "mmenu" )) {
+		var API = $menu.data( "mmenu" );
+		API.bind( "opening", function() {
+		  $('.head-toggle').toggleClass('header-mobile-togle--open');
+		});
+		API.bind( "closing", function() {
+		  $('.head-toggle').toggleClass('header-mobile-togle--open');
+		});
+		$('.modal-get').click(function() {
+         API.close();
+      });
+	}
+	//===== Mobile slide-left menu =====
+
 	//toggle mobile filter
 		$('.list-toogle').click(function(){
 			$('.list-tool').slideToggle();
@@ -7,7 +45,6 @@ $(document).ready(function(){
 	//mobile search
 
 	$('.head-search__wrap .icon--mobile').click(function(){
-		console.log('mobileSearc');
 		event.stopPropagation();
 		$('.head-search__wrap').addClass('head-search__wrap--show');
 		$('.head-search__wrap').on("click", function (event) {
@@ -16,6 +53,7 @@ $(document).ready(function(){
 		$(document).on("click", function () {
 				$('.head-search__wrap').removeClass('head-search__wrap--show');
 		});
+		$('.head-search__input').focus();
 	});
 
 

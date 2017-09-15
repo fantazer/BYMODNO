@@ -46,6 +46,9 @@
 		<!--link(rel="stylesheet", href="bower/components-font-awesome/css/font-awesome.css")-->
 		<link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css" />
 		<link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
+		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/css/jquery.mmenu.all.css" />
+		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/extensions/effects/jquery.mmenu.effects.css" />
+		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/extensions/themes/jquery.mmenu.themes.css" />
 		<!--endbuild-->
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-edit.css" />
@@ -90,11 +93,14 @@
 			<div class="main-cont">
 				<div class="head-wrap">
 					<div class="head-search">
-						<div class="head-toggle">
-							<svg class="icon">
+						<a class="head-toggle" href="#mobile-menu">
+							<svg class="icon icon-menu">
 								<use xlink:href="#menu"></use>
 							</svg>
-						</div>
+							<svg class="icon icon-menu-close">
+								<use xlink:href="#close"></use>
+							</svg>
+						</a>
 						<div class="head-search__wrap">
 							<svg class="icon icon--desct">
 								<use xlink:href="#search"></use>
@@ -1110,6 +1116,363 @@
 				</div>
 			</div>
 		</div>
+		<!--block mobile-menu-->
+		<nav id="mobile-menu">
+			<ul class="mobile-menu__one-lvl">
+				<li class="mobile-menu-el">
+					<a href="#">Юбки</a>
+					<ul class="mobile-menu__two-lvl">
+						<li class="mobile-menu-el">
+							<a href="#">Вечерние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Вязаные и трикотажные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Джинсовые платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Коктейльные платья</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Летние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Офисные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-миди </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-макси </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-мини </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Пляжные платья и туники </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Повседневные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Сарафаны </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Свадебные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Спортивные платья</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mobile-menu-el">
+					<a href="#">Брюки</a>
+					<ul class="mobile-menu__two-lvl">
+						<li class="mobile-menu-el">
+							<a href="#">Вечерние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Вязаные и трикотажные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Джинсовые платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Коктейльные платья</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Летние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Офисные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-миди </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-макси </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-мини </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Пляжные платья и туники </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Повседневные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Сарафаны </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Свадебные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Спортивные платья</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mobile-menu-el">
+					<a href="#">Топы</a>
+					<ul class="mobile-menu__two-lvl">
+						<li class="mobile-menu-el">
+							<a href="#">Вечерние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Вязаные и трикотажные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Джинсовые платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Коктейльные платья</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Летние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Офисные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-миди </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-макси </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-мини </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Пляжные платья и туники </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Повседневные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Сарафаны </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Свадебные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Спортивные платья</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mobile-menu-el">
+					<a href="#">Блузы и рубашки</a>
+					<ul class="mobile-menu__two-lvl">
+						<li class="mobile-menu-el">
+							<a href="#">Вечерние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Вязаные и трикотажные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Джинсовые платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Коктейльные платья</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Летние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Офисные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-миди </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-макси </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-мини </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Пляжные платья и туники </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Повседневные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Сарафаны </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Свадебные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Спортивные платья</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mobile-menu-el">
+					<a href="#">Жакеты</a>
+					<ul class="mobile-menu__two-lvl">
+						<li class="mobile-menu-el">
+							<a href="#">Вечерние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Вязаные и трикотажные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Джинсовые платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Коктейльные платья</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Летние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Офисные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-миди </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-макси </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-мини </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Пляжные платья и туники </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Повседневные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Сарафаны </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Свадебные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Спортивные платья</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mobile-menu-el">
+					<a href="#">Аксессуары</a>
+					<ul class="mobile-menu__two-lvl">
+						<li class="mobile-menu-el">
+							<a href="#">Вечерние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Вязаные и трикотажные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Джинсовые платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Коктейльные платья</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Летние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Офисные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-миди </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-макси </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-мини </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Пляжные платья и туники </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Повседневные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Сарафаны </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Свадебные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Спортивные платья</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mobile-menu-el">
+					<a href="#">Верхняя одежда</a>
+					<ul class="mobile-menu__two-lvl">
+						<li class="mobile-menu-el">
+							<a href="#">Вечерние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Вязаные и трикотажные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Джинсовые платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Коктейльные платья</a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Летние платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Офисные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-миди </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-макси </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Платья-мини </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Пляжные платья и туники </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Повседневные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Сарафаны </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Свадебные платья </a>
+						</li>
+						<li class="mobile-menu-el">
+							<a href="#">Спортивные платья</a>
+						</li>
+					</ul>
+				</li>
+				<li class="mobile-menu-el mobile-menu-el--sub">
+					<span>Личный кабинет</span>
+					<ul class="mobile-menu__two-lvl">
+						<li class="mobile-menu-el">
+							<span class="modal-get" data-modal="enter">Вход</span>
+						</li>
+						<li class="mobile-menu-el">
+							<span class="modal-get" data-modal="registration">Регистрация</span>
+						</li>
+					</ul>
+				</li>
+				<li class="mobile-menu-el mobile-menu-el--sub">
+					<span>Регион</span>
+					<ul class="mobile-menu__two-lvl">
+						<li class="mobile-menu-el">
+							<span>Регион 1</span>
+						</li>
+						<li class="mobile-menu-el">
+							<span>Регион 2</span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<!--block mobile-menu end-->
 		<!--block footer-->
 		<div class="subscribe">
 			<div class="subscribe__title">Подпишитесь на новости
@@ -1193,6 +1556,7 @@
 		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
 		<script src="js/jquery.smoothscroll.js"></script>
 		<script src="bower/jquery-nice-select/js/jquery.nice-select.js"></script>
+		<script src="bower/jQuery.mmenu/dist/js/jquery.mmenu.all.min.umd.js"></script>
 		<!-- endbuild-->
 		<script src="js/script.js"></script>
 		<script src="js/script-edit.js"></script>

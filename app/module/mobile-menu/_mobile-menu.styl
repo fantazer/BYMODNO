@@ -1,0 +1,53 @@
+//mobile slide menu
+#mobile-menu
+	+above(768px)
+		display none!important
+	margin-top 54px
+	background white
+	border-top 1px solid #e6e6e6
+
+	//display none!important
+
+#mobile-menu:not( .mm-menu )
+	display: none;
+
+.mobile-menu-el
+	padding 10px 0!important
+	display inline-block
+	color black
+	font-size 16px
+	font-weight 600
+	.header__sub-menu__el
+		width 100%
+		f()
+
+.mm-listview>li:not(.mm-divider):after
+	left 0
+
+.mm-menu .mm-listview>li .mm-next:after,
+.mm-menu .mm-btn:after, .mm-menu .mm-btn:before
+	border-color black
+
+.mm-title
+	color black!important
+
+.mm-navbar
+	background #efeeee
+
+html.mm-opened
+	overflow hidden
+
+.mobile-menu-el--sub
+	a:after, a:before
+		border-color  #a5a4a4!important
+	span,a
+		color #a5a4a4!important
+
+.header-mobile-togle--open
+	.icon-menu-close
+		display: block
+	.icon-menu
+		display: none
+
+.icon-menu-close
+	display: none

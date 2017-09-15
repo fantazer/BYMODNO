@@ -280,6 +280,23 @@
 
       
 
+        <li title="close">
+            <div class="icon-box" id="icon-box-close">
+                <div class="icon close"></div>
+            </div>
+            <h2>close</h2>
+            <button onclick="showPopover('snippet-close')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-close')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-close">
+                <pre><code>&lt;span class=&quot;icon close&quot;&gt;&lt;/span&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+
+
+      
+
         <li title="dirrect">
             <div class="icon-box" id="icon-box-dirrect">
                 <div class="icon dirrect"></div>
@@ -290,6 +307,23 @@
             <button onclick="invertBackground('icon-box-dirrect')">Invert Background</button>
             <div class="snippet-popover" id="snippet-dirrect">
                 <pre><code>&lt;span class=&quot;icon dirrect&quot;&gt;&lt;/span&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+
+
+      
+
+        <li title="filter">
+            <div class="icon-box" id="icon-box-filter">
+                <div class="icon filter"></div>
+            </div>
+            <h2>filter</h2>
+            <button onclick="showPopover('snippet-filter')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-filter')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-filter">
+                <pre><code>&lt;span class=&quot;icon filter&quot;&gt;&lt;/span&gt;</code></pre>
                 <button onclick="hidePopover()">Close</button>
             </div>
         </li>

@@ -1,0 +1,53 @@
+mixin mobile-menu()
+	//block mobile-menu
+	nav#mobile-menu
+		ul.mobile-menu__one-lvl
+			-
+				var items = [
+					'Юбки',
+					'Брюки',
+					'Топы',
+					'Блузы и рубашки',
+					'Жакеты',
+					'Аксессуары',
+					'Верхняя одежда'
+					];
+			each item in items
+				li.mobile-menu-el
+					a(href="#") #{item}
+					ul.mobile-menu__two-lvl
+						-
+							var subitems = [
+								'Вечерние платья ',
+								'Вязаные и трикотажные платья ',
+								'Джинсовые платья ',
+								'Коктейльные платья',
+								'Летние платья ',
+								'Офисные платья ',
+								'Платья-миди ',
+								'Платья-макси ',
+								'Платья-мини ',
+								'Пляжные платья и туники ',
+								'Повседневные платья ',
+								'Сарафаны ',
+								'Свадебные платья ',
+								'Спортивные платья'
+							];
+						each subitem in subitems
+							li.mobile-menu-el
+								a(href="#") #{subitem}
+			li.mobile-menu-el.mobile-menu-el--sub
+				span Личный кабинет
+				ul.mobile-menu__two-lvl
+					li.mobile-menu-el
+						span.modal-get(data-modal="enter") Вход
+					li.mobile-menu-el
+						span.modal-get(data-modal="registration") Регистрация
+			li.mobile-menu-el.mobile-menu-el--sub
+				span Регион
+				ul.mobile-menu__two-lvl
+					li.mobile-menu-el
+						span Регион 1
+					li.mobile-menu-el
+						span Регион 2
+	//block mobile-menu end
