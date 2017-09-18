@@ -132,7 +132,7 @@
 		padding: 0
 		.main-cont
 			padding: 0
-	padding: 40px 0
+	padding: 10px 0 40px 0
 	position: relative
 
 .head-toggle
@@ -210,11 +210,13 @@
 		flex(mid)
 	margin-bottom: 20px
 	.icon
+		+below(1024px)
+			max-height 30px
 		+below(768px)
 			width: 30%
 			min-width 110px
 		width 240px
-		max-height 30px
+		max-height 55px
 
 .head-logo__text
 	+below(1024px)

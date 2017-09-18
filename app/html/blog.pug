@@ -1,0 +1,52 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+
+.content
+	.main-cont
+		.content-tool
+			.breadcrumbs
+				-
+					var items = [
+					'Главная',
+					'Одежда',
+					'Жакеты и пиджаки',
+					'Жакеты',
+					'Жакет - Perfect Mango'
+					];
+				each item in items
+					a(href="#").breadcrumbs__el #{item}
+			a(href="#").back
+				+icon("dirrect","icon")
+				.back__text Вернуться в каталог
+		.page-title Жакеты и пиджаки
+
+	.main-cont
+		.blog
+			.blog-slider-wrap
+				.blog-slider-control
+					.blog-slider-control__el.blog-slider-control__el--prev
+						+icon("arrow-left","icon")
+					.blog-slider-control__el.blog-slider-control__el--next
+						+icon("arrow-right","icon")
+				.blog-slider.owl-carousel
+					- for (var i=0;i<4;i++)
+						a(href="#").blog-slider__el
+							.blog-slider__el-img(style="background-image:url('img/blog-baner.jpg')")
+							.blog-slider__el-info
+								.blog-slider__el-date 28 Декабря, 2017
+								.blog-slider__el-text Как носить вещи из подиумной коллекции H&M Studio AW 201#{i}
+			.blog-wrap
+				- for (var i=0;i<8;i++)
+					a(href="#").blog-el
+						.blog-el__img
+							.blog-el__img-item(style="background-image:url('img/blog-item.jpg')")
+						.blog-el__date 25 Октбяря, 2017
+						.blog-el__text #{i} способов носить обычную футболку,о которых вы еще не знали
+				a(href="#").blog-el.blog-el--simple
+					.blog-el__date 25 Октбяря, 2017
+					.blog-el__text Главные тренды осенне-зимнего	сезона 2017
+
++footer()
+include ./block_html/_script.pug

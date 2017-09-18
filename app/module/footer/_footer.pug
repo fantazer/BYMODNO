@@ -26,11 +26,11 @@ mixin footer()
 					.footer-title О нас
 					.footer-type.footer-type--black ByModno 2017
 					.footer-type Проект byModno - это больше чем интернет магазин. Это сеть магазинов, имеющих интернет-площадкудля продажи своей продукции.
-					.footer-contact +7 916 914 08 08; modno.rabota@mail.ru
+					a(href="#").footer-link Публичная оферта
+					a(href="#").footer-link Политика конфиденциальности
 				.footer__soc
 					.footer__soc-cont
 						.footer-title Мы в соц. сетях
-						.footer-type Подписывайтесь, будьте вкурсе последних новостей
 						.soc-row
 							a(href="#").soc-el
 								+icon("soc-instagram","icon")
@@ -40,6 +40,7 @@ mixin footer()
 								+icon("soc-facebook","icon")
 							a(href="#").soc-el
 								+icon("soc-vk","icon")
+						.footer-type Подписывайтесь, будьте вкурсе последних новостей
 				.footer__pay
 					.footer-title Способы оплаты
 					.pay-row
@@ -49,4 +50,6 @@ mixin footer()
 							+icon("visa","icon")
 					.footer-type Вы можете оплатить покупки наличными при получении, либо выбрать другой способ оплаты.
 
+		.scroll-up
+			+icon("arrow-up","icon")
 	//block footer end

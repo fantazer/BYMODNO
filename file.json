@@ -9,6 +9,7 @@
 	"page":{
 		"index":"index",
 		"list":"list",
+		"blog":"blog",
 		"card":"card"
 	}
 }

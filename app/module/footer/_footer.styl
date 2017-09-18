@@ -1,7 +1,7 @@
 .subscribe
 	+below(768px)
 		padding: 30px 0
-	bgi('bg-subscribe.png')
+	bgi('bg-subscribe.jpg')
 	bg-full()
 	flex(mid)
 	fl()
@@ -74,24 +74,42 @@
 		fw()
 		width: 100%
 		padding: 0 10px
+		min-width auto
 	min-width 620px
 	flex(between)
 	width: 40%
 
 .footer-wrap
+	+below(768px)
+		padding: 20px 0
 	padding: 40px 0
 
 .footer
+	+below(768px)
+		flex(mid)
+		fl()
+		fw()
 	f()
 	justify-content: space-between
 
 .footer__about
+	+below(1024px)
+		width: 33%
+		padding: 25px 10px
+	+below(768px)
+		order 2
+		width: 100%
+		max-width 300px
+		border 0
+		padding: 10px
 	width: 46%
 	padding: 25px 0
 	padding-right: 15%
 	border-right:1px solid $border-color
 
 .footer-title
+	+below(768px)
+		display: none
 	@extend .type--md
 	up()
 	font-weight 600
@@ -99,6 +117,9 @@
 	margin-bottom: 30px
 
 .footer-type
+	+below(768px)
+		margin-bottom: 10px
+		text-align: center
 	color #898989
 	margin-bottom: 30px
 
@@ -108,13 +129,27 @@
 .footer-contact
 	color black
 .footer__soc
+	+below(1024px)
+		width: 33%
+		padding: 25px 10px
+	+below(768px)
+		width: 100%
+		max-width 300px
+		order 3
+		padding: 10px
 	width: 35%
 	padding: 25px 0
 	flex(mid)
 	align-items: flex-start
 
 .footer__soc-cont
+	+below(1024px)
+		width: 100%
 	width: 70%
+	.soc-row
+		+below(768px)
+			flex(mid)
+		margin-bottom: 30px
 
 .soc-row
 	f()
@@ -138,9 +173,19 @@
 			fill black
 //.icon
 .footer__pay
+	+below(1024px)
+		width: 33%
+	+below(768px)
+		order 1
+		width: 100%
+		max-width 300px
+		padding: 10px
 	width: 20%
 	padding: 25px 0
 .pay-row
+	+below(768px)
+		flex(mid)
+		margin-bottom: 10px
 	f()
 	align-items: flex-start
 	margin-bottom: 30px
@@ -151,3 +196,10 @@
 			height: 55px
 		.icon.icon--master
 			size 55px
+
+.footer-link
+	+below(768px)
+		text-align: center
+	@extend .link--mark
+	display: block
+	margin-bottom: 10px
