@@ -15,23 +15,29 @@
 	background: white
 	tr(all)
 	+below(1024px)
+		&:hover
+			.item__img--one
+				opacity 0
+				//transform translateY(-100%)
+			.item__img--two
+				opacity 1
 		height: auto
 		.item__content
-			padding: 20px
+			height: auto
+			//padding: 20px
 			z-index 20
 			//overflow inherit
 			width:auto
-			height 600px
 			top initial
 			left initial
 			z-index 20
-			box-shadow 0 1px 2px rgba(0, 0, 0, 0.21)
+			//box-shadow 0 1px 2px rgba(0, 0, 0, 0.21)
 			position: static
 		.item__img--one
-			opacity 0
+			opacity 1
 			//transform translateY(-100%)
 		.item__img--two
-			opacity 1
+			opacity 0
 		.item__construct
 			height: auto
 			//transform translateY(0%)
@@ -85,7 +91,7 @@
 	position: absolute
 	top 0
 	left 0
-	transition all .8s
+	//transition all .8s
 //.item__info
 
 .item__price
@@ -158,6 +164,8 @@
 	+below(1200px)
 		padding: 5px
 		font-size: 12px
+		&:first-child
+			margin-left: 0
 	width: 100%
 	padding: 10px
 	border 1px solid $border-color

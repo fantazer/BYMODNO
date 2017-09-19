@@ -33,7 +33,9 @@ include block_html/_include.pug
 				.blog-slider.owl-carousel
 					- for (var i=0;i<4;i++)
 						a(href="#").blog-slider__el
-							.blog-slider__el-img(style="background-image:url('img/blog-baner.jpg')")
+							//.blog-slider__el-img(style="background-image:url('img/blog-baner.jpg')")
+							.blog-slider__el-img
+								img(src="img/blog-baner.jpg", alt="")
 							.blog-slider__el-info
 								.blog-slider__el-date 28 Декабря, 2017
 								.blog-slider__el-text Как носить вещи из подиумной коллекции H&M Studio AW 201#{i}
@@ -41,7 +43,8 @@ include block_html/_include.pug
 				- for (var i=0;i<8;i++)
 					a(href="#").blog-el
 						.blog-el__img
-							.blog-el__img-item(style="background-image:url('img/blog-item.jpg')")
+							//.blog-el__img-item(style="background-image:url('img/item-2.jpg')")
+							img(src="img/blog-item.jpg", alt="").blog-el__img-item
 						.blog-el__date 25 Октбяря, 2017
 						.blog-el__text #{i} способов носить обычную футболку,о которых вы еще не знали
 				a(href="#").blog-el.blog-el--simple

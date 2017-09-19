@@ -1,0 +1,126 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+
+.content
+	.main-cont
+		.content-tool
+			.breadcrumbs
+				-
+					var items = [
+					'Главная',
+					'Одежда',
+					'Жакеты и пиджаки',
+					'Жакеты',
+					'Жакет - Perfect Mango'
+					];
+				each item in items
+					a(href="#").breadcrumbs__el #{item}
+			a(href="#").back
+				+icon("dirrect","icon")
+				.back__text Вернуться в каталог
+		.page-title Контакты
+
+	.main-cont
+		.contact
+			.contact-tab
+				.contact-tab-head
+					.contact-tab__el.contact-tab__el--active(data-tab="tab-one") Барнаул
+					.contact-tab__el(data-tab="tab-two") Новосибирск
+					.contact-tab__el(data-tab="tab-three") Москва
+				.contact-attr.contact-attr--active(data-tab="tab-one")
+					.contact-info
+						.contact-info__el
+							.contact-info__icon
+								+icon("map","icon")
+							.contact-info__text ул. Пролетарская д. 56 <br> (вход с улицы Максима Горького)
+						.contact-info__el
+							.contact-info__icon
+								+icon("phone","icon")
+							.contact-info__text +7 913 210 04 71
+						.contact-info__el
+							.contact-info__icon
+								+icon("mail","icon")
+							.contact-info__text byMODNO22@mail.ru
+						.soc-row
+							a(href="#").soc-el
+								+icon("soc-instagram","icon")
+							a(href="#").soc-el
+								+icon("soc-twitter","icon")
+							a(href="#").soc-el
+								+icon("soc-facebook","icon")
+							a(href="#").soc-el
+								+icon("soc-vk","icon")
+				.contact-attr(data-tab="tab-two")
+					.contact-info
+						.contact-info__el
+							.contact-info__icon
+								+icon("map","icon")
+							.contact-info__text ул. Ленина д. 56 <br> (вход с улицы Максима Горького)
+						.contact-info__el
+							.contact-info__icon
+								+icon("phone","icon")
+							.contact-info__text +7 913 232 12 12
+						.contact-info__el
+							.contact-info__icon
+								+icon("mail","icon")
+							.contact-info__text next@mail.ru
+						.soc-row
+							a(href="#").soc-el
+								+icon("soc-instagram","icon")
+							a(href="#").soc-el
+								+icon("soc-twitter","icon")
+							a(href="#").soc-el
+								+icon("soc-facebook","icon")
+							a(href="#").soc-el
+								+icon("soc-vk","icon")
+				.contact-attr(data-tab="tab-three")
+					.contact-info
+						.contact-info__el
+							.contact-info__icon
+								+icon("map","icon")
+							.contact-info__text ул. Маяковского д. 12 <br> (обойти здание с торца)
+						.contact-info__el
+							.contact-info__icon
+								+icon("phone","icon")
+							.contact-info__text +7 495 847 38 28
+						.contact-info__el
+							.contact-info__icon
+								+icon("mail","icon")
+							.contact-info__text info@mail.ru
+						.soc-row
+							a(href="#").soc-el
+								+icon("soc-instagram","icon")
+							a(href="#").soc-el
+								+icon("soc-twitter","icon")
+							a(href="#").soc-el
+								+icon("soc-facebook","icon")
+							a(href="#").soc-el
+								+icon("soc-vk","icon")
+			.contact-map
+				.contact-map__el.contact-map__el--active(data-tab="tab-one") 1 map
+				.contact-map__el(data-tab="tab-two") 2 map
+				.contact-map__el(data-tab="tab-three") 3 map
+		.form-wrap
+			.form-title Связаться с нами
+			.form
+				form(action="#")
+					input(type="text" placeholder="Имя").input
+					.input-row
+						input(type="text" placeholder="Телефон").input.input-row__el
+						input(type="text" placeholder="Email").input.input-row__el
+					textarea(name="text", cols="30", rows="10" placeholder="Сообщение").textarea
+					.check
+						.check-el
+							label.style-label.style-label--checkbox
+								input(type="checkbox" name="agree").sytle-input
+								.sytle-input-element
+									+icon("Check","icon-check")
+								.sytle-input-text В полном объеме ознакомлен с
+									a(href="#") Условиями обработки персональных данных
+									|  и даю свое согласие на обработку персональных данных на указанных условиях.
+					.form-get-row
+						input(type="submit" value="Отправить").form-get
++footer()
+include ./block_html/_script.pug

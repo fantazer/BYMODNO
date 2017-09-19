@@ -1,5 +1,43 @@
 $(document).ready(function(){
 
+	//blog slider
+	$(".blog-slider").owlCarousel({
+		items: 1,
+		autoHeight: false,
+		dots: false,
+		autoplay: true,
+		singleItem: true,
+		nav: false
+	});
+
+	var owl = $('.blog-slider');
+
+	owl.owlCarousel();
+	$('.blog-slider-control__el--prev').click(function() {
+	    owl.trigger('next.owl.carousel');
+	});
+	$('.blog-slider-control__el--next').click(function() {
+	    owl.trigger('prev.owl.carousel', [300]);
+	});
+
+	//scroll top
+	var scrollTop = 450;
+	$(window).scroll(function() {
+		var scroll = $(this).scrollTop();
+		if ( scroll >= scrollTop ) {
+				//var heightHeader=$('.header-main-wrap').height();
+				$('.scroll-up').addClass('scroll-up--show');
+			}
+			else {
+					$('.scroll-up').removeClass('scroll-up--show');
+			}
+	});
+
+	$('.scroll-up').click(function() {
+    $('html, body').animate({scrollTop: 0},800);
+    return false;
+  });
+
 	//===== Mobile slide-left menu =====
 	 var $menu = $("#mobile-menu").mmenu({
 			navbar: {
@@ -79,6 +117,29 @@ $(document).ready(function(){
 		})
 	});
 
+	//tab on card
+	$('.contact-tab__el').click(function(){
+		var current = $(this).data('tab');
+		$('.contact-tab__el').removeClass('contact-tab__el--active');
+		$(this).addClass('contact-tab__el--active');
+		$('.contact-attr').each(function () {
+			var tab = $(this).data('tab');
+			if(tab==current){
+				$(this).addClass('contact-attr--active');
+			}else{
+				$(this).removeClass('contact-attr--active');
+			}
+		})
+		$('.contact-map__el').each(function () {
+			var tab = $(this).data('tab');
+			if(tab==current){
+				$(this).addClass('contact-map__el--active');
+			}else{
+				$(this).removeClass('contact-map__el--active');
+			}
+		})
+	});
+
 	//get height cont-gray
 	var heightContGray = function(){
 		var bredCrumbs = $('.main-cont--bread').height();
@@ -107,9 +168,6 @@ $(document).ready(function(){
 
 
 	//select-end
-	$('.item').hover(function(){
-		$(this).toggleClass('item--active')
-	});
 
 	heightContGray();
 
@@ -261,16 +319,19 @@ $(document).ready(function(){
 	hideToggle('.icon-bars','.top-menu_link');*/
 
 
+
 	var resize = (function () {
 		if( $(this).width() > 1023 ) {
-			heightContGray();
+			$('.item').hover(function(){
+				$(this).toggleClass('item--active')
+			});
     }
     if( $(this).width() < 1023 ) {
     }
 	})();
 
 	$(window).resize(function(){
-		resize
+
 	});
 
 	//resize function end

@@ -82,6 +82,7 @@ body
 
 .page-title
 	+below(1024px)
+		margin-top: 0
 		margin-bottom: 25px
 	+below(768px)
 		font-size: 26px
@@ -89,6 +90,7 @@ body
 	font-weight 500
 	color black
 	text-align: center
+	margin-top: 20px
 	margin-bottom: 70px
 
 .list-cont
@@ -392,12 +394,12 @@ body
 	height: 100%
 	&:after
 		content ''
-+		position: absolute
 		bottom -60px
 		left 0px
 		width: 100%
 		height: 1px
 		background: $border-color
+		position: absolute
 .card-head
 	+below(1024px)
 		margin-bottom: 0
@@ -814,16 +816,13 @@ body
 	+below(768px)
 		fw()
 		height:auto
-
 	f()
-	height: 440px
+	//max-height: 440px
 
 .blog-slider__el-img
 	+below(768px)
 		width: 100%
-		height: 300px
-	+below(640px)
-		height: 250px
+
 	width: 60%
 	bg-full()
 
@@ -843,7 +842,12 @@ body
 	margin-bottom: 30px
 
 .blog-slider__el-text
+	+below(1024px)
+		font-size: 20px
+	+below(768px)
+		font-size: 16px
 	@extend .type--lg
+	color black
 
 .blog-wrap
 	+below(1024px)
@@ -864,13 +868,14 @@ body
 
 .blog-el__img
 	overflow hidden
-	height: 280px
+	//height: 280px
 	margin-bottom: 20px
 
 .blog-el__img-item
 	transition all .7s
 	bg-full()
-	height: 100%
+	background-position top center
+	//height: 100%
 
 .blog-el__date
 	color #808080
@@ -893,4 +898,304 @@ body
 	.blog-el__text
 		text-align: center
 
+.contact-tab-head
+	+below(1024px)
+		height: auto
+	flex(mid)
+	border-bottom 1px solid $border-color
+
+.contact-tab__el
+	+below(768px)
+		padding: 20px 0
+		width: 100%
+		text-align: center
+	+below(640px)
+		font-size: 10px
+	up()
+	cp()
+	text-align: center
+	padding: 20px
+	color #5a5a5a
+
+.contact-tab__el--active
+	color black
+	border-bottom:1px solid black
+	padding-top: 21px
+
+.card-attr
+	display: none
+
+.card-attr--active
+	display: block
+
+.contact
+	+below(768px)
+		margin-bottom: 40px
+	f()
+	fw()
+	margin-bottom: 100px
+
+.contact-tab
+	+below(768px)
+		width: 100%
+	width: 50%
+	background: #fafafa
+
+.contact-map
+	+below(768px)
+		width: 100%
+		height: 300px
+	width: 50%
+	background: gray
+
+.contact-attr
+	display: none
+
+.contact-attr--active
+	+below(768px)
+		flex(mid)
+	f()
+	justify-content: center
+	fl()
+	padding: 0 20%
+
+.contact-info
+	+below(768px)
+		padding: 40px 0
+	padding: 70px 0
+	.soc-row
+		+below(768px)
+			margin-top: 0
+		margin-top: 40px
+
+.contact-info__el
+	f()
+	align-items: flex-start
+	margin-bottom: 30px
+
+.contact-info__icon
+	.icon
+		size 14px
+		fill #808080
+		margin-right: 20px
+
+.contact-info__text
+	line-height: 1.6
+	margin-top: -5px
+
+.contact-map__el
+	display: none
+
+.contact-map__el--active
+	display: block
+
+.check
+	+below(768px)
+		margin-bottom: 40px
+	margin-bottom: 40px
+
+.form-get-row
+	f()
+	justify-content: flex-end
+
+
+.input-row
+	fw()
+	f()
+	justify-content: space-between
+	.input-row__el
+		+below(768px)
+			width: 100%
+		width: 48%
+
+.form-get
+	+below(768px)
+		width: 100%!important
+	@extend .btn--mark
+	@extend .btn--md
+	width: auto!important
+	margin-bottom: 0!important
+
+.sytle-input-text
+	+below(768px)
+		font-size: 10px
+	width:calc(100% - 52px)
+	line-height:1.4
+	a
+		text-decoration: underline
+
+.form-title
+	+below(768px)
+		margin-bottom: 40px
+	@extend .type--lg
+	margin-bottom: 55px
+	text-align: center
+
+.form
+	+below(768px)
+		margin-bottom: 40px
+	center(580px,0px)
+	margin-bottom: 100px
+	form
+		width: 100%
+	input
+		width: 100%
+		margin-bottom: 20px
+		&:focus
+			border 1px solid black
+	textarea
+		width: 100%
+		margin-bottom: 40px
+		&:focus
+			border 1px solid black
+	.style-label
+		align-items: flex-start
+	.sytle-input-element
+		+below(768px)
+			margin-right: 10px
+		margin-right: 30px
+
+.modal-layer
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index 1000
+	top 0
+	left 0
+	visibility: hidden
+	transition all 1s // duration for fade
+	opacity 0
+
+.modal-layer-show
+	visibility: visible
+	opacity 1
+
+.modal-cont
+	width: 100%
+	height: 100%
+	position: relative
+
+.modal-filter
+	position: absolute
+	top: 0
+	left: 0
+	background: rgba(0, 0, 0, 0.6)
+	width: 100%
+	height: 100%
+
+.modal
+	+below(768px)
+		width: 100%
+	transform translate(-50%,-350%)
+	position: absolute
+	top 50%
+	left 50%
+	opacity .1
+	transition transform .8s, opacity 1s
+	//transform translateY(-1000px)
+
+.modal-content
+	+below(768px)
+		padding: 20px
+	padding: 40px
+	background: white
+	+below(768px)
+		width: 80%
+
+.modal-content--register
+	+below(640px)
+		width: 100%
+	width: 500px
+	input
+		width: 100%
+		margin-bottom: 20px
+
+
+.modal__show
+	opacity 1
+	transform translate(-50%,-50%)
+
+.modal-close
+	position: absolute
+	top: 30px
+	right: 30px
+	cp()
+	.icon
+		size 24px
+		fill rgba(0, 0, 0, 0.42)
+
+.modal-open
+	overflow: hidden
+	overflow-x: hidden
+	overflow-y: scroll
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+
+.modal-title
+	@extend .type--lg
+	margin-bottom: 40px
+	text-align: center
+
+.modal-btn
+	+below(768px)
+		width: 100%!important
+	@extend .btn--mark
+	@extend .btn--md
+	width: auto!important
+	margin-bottom: 0!important
+
+.modal-btn-row
+	flex(mid)
+	margin-bottom: 40px
+
+.modal-lengthpass
+	color #747474
+	margin-bottom: 40px
+
+.modal-content--fogot
+	+below(768px)
+		width: 100%
+	width: 580px
+	padding: 30px
+	.modal-title
+		text-align: left
+		margin-bottom: 20px
+
+.modal-fogot-text
+	+below(640px)
+		width: 100%
+	margin-bottom: 20px
+	width: 80%
+
+.input-btn-row
+	+below(640px)
+		fw()
+	flex(between)
+	.input
+		+below(640px)
+			width: 100%
+			margin-bottom: 20px
+		width: 60%
+	.input-btn
+		+below(640px)
+			width: 100%
+		@extend .btn--mark
+		@extend .btn--md
+
+.modal-content--auth
+	width: 100%
+	.enter-wrap
+		min-width 300px
+	.soc-row
+		flex(mid)
+		margin-bottom: 30px
+	.input
+		width: 100%
+		margin-bottom: 20px
+	.enter-wrap
+		box-shadow 0 0 0
 @import "../module/**/*"

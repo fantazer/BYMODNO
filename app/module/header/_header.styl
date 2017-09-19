@@ -250,6 +250,7 @@
 .head-tool__icon--profile
 	+below(1024px)
 		display: none
+	position: relative
 //.head-tool__like
 .head-tool__cart
 	position: relative
@@ -265,3 +266,91 @@
 	size 22px
 	top -5px
 	right: -10px
+
+.enter
+	position: absolute
+	top calc(100% + 30px)
+	right: -50px
+	z-index 1100
+	width: 380px
+	display: none
+	.soc-row
+		flex(mid)
+		margin-bottom: 30px
+	.input
+		width: 100%
+		margin-bottom: 20px
+
+.enter--open
+	display: block
+
+.enter-wrap
+	padding: 35px 20px
+	background: white
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24)
+	position: relative
+
+.enter-coner
+	size 20px
+	transform rotate(45deg)
+	background: white
+	position: absolute
+	top -10px
+	right 52px
+	border-left 1px solid rgba(212, 210, 210, 0.24)
+	border-top 1px solid rgba(212, 210, 210, 0.24)
+
+.enter-close
+	position: absolute
+	top 20px
+	right: 20px
+	.icon
+		fill #a6a6a6
+		size 20px
+
+.enter-title
+	@extend .type--lg
+	margin-bottom: 20px
+	text-align: center
+
+.enter-line
+	position: relative
+	border-bottom 1px solid $border-color
+	margin-bottom: 30px
+
+.enter-line__el
+	flex(mid)
+	round()
+	size 26px
+	border 1px solid #e2e2e2
+	color #e2e2e2
+	position: absolute
+	left 50%
+	top 50%
+	margin-left:-13px
+	margin-top:-13px
+	background: white
+
+.enter-fogotlink
+	text-align: right
+	color #5a5a5a
+	margin-bottom: 30px
+	cp()
+
+.enter-get
+	+below(768px)
+		width: 100%!important
+	@extend .btn--mark
+	@extend .btn--md
+	width: auto!important
+	margin-bottom: 0!important
+
+.enter-get-row
+	flex(mid)
+	margin-bottom: 40px
+
+.enter-account
+	text-align: center
+	.enter-account-get
+		@extend .link--mark
+		cp()

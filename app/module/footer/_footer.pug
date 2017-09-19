@@ -52,4 +52,63 @@ mixin footer()
 
 		.scroll-up
 			+icon("arrow-up","icon")
+
+		//modal
+		.modal-layer
+			.modal-cont
+				.modal-filter
+				.modal-wrap
+					.modal(data-modal="fogot")
+						.modal-content.modal-content--fogot
+							.modal-close
+								+icon("close","icon")
+							.modal-title Восстановление пароля
+							.modal-fogot-text Укажите Ваш e-mail, и мы сможем отправить ссылку для восстановления пароля на Ваш почтовый ящик.
+							form(action="#")
+								.input-btn-row
+									input(type="text" placeholder="Логин").input
+									input(type="submit" value="Выслать").input-btn
+
+
+					.modal(data-modal="register")
+						.modal-content.modal-content--register
+							.modal-close
+								+icon("close","icon")
+							.modal-title Регистрация
+							form(action="#")
+								input(type="text" placeholder="Имя Фамилия").input
+								input(type="text" placeholder="Email").input
+								input(type="password" placeholder="Пароль").input
+								input(type="password" placeholder="Подтвердите пароль").input
+								.modal-lengthpass Пароль должен быть не менее 6 символов длиной.
+								.modal-btn-row
+									input(type="submit" value="Зарегистрироваться").modal-btn
+
+					.modal(data-modal="auth")
+						.modal-content.modal-content--auth
+							.enter-wrap
+								.enter-close
+									+icon("close","icon")
+								.enter-title Войти
+								.soc-row
+									a(href="#").soc-el
+										+icon("soc-instagram","icon")
+									a(href="#").soc-el
+										+icon("soc-twitter","icon")
+									a(href="#").soc-el
+										+icon("soc-facebook","icon")
+									a(href="#").soc-el
+										+icon("soc-vk","icon")
+								.enter-line
+									.enter-line__el /
+								form(action="#")
+									input(type="text" placeholder="email").input
+									input(type="password" placeholder="Пароль").input
+									div(data-modal="fogot").modal-get.enter-fogotlink Забыли пароль?
+									.enter-get-row
+										input(type="submit" value="Войти").enter-get
+
+								.enter-account Нет аккаунта?
+									div(data-modal="register").modal-get.enter-account-get Зарегистрируйтесь
+		//modal-end
 	//block footer end

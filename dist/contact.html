@@ -40,16 +40,7 @@
 		<!--SEO-->
 		<title>Document</title>
 		<meta name="description" itemprop="description" content="" />
-		<!--build:css css/vendor.css-->
-		<link rel="stylesheet" href="bower/normalize.css/normalize.css" />
-		<!--link(rel="stylesheet", href="bower/flexbox-grid-stylus/dist/flexbox-grid.min.css")-->
-		<!--link(rel="stylesheet", href="bower/components-font-awesome/css/font-awesome.css")-->
-		<link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css" />
-		<link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
-		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/css/jquery.mmenu.all.css" />
-		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/extensions/effects/jquery.mmenu.effects.css" />
-		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/extensions/themes/jquery.mmenu.themes.css" />
-		<!--endbuild-->
+		<link rel="stylesheet" href="css/vendor.css">
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-edit.css" />
 	</head>
@@ -128,53 +119,6 @@
 								<svg class="icon">
 									<use xlink:href="#profile"></use>
 								</svg>
-								<div class="enter">
-									<div class="enter-wrap">
-										<div class="enter-coner"></div>
-										<div class="enter-close">
-											<svg class="icon">
-												<use xlink:href="#close"></use>
-											</svg>
-										</div>
-										<div class="enter-title">Войти</div>
-										<div class="soc-row">
-											<a class="soc-el" href="#">
-												<svg class="icon">
-													<use xlink:href="#soc-instagram"></use>
-												</svg>
-											</a>
-											<a class="soc-el" href="#">
-												<svg class="icon">
-													<use xlink:href="#soc-twitter"></use>
-												</svg>
-											</a>
-											<a class="soc-el" href="#">
-												<svg class="icon">
-													<use xlink:href="#soc-facebook"></use>
-												</svg>
-											</a>
-											<a class="soc-el" href="#">
-												<svg class="icon">
-													<use xlink:href="#soc-vk"></use>
-												</svg>
-											</a>
-										</div>
-										<div class="enter-line">
-											<div class="enter-line__el">/</div>
-										</div>
-										<form action="#">
-											<input class="input" type="text" placeholder="email" />
-											<input class="input" type="password" placeholder="Пароль" />
-											<div class="modal-get enter-fogotlink" data-modal="fogot">Забыли пароль?</div>
-											<div class="enter-get-row">
-												<input class="enter-get" type="submit" value="Войти" />
-											</div>
-										</form>
-										<div class="enter-account">Нет аккаунта?
-											<div class="modal-get enter-account-get" data-modal="register">Зарегистрируйтесь</div>
-										</div>
-									</div>
-								</div>
 							</div>
 							<div class="head-tool__icon head-tool__like">
 								<svg class="icon">
@@ -386,10 +330,7 @@
 		<!--head-top-end-->
 		<!--block header end-->
 		<div class="content">
-			<div class="cont-gray">
-				<div class="cont-gray-border"></div>
-			</div>
-			<div class="main-cont main-cont--bread main-cont--gray">
+			<div class="main-cont">
 				<div class="content-tool">
 					<div class="breadcrumbs">
 						<a class="breadcrumbs__el" href="#">Главная</a>
@@ -405,40 +346,144 @@
 						<div class="back__text">Вернуться в каталог</div>
 					</a>
 				</div>
+				<div class="page-title">Контакты</div>
 			</div>
-			<div class="main-cont main-cont--gray">
-				<div class="card-head">
-					<div class="card-head__slider">
-						<div class="card-head__img">
-							<div class="card-img">
-								<div class="card-img__main">
-									<div class="card-img__lg" style="background-image:url('img/item-1.jpg');"></div>
+			<div class="main-cont">
+				<div class="contact">
+					<div class="contact-tab">
+						<div class="contact-tab-head">
+							<div class="contact-tab__el contact-tab__el--active" data-tab="tab-one">Барнаул</div>
+							<div class="contact-tab__el" data-tab="tab-two">Новосибирск</div>
+							<div class="contact-tab__el" data-tab="tab-three">Москва</div>
+						</div>
+						<div class="contact-attr contact-attr--active" data-tab="tab-one">
+							<div class="contact-info">
+								<div class="contact-info__el">
+									<div class="contact-info__icon">
+										<svg class="icon">
+											<use xlink:href="#map"></use>
+										</svg>
+									</div>
+									<div class="contact-info__text">ул. Пролетарская д. 56
+										<br> (вход с улицы Максима Горького)</div>
 								</div>
-								<div class="card-img-row">
-									<div class="card-img__el" style="background-image:url('img/item-2.jpg');">
-										<div class="card-img__filter"></div>
+								<div class="contact-info__el">
+									<div class="contact-info__icon">
+										<svg class="icon">
+											<use xlink:href="#phone"></use>
+										</svg>
 									</div>
-									<div class="card-img__el" style="background-image:url('img/item-3.jpg');">
-										<div class="card-img__filter"></div>
+									<div class="contact-info__text">+7 913 210 04 71</div>
+								</div>
+								<div class="contact-info__el">
+									<div class="contact-info__icon">
+										<svg class="icon">
+											<use xlink:href="#mail"></use>
+										</svg>
 									</div>
-									<div class="card-img__el" style="background-image:url('img/item-4.jpg');">
-										<div class="card-img__filter"></div>
+									<div class="contact-info__text">byMODNO22@mail.ru</div>
+								</div>
+								<div class="soc-row">
+									<a class="soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-instagram"></use>
+										</svg>
+									</a>
+									<a class="soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-twitter"></use>
+										</svg>
+									</a>
+									<a class="soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-facebook"></use>
+										</svg>
+									</a>
+									<a class="soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-vk"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="contact-attr" data-tab="tab-two">
+							<div class="contact-info">
+								<div class="contact-info__el">
+									<div class="contact-info__icon">
+										<svg class="icon">
+											<use xlink:href="#map"></use>
+										</svg>
 									</div>
-									<div class="card-img__el" style="background-image:url('img/item-5.jpg');">
-										<div class="card-img__filter"></div>
+									<div class="contact-info__text">ул. Ленина д. 56
+										<br> (вход с улицы Максима Горького)</div>
+								</div>
+								<div class="contact-info__el">
+									<div class="contact-info__icon">
+										<svg class="icon">
+											<use xlink:href="#phone"></use>
+										</svg>
 									</div>
-									<div class="card-img__el" style="background-image:url('img/item-2.jpg');">
-										<div class="card-img__filter"></div>
+									<div class="contact-info__text">+7 913 232 12 12</div>
+								</div>
+								<div class="contact-info__el">
+									<div class="contact-info__icon">
+										<svg class="icon">
+											<use xlink:href="#mail"></use>
+										</svg>
 									</div>
-									<div class="card-img__el" style="background-image:url('img/item-3.jpg');">
-										<div class="card-img__filter"></div>
+									<div class="contact-info__text">next@mail.ru</div>
+								</div>
+								<div class="soc-row">
+									<a class="soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-instagram"></use>
+										</svg>
+									</a>
+									<a class="soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-twitter"></use>
+										</svg>
+									</a>
+									<a class="soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-facebook"></use>
+										</svg>
+									</a>
+									<a class="soc-el" href="#">
+										<svg class="icon">
+											<use xlink:href="#soc-vk"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="contact-attr" data-tab="tab-three">
+							<div class="contact-info">
+								<div class="contact-info__el">
+									<div class="contact-info__icon">
+										<svg class="icon">
+											<use xlink:href="#map"></use>
+										</svg>
 									</div>
-									<div class="card-img__el" style="background-image:url('img/item-4.jpg');">
-										<div class="card-img__filter"></div>
+									<div class="contact-info__text">ул. Маяковского д. 12
+										<br> (обойти здание с торца)</div>
+								</div>
+								<div class="contact-info__el">
+									<div class="contact-info__icon">
+										<svg class="icon">
+											<use xlink:href="#phone"></use>
+										</svg>
 									</div>
-									<div class="card-img__el" style="background-image:url('img/item-5.jpg');">
-										<div class="card-img__filter"></div>
+									<div class="contact-info__text">+7 495 847 38 28</div>
+								</div>
+								<div class="contact-info__el">
+									<div class="contact-info__icon">
+										<svg class="icon">
+											<use xlink:href="#mail"></use>
+										</svg>
 									</div>
+									<div class="contact-info__text">info@mail.ru</div>
 								</div>
 								<div class="soc-row">
 									<a class="soc-el" href="#">
@@ -465,375 +510,41 @@
 							</div>
 						</div>
 					</div>
-					<div class="card-head__info">
-						<div class="card-about">
-							<div class="card-title">Жакет - PERFECT Mango</div>
-							<div class="card-tool">
-								<div class="card-price">
-									<div class="card-price--false">
-										<span>6 200</span>
-										<div class="rub">a</div>
-									</div>
-									<div class="card-price--true">
-										<span>4 960</span>
-										<div class="rub">a</div>
-									</div>
-								</div>
-								<div class="card-filter">
-									<div class="card-filter__size">
-										<select class="select-beauty select--order">
-											<option>
-												<span class="order-size-name">Размер:</span>
-												<span>XXL</span>
-											</option>
-											<option>
-												<span class="order-size-name">Размер:</span>
-												<span>XL</span>
-											</option>
-											<option>
-												<span class="order-size-name">Размер:</span>
-												<span>SM</span>
-											</option>
-										</select>
-									</div>
-									<div class="card-filter__color">
-										<select class="select-beauty select--order">
-											<option data-color="#f3141c" data-text="Цвет:">Красный</option>
-											<option data-color="#5cd37c" data-text="Цвет:">Зеленый</option>
-											<option data-color="#4592db" data-text=":">Синиий</option>
-										</select>
-									</div>
-								</div>
-								<div class="card-get">
-									<div class="card-get__btn">Подробнеее</div>
-									<div class="card-get__like">
-										<svg class="icon">
-											<use xlink:href="#like"></use>
-										</svg>
-									</div>
-								</div>
-								<div class="card-size">Как выбрать размер</div>
-								<div class="card-isset">Наличие в розничных магазинах</div>
-							</div>
-						</div>
-						<div class="card-descr-warp">
-							<div class="card-descr-cont">
-								<div class="card-descr">
-									<div class="card-tab-head">
-										<div class="card-tab__el card-tab__el--active" data-tab="tab-one">Описание</div>
-										<div class="card-tab__el" data-tab="tab-two">Доставка</div>
-										<div class="card-tab__el" data-tab="tab-three">Оплата</div>
-										<div class="card-tab__el" data-tab="tab-four">Вопросы</div>
-									</div>
-									<div class="card-attr card-attr--active" data-tab="tab-one">
-										<div class="card-attr__text">Асимметричная застежка на молнию. Подплечники. Длинные рукава. Подкладка. Новый фасон цвет и текстура</div>
-										<div class="card-attr__cont">
-											<div class="card-attr-row">
-												<div class="card-attr-row__cont">
-													<div class="card-attr-title">Состав:</div>
-													<div class="card-attr-dot"></div>
-												</div>
-												<div class="card-attr-value">Полиэстер - 100%</div>
-											</div>
-											<div class="card-attr-row">
-												<div class="card-attr-row__cont">
-													<div class="card-attr-title">Материал подкладки:</div>
-													<div class="card-attr-dot"></div>
-												</div>
-												<div class="card-attr-value">Полиэстер - 95%, Эластан - 5%</div>
-											</div>
-											<div class="card-attr-row">
-												<div class="card-attr-row__cont">
-													<div class="card-attr-title">Узор:</div>
-													<div class="card-attr-dot"></div>
-												</div>
-												<div class="card-attr-value">Однотонный</div>
-											</div>
-											<div class="card-attr-row">
-												<div class="card-attr-row__cont">
-													<div class="card-attr-title">Рост модели на фото:</div>
-													<div class="card-attr-dot"></div>
-												</div>
-												<div class="card-attr-value">177</div>
-											</div>
-											<div class="card-attr-row">
-												<div class="card-attr-row__cont">
-													<div class="card-attr-title">Длина:</div>
-													<div class="card-attr-dot"></div>
-												</div>
-												<div class="card-attr-value">56 см</div>
-											</div>
-											<div class="card-attr-row">
-												<div class="card-attr-row__cont">
-													<div class="card-attr-title">Цвет: :</div>
-													<div class="card-attr-dot"></div>
-												</div>
-												<div class="card-attr-value">Синий</div>
-											</div>
-											<div class="card-attr-row">
-												<div class="card-attr-row__cont">
-													<div class="card-attr-title">Застежка:</div>
-													<div class="card-attr-dot"></div>
-												</div>
-												<div class="card-attr-value">на молнии</div>
-											</div>
-											<div class="card-attr-row">
-												<div class="card-attr-row__cont">
-													<div class="card-attr-title">Детали одежды:</div>
-													<div class="card-attr-dot"></div>
-												</div>
-												<div class="card-attr-value">рюши/воланы</div>
-											</div>
-											<div class="card-attr-row">
-												<div class="card-attr-row__cont">
-													<div class="card-attr-title">Артикул:</div>
-													<div class="card-attr-dot"></div>
-												</div>
-												<div class="card-attr-value">MA002EWWFA76</div>
-											</div>
-										</div>
-									</div>
-									<div class="card-attr" data-tab="tab-two">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut aliquam illo sed tempora, unde veniam incidunt consequuntur placeat eligendi animi facere voluptate consectetur alias non impedit tenetur reprehenderit quaerat.</p>
-									</div>
-									<div class="card-attr" data-tab="tab-three">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut aliquam illo sed tempora, unde veniam incidunt consequuntur placeat eligendi animi facere voluptate consectetur alias non impedit tenetur reprehenderit quaerat.</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut aliquam illo sed tempora, unde veniam incidunt consequuntur placeat eligendi animi facere voluptate consectetur alias non impedit tenetur reprehenderit quaerat.</p>
-									</div>
-									<div class="card-attr" data-tab="tab-four">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut aliquam illo sed tempora, unde veniam incidunt consequuntur placeat eligendi animi facere voluptate consectetur alias non impedit tenetur reprehenderit quaerat.</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut aliquam illo sed tempora, unde veniam incidunt consequuntur placeat eligendi animi facere voluptate consectetur alias non impedit tenetur reprehenderit quaerat.</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ut aliquam illo sed tempora, unde veniam incidunt consequuntur placeat eligendi animi facere voluptate consectetur alias non impedit tenetur reprehenderit quaerat.</p>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="contact-map">
+						<div class="contact-map__el contact-map__el--active" data-tab="tab-one">1 map</div>
+						<div class="contact-map__el" data-tab="tab-two">2 map</div>
+						<div class="contact-map__el" data-tab="tab-three">3 map</div>
 					</div>
 				</div>
-			</div>
-			<div class="canlike">
-				<div class="main-cont">
-					<div class="canlike--title">Вам так же может понравиться</div>
-					<div class="canlike-wrap">
-						<!--block item-->
-						<div class="item">
-							<div class="item__content">
-								<div class="item-wrap">
-									<div class="item-head">
-										<div class="item__img-wrap">
-											<div class="item-label item-label--sale">-20%</div>
-											<!-- use for new item <div class="item-label item-label--time">new</div>-->
-											<div class="item__img item__img--one" style="background-image:url('img/item-1.jpg');"></div>
-											<div class="item__img item__img--two" style="background-image:url('img/item-2.jpg');"></div>
-										</div>
-										<div class="item__info">
-											<div class="item__price">
-												<div class="item__price-false">
-													<span>6 200</span>
-													<div class="rub">a</div>
-												</div>
-												<div class="item__price-true">
-													<span>4 960</span>
-													<div class="rub">a</div>
-												</div>
-											</div>
-											<div class="item__descr">Perfect Mango Черный пиджак из шерсти с ремнем</div>
-										</div>
-									</div>
-								</div>
-								<div class="item__construct">
-									<div class="item__construct-title">Доступные размеры</div>
-									<div class="item-size">
-										<div class="item-size__el">XXS</div>
-										<div class="item-size__el">XS</div>
-										<div class="item-size__el">S</div>
-										<div class="item-size__el">XXS</div>
-										<div class="item-size__el">L</div>
-										<div class="item-size__el">XL</div>
-										<div class="item-size__el item-size__el--disable">XXL</div>
-									</div>
-									<div class="item-get">
-										<div class="item-get__btn">Подробнеее</div>
-										<div class="item-get__like">
-											<svg class="icon">
-												<use xlink:href="#like"></use>
+				<div class="form-wrap">
+					<div class="form-title">Связаться с нами</div>
+					<div class="form">
+						<form action="#">
+							<input class="input" type="text" placeholder="Имя" />
+							<div class="input-row">
+								<input class="input input-row__el" type="text" placeholder="Телефон" />
+								<input class="input input-row__el" type="text" placeholder="Email" />
+							</div>
+							<textarea class="textarea" name="text" cols="30" rows="10" placeholder="Сообщение"></textarea>
+							<div class="check">
+								<div class="check-el">
+									<label class="style-label style-label--checkbox">
+										<input class="sytle-input" type="checkbox" name="agree" />
+										<div class="sytle-input-element">
+											<svg class="icon-check">
+												<use xlink:href="#Check"></use>
 											</svg>
 										</div>
-									</div>
+										<div class="sytle-input-text">В полном объеме ознакомлен с
+											<a href="#">Условиями обработки персональных данных</a> и даю свое согласие на обработку персональных данных на указанных условиях.</div>
+									</label>
 								</div>
 							</div>
-						</div>
-						<!--block item end-->
-						<!--block item-->
-						<div class="item">
-							<div class="item__content">
-								<div class="item-wrap">
-									<div class="item-head">
-										<div class="item__img-wrap">
-											<div class="item-label item-label--sale">-20%</div>
-											<!-- use for new item <div class="item-label item-label--time">new</div>-->
-											<div class="item__img item__img--one" style="background-image:url('img/item-1.jpg');"></div>
-											<div class="item__img item__img--two" style="background-image:url('img/item-2.jpg');"></div>
-										</div>
-										<div class="item__info">
-											<div class="item__price">
-												<div class="item__price-false">
-													<span>6 200</span>
-													<div class="rub">a</div>
-												</div>
-												<div class="item__price-true">
-													<span>4 960</span>
-													<div class="rub">a</div>
-												</div>
-											</div>
-											<div class="item__descr">Perfect Mango Черный пиджак из шерсти с ремнем</div>
-										</div>
-									</div>
-								</div>
-								<div class="item__construct">
-									<div class="item__construct-title">Доступные размеры</div>
-									<div class="item-size">
-										<div class="item-size__el">XXS</div>
-										<div class="item-size__el">XS</div>
-										<div class="item-size__el">S</div>
-										<div class="item-size__el">XXS</div>
-										<div class="item-size__el">L</div>
-										<div class="item-size__el">XL</div>
-										<div class="item-size__el item-size__el--disable">XXL</div>
-									</div>
-									<div class="item-get">
-										<div class="item-get__btn">Подробнеее</div>
-										<div class="item-get__like">
-											<svg class="icon">
-												<use xlink:href="#like"></use>
-											</svg>
-										</div>
-									</div>
-								</div>
+							<div class="form-get-row">
+								<input class="form-get" type="submit" value="Отправить" />
 							</div>
-						</div>
-						<!--block item end-->
-						<!--block item-->
-						<div class="item">
-							<div class="item__content">
-								<div class="item-wrap">
-									<div class="item-head">
-										<div class="item__img-wrap">
-											<div class="item-label item-label--sale">-20%</div>
-											<!-- use for new item <div class="item-label item-label--time">new</div>-->
-											<div class="item__img item__img--one" style="background-image:url('img/item-1.jpg');"></div>
-											<div class="item__img item__img--two" style="background-image:url('img/item-2.jpg');"></div>
-										</div>
-										<div class="item__info">
-											<div class="item__price">
-												<div class="item__price-false">
-													<span>6 200</span>
-													<div class="rub">a</div>
-												</div>
-												<div class="item__price-true">
-													<span>4 960</span>
-													<div class="rub">a</div>
-												</div>
-											</div>
-											<div class="item__descr">Perfect Mango Черный пиджак из шерсти с ремнем</div>
-										</div>
-									</div>
-								</div>
-								<div class="item__construct">
-									<div class="item__construct-title">Доступные размеры</div>
-									<div class="item-size">
-										<div class="item-size__el">XXS</div>
-										<div class="item-size__el">XS</div>
-										<div class="item-size__el">S</div>
-										<div class="item-size__el">XXS</div>
-										<div class="item-size__el">L</div>
-										<div class="item-size__el">XL</div>
-										<div class="item-size__el item-size__el--disable">XXL</div>
-									</div>
-									<div class="item-get">
-										<div class="item-get__btn">Подробнеее</div>
-										<div class="item-get__like">
-											<svg class="icon">
-												<use xlink:href="#like"></use>
-											</svg>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--block item end-->
-						<!--block item-->
-						<div class="item">
-							<div class="item__content">
-								<div class="item-wrap">
-									<div class="item-head">
-										<div class="item__img-wrap">
-											<div class="item-label item-label--sale">-20%</div>
-											<!-- use for new item <div class="item-label item-label--time">new</div>-->
-											<div class="item__img item__img--one" style="background-image:url('img/item-1.jpg');"></div>
-											<div class="item__img item__img--two" style="background-image:url('img/item-2.jpg');"></div>
-										</div>
-										<div class="item__info">
-											<div class="item__price">
-												<div class="item__price-false">
-													<span>6 200</span>
-													<div class="rub">a</div>
-												</div>
-												<div class="item__price-true">
-													<span>4 960</span>
-													<div class="rub">a</div>
-												</div>
-											</div>
-											<div class="item__descr">Perfect Mango Черный пиджак из шерсти с ремнем</div>
-										</div>
-									</div>
-								</div>
-								<div class="item__construct">
-									<div class="item__construct-title">Доступные размеры</div>
-									<div class="item-size">
-										<div class="item-size__el">XXS</div>
-										<div class="item-size__el">XS</div>
-										<div class="item-size__el">S</div>
-										<div class="item-size__el">XXS</div>
-										<div class="item-size__el">L</div>
-										<div class="item-size__el">XL</div>
-										<div class="item-size__el item-size__el--disable">XXL</div>
-									</div>
-									<div class="item-get">
-										<div class="item-get__btn">Подробнеее</div>
-										<div class="item-get__like">
-											<svg class="icon">
-												<use xlink:href="#like"></use>
-											</svg>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--block item end-->
+						</form>
 					</div>
-				</div>
-			</div>
-			<div class="main-cont">
-				<div class="links">
-					<a class="links-el link--mark" href="#">Жакеты</a>
-					<a class="links-el link--mark" href="#">Пиджаки</a>
-					<a class="links-el link--mark" href="#">Длинные платья</a>
-					<a class="links-el link--mark" href="#">Короткие платья</a>
-					<a class="links-el link--mark" href="#">Юбки</a>
-					<a class="links-el link--mark" href="#">Красные платья</a>
-					<a class="links-el link--mark" href="#">Джинсы</a>
-					<a class="links-el link--mark" href="#">Распродажа</a>
-					<a class="links-el link--mark" href="#">Новинки</a>
-					<a class="links-el link--mark" href="#">Тапочки</a>
-					<a class="links-el link--mark" href="#">Шляпы</a>
-					<a class="links-el link--mark" href="#">Сарафаны</a>
-					<a class="links-el link--mark" href="#">Популярное</a>
-					<a class="links-el link--mark" href="#">Скидки</a>
-					<a class="links-el link--mark" href="#">Синий</a>
-					<a class="links-el link--mark" href="#">Желтый</a>
-					<a class="links-el link--mark" href="#">К лету</a>
-					<a class="links-el link--mark" href="#">Большой размер</a>
 				</div>
 			</div>
 		</div>
@@ -1173,7 +884,7 @@
 					<span>Личный кабинет</span>
 					<ul class="mobile-menu__two-lvl">
 						<li class="mobile-menu-el">
-							<span class="modal-get" data-modal="auth">Вход</span>
+							<span class="modal-get" data-modal="enter">Вход</span>
 						</li>
 						<li class="mobile-menu-el">
 							<span class="modal-get" data-modal="registration">Регистрация</span>
@@ -1275,110 +986,9 @@
 					<use xlink:href="#arrow-up"></use>
 				</svg>
 			</div>
-			<!--modal-->
-			<div class="modal-layer">
-				<div class="modal-cont">
-					<div class="modal-filter"></div>
-					<div class="modal-wrap">
-						<div class="modal" data-modal="fogot">
-							<div class="modal-content modal-content--fogot">
-								<div class="modal-close">
-									<svg class="icon">
-										<use xlink:href="#close"></use>
-									</svg>
-								</div>
-								<div class="modal-title">Восстановление пароля</div>
-								<div class="modal-fogot-text">Укажите Ваш e-mail, и мы сможем отправить ссылку для восстановления пароля на Ваш почтовый ящик.</div>
-								<form action="#">
-									<div class="input-btn-row">
-										<input class="input" type="text" placeholder="Логин" />
-										<input class="input-btn" type="submit" value="Выслать" />
-									</div>
-								</form>
-							</div>
-						</div>
-						<div class="modal" data-modal="register">
-							<div class="modal-content modal-content--register">
-								<div class="modal-close">
-									<svg class="icon">
-										<use xlink:href="#close"></use>
-									</svg>
-								</div>
-								<div class="modal-title">Регистрация</div>
-								<form action="#">
-									<input class="input" type="text" placeholder="Имя Фамилия" />
-									<input class="input" type="text" placeholder="Email" />
-									<input class="input" type="password" placeholder="Пароль" />
-									<input class="input" type="password" placeholder="Подтвердите пароль" />
-									<div class="modal-lengthpass">Пароль должен быть не менее 6 символов длиной.</div>
-									<div class="modal-btn-row">
-										<input class="modal-btn" type="submit" value="Зарегистрироваться" />
-									</div>
-								</form>
-							</div>
-						</div>
-						<div class="modal" data-modal="auth">
-							<div class="modal-content modal-content--auth">
-								<div class="enter-wrap">
-									<div class="enter-close">
-										<svg class="icon">
-											<use xlink:href="#close"></use>
-										</svg>
-									</div>
-									<div class="enter-title">Войти</div>
-									<div class="soc-row">
-										<a class="soc-el" href="#">
-											<svg class="icon">
-												<use xlink:href="#soc-instagram"></use>
-											</svg>
-										</a>
-										<a class="soc-el" href="#">
-											<svg class="icon">
-												<use xlink:href="#soc-twitter"></use>
-											</svg>
-										</a>
-										<a class="soc-el" href="#">
-											<svg class="icon">
-												<use xlink:href="#soc-facebook"></use>
-											</svg>
-										</a>
-										<a class="soc-el" href="#">
-											<svg class="icon">
-												<use xlink:href="#soc-vk"></use>
-											</svg>
-										</a>
-									</div>
-									<div class="enter-line">
-										<div class="enter-line__el">/</div>
-									</div>
-									<form action="#">
-										<input class="input" type="text" placeholder="email" />
-										<input class="input" type="password" placeholder="Пароль" />
-										<div class="modal-get enter-fogotlink" data-modal="fogot">Забыли пароль?</div>
-										<div class="enter-get-row">
-											<input class="enter-get" type="submit" value="Войти" />
-										</div>
-									</form>
-									<div class="enter-account">Нет аккаунта?
-										<div class="modal-get enter-account-get" data-modal="register">Зарегистрируйтесь</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--modal-end-->
 		</div>
 		<!--block footer end-->
-		<!--build:js js/combined.js-->
-		<script src="bower/jquery/dist/jquery.js"></script>
-		<script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
-		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
-		<script src="js/jquery.smoothscroll.js"></script>
-		<script src="bower/jquery-nice-select/js/jquery.nice-select.js"></script>
-		<script src="bower/jQuery.mmenu/dist/js/jquery.mmenu.all.min.umd.js"></script>
-		<!-- endbuild-->
+		<script src="js/combined.js"></script>
 		<script src="js/script.js"></script>
 		<script src="js/script-edit.js"></script>
 	</body>

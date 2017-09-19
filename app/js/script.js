@@ -1,5 +1,66 @@
 $(document).ready(function(){
 
+	//modal
+	var scrollPos = 0;
+	var closeModal = function () {
+  	$('.modal-layer').removeClass('modal-layer-show');
+  	$("body").removeClass("modal-fix");
+  	$('body').css({
+            overflow: '',
+            position: '',
+            top: ''
+        }).scrollTop(scrollPos);
+    $('.modal').removeClass('modal__show');
+		$('.enter').removeClass('enter--open');
+	};
+
+	var openModal = function () {
+  	if(!$('.modal-layer').hasClass('modal-layer-show')){
+			$('.modal-layer').addClass('modal-layer-show');
+		}
+		if(!$("body").hasClass("modal-fix")){
+			$("body").addClass("modal-fix");
+			 scrollPos = $('body').scrollTop();
+        $('body').css({
+            overflow: 'hidden',
+            position: 'fixed',
+            overflowY: 'scroll',
+            top : -scrollPos,
+            width:'100%'
+        });
+		}
+	};
+
+	$('.modal-get').click(function (){
+		$('.enter').removeClass('enter--open');
+		openModal();
+		var currentModal = $(this).data("modal");
+		$('.modal').each(function () {
+			if ($(this).data('modal')===currentModal){
+				$(this).addClass('modal__show')
+			} else {
+				$(this).removeClass('modal__show')
+			}
+		});
+	});
+
+	$('.modal-close , .modal-filter, .toggle-close-modal').click(function (){
+		closeModal();
+	});
+	//modal-end
+
+	//header-auth
+	$('.head-tool__icon--profile .icon').click(function(){
+		$('.enter').addClass('enter--open');
+		openModal();
+	});
+
+	$('.enter-close').click(function(){
+		$('.enter').removeClass('enter--open');
+		closeModal();
+	});
+	//header-auth-end
+
 	//blog slider
 	$(".blog-slider").owlCarousel({
 		items: 1,
@@ -11,6 +72,7 @@ $(document).ready(function(){
 	});
 
 	var owl = $('.blog-slider');
+
 	owl.owlCarousel();
 	$('.blog-slider-control__el--prev').click(function() {
 	    owl.trigger('next.owl.carousel');
@@ -112,6 +174,29 @@ $(document).ready(function(){
 				$(this).addClass('card-attr--active');
 			}else{
 				$(this).removeClass('card-attr--active');
+			}
+		})
+	});
+
+	//tab on card
+	$('.contact-tab__el').click(function(){
+		var current = $(this).data('tab');
+		$('.contact-tab__el').removeClass('contact-tab__el--active');
+		$(this).addClass('contact-tab__el--active');
+		$('.contact-attr').each(function () {
+			var tab = $(this).data('tab');
+			if(tab==current){
+				$(this).addClass('contact-attr--active');
+			}else{
+				$(this).removeClass('contact-attr--active');
+			}
+		})
+		$('.contact-map__el').each(function () {
+			var tab = $(this).data('tab');
+			if(tab==current){
+				$(this).addClass('contact-map__el--active');
+			}else{
+				$(this).removeClass('contact-map__el--active');
 			}
 		})
 	});

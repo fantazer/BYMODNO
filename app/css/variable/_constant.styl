@@ -273,16 +273,16 @@ button
 .input,.textarea,.select
 	border 0px
 	padding 20px
-	border 1px solid $border-color
+	border 1px solid #dedede
 	resize: none
-	outline: 0!important
-	border-radius 4px
+	outline: 0 !important
+	border-radius 0px
 	font-family $v-font
 	display block!important
 	placeholder(#888888)
-	background: #f7f7f8
-	/*&:focus
-		border 1px solid $border-color*/
+	background: white
+	tr(all)
+
 
 .style-label
 	display flex
@@ -304,19 +304,19 @@ button
 		display inline-block
 		margin-right 10px
 		background white
-		border 1px solid #b6b6b6
+		border 1px solid #cfcfcf
 		cp()
 		tr(all)
 		&:hover
-			border 1px solid black
+			border 1px solid #8d8d8d
 	.icon-check
 		display none
 	.sytle-input
-		&:checked + .sytle-input-element
+		&:checked ~ .sytle-input-element
 			flex(mid)
-			border 1px solid black
 			color white
 			background: black
+			border 1px solid black
 			.icon-check
 				display block
 				fill white
@@ -328,8 +328,8 @@ button
 		top 0
 		left -9999px
 	.sytle-input-element
-		width 24px
-		height 24px
+		width 22px
+		height 22px
 		position relative
 		display inline-block
 		margin-right 10px
@@ -346,4 +346,4 @@ button
 			.icon-radio
 				round()
 				size 14px
-				background white;
+				background blue;

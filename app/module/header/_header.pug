@@ -38,6 +38,33 @@ mixin header()
 					.head-tool__wrap
 						.head-tool__icon.head-tool__icon--profile
 							+icon("profile","icon")
+							.enter
+								.enter-wrap
+									.enter-coner
+									.enter-close
+										+icon("close","icon")
+									.enter-title Войти
+									.soc-row
+										a(href="#").soc-el
+											+icon("soc-instagram","icon")
+										a(href="#").soc-el
+											+icon("soc-twitter","icon")
+										a(href="#").soc-el
+											+icon("soc-facebook","icon")
+										a(href="#").soc-el
+											+icon("soc-vk","icon")
+									.enter-line
+										.enter-line__el /
+									form(action="#")
+										input(type="text" placeholder="email").input
+										input(type="password" placeholder="Пароль").input
+										div(data-modal="fogot").modal-get.enter-fogotlink Забыли пароль?
+										.enter-get-row
+											input(type="submit" value="Войти").enter-get
+
+									.enter-account Нет аккаунта?
+										div(data-modal="register").modal-get.enter-account-get Зарегистрируйтесь
+
 						.head-tool__icon.head-tool__like
 							+icon("like","icon")
 						.head-tool__icon.head-tool__cart
