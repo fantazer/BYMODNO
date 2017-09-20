@@ -1076,6 +1076,8 @@ body
 	position: relative
 
 .modal-filter
+	+below(640px)
+		background: white
 	position: absolute
 	top: 0
 	left: 0
@@ -1086,6 +1088,9 @@ body
 .modal
 	+below(768px)
 		width: 100%
+	+below(640px)
+		top 0
+		left 0
 	transform translate(-50%,-350%)
 	position: absolute
 	top 50%
@@ -1097,14 +1102,17 @@ body
 .modal-content
 	+below(768px)
 		padding: 20px
+	+below(640px)
+		max-height calc(100vh - 40px)
+		overflow-y scroll
+		width: 100%!important
+	position: relative
 	padding: 40px
 	background: white
 	+below(768px)
 		width: 80%
 
 .modal-content--register
-	+below(640px)
-		width: 100%
 	width: 500px
 	input
 		width: 100%
@@ -1112,6 +1120,10 @@ body
 
 
 .modal__show
+	+below(768px)
+		flex(mid)
+	+below(640px)
+		transform translate(0%,0%)
 	opacity 1
 	transform translate(-50%,-50%)
 
@@ -1187,9 +1199,10 @@ body
 		@extend .btn--md
 
 .modal-content--auth
+
 	width: 100%
-	.enter-wrap
-		min-width 300px
+	//.enter-wrap
+	//	min-width 300px
 	.soc-row
 		flex(mid)
 		margin-bottom: 30px
@@ -1197,5 +1210,7 @@ body
 		width: 100%
 		margin-bottom: 20px
 	.enter-wrap
+		+below(768px)
+			padding: 10px
 		box-shadow 0 0 0
 @import "../module/**/*"
