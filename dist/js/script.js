@@ -1,5 +1,91 @@
 $(document).ready(function(){
 
+	//scroll temlate
+
+	$('.basket-cont').perfectScrollbar();
+
+
+	//modal
+	var scrollPos = 0;
+	var closeModal = function () {
+  	$('.modal-layer').removeClass('modal-layer-show');
+  	$("body").removeClass("modal-fix");
+  	$('body').css({
+            overflow: '',
+            position: '',
+            top: ''
+        }).scrollTop(scrollPos);
+    $('.modal').removeClass('modal__show');
+		$('.enter').removeClass('enter--open');
+		$('.basket').removeClass('basket--open');
+	};
+
+	var openModal = function () {
+  	if(!$('.modal-layer').hasClass('modal-layer-show')){
+			$('.modal-layer').addClass('modal-layer-show');
+		}
+		if(!$("body").hasClass("modal-fix")){
+			$("body").addClass("modal-fix");
+			 scrollPos = $('body').scrollTop();
+        $('body').css({
+            overflow: 'hidden',
+            position: 'fixed',
+            overflowY: 'scroll',
+            top : -scrollPos,
+            width:'100%'
+        });
+		}
+	};
+
+	$('.modal-get').click(function (){
+		$('.enter').removeClass('enter--open');
+		$('.basket').removeClass('basket--open');
+		openModal();
+		var currentModal = $(this).data("modal");
+		$('.modal').each(function () {
+			if ($(this).data('modal')===currentModal){
+				$(this).addClass('modal__show')
+			} else {
+				$(this).removeClass('modal__show')
+			}
+		});
+	});
+
+	$('.modal-close , .modal-filter, .toggle-close-modal').click(function (){
+		closeModal();
+	});
+	//modal-end
+
+	//header-auth
+	$('.head-tool__icon--profile .icon').click(function(){
+		$('.enter').addClass('enter--open');
+		openModal();
+	});
+
+	$('.enter-close').click(function(){
+		$('.enter').removeClass('enter--open');
+		closeModal();
+	});
+	//header-auth-end
+
+	//header-basket
+	$('.head-tool__cart .icon').click(function(){
+		$('.basket').addClass('basket--open');
+		openModal();
+
+		var heightBlock = 0;
+		$('.basket__row').slice(0,2).each(function () {
+			heightBlock = heightBlock + $(this).outerHeight()*1;
+		});
+		$('.basket-cont').height(heightBlock);
+	});
+
+	$('.basket-close').click(function(){
+		$('.basket').removeClass('basket--open');
+		closeModal();
+	});
+	//header-basket-end
+
 	//blog slider
 	$(".blog-slider").owlCarousel({
 		items: 1,

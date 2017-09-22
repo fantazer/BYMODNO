@@ -38,6 +38,7 @@ mixin header()
 					.head-tool__wrap
 						.head-tool__icon.head-tool__icon--profile
 							+icon("profile","icon")
+							//enter form
 							.enter
 								.enter-wrap
 									.enter-coner
@@ -64,13 +65,47 @@ mixin header()
 
 									.enter-account Нет аккаунта?
 										div(data-modal="register").modal-get.enter-account-get Зарегистрируйтесь
-
+							//enter form-end
 						.head-tool__icon.head-tool__like
 							+icon("like","icon")
 						.head-tool__icon.head-tool__cart
 							.head-cart__val 10
 							+icon("сart","icon")
 
+							//basket
+							.basket
+								.basket-wrap
+									.basket-coner
+									.basket-close
+										+icon("close","icon")
+									.basket-title Мой заказ
+									.basket__head
+										.basket__head-name Наименование
+										.basket__head-numb Кол-во
+										.basket__head-price Цена
+										.basket__head-remove
+									.basket-cont
+										- for (var i=0;i<8;i++)
+											.basket__row
+												.basket__name
+													.basket__el
+														.basket__el-img(style="background-image:url('img/basket-item.jpg')")
+														.basket__el-info
+															.basket__el-title Кроссовки New Balance #{i}
+															.basket__el-info Размер 38
+												.basket__numb
+													.basket__numb-text 2 шт.
+												.basket__price 14 900
+													.rub a
+												.basket__remove
+													+icon("close","icon")
+									.basket-total
+										.basket-total__price Сумма: 19 400
+											.rub a
+										.basket-total__get
+											a(href="#").basket-total__btn Оформить заказ
+											a(href="#").basket-total__link Просмотр корзины
+							//basket-end
 	.menu-wrap
 		.main-cont
 			.menu

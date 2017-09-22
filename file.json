@@ -10,6 +10,7 @@
 		"index":"index",
 		"list":"list",
 		"blog":"blog",
+		"blog-item":"blog-item",
 		"contact":"contact",
 		"card":"card"
 	}

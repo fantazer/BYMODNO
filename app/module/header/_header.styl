@@ -253,6 +253,8 @@
 	position: relative
 //.head-tool__like
 .head-tool__cart
+	+below(768px)
+		position: static
 	position: relative
 
 .head-cart__val
@@ -354,3 +356,205 @@
 	.enter-account-get
 		@extend .link--mark
 		cp()
+
+
+.basket
+	+below(1280px)
+		right: 0
+	+below(768px)
+		width: 100%
+	+below(640px)
+		top 0
+		overflow-y scroll
+		max-height calc(100vh - 60px)
+	position: absolute
+	top calc(100% + 30px)
+	right: -50px
+	z-index 1100
+	width: 620px
+	display: none
+	.soc-row
+		flex(mid)
+		margin-bottom: 30px
+	.input
+		width: 100%
+		margin-bottom: 20px
+
+.basket--open
+	display: block
+
+.basket-wrap
+	+below(768px)
+		padding: 20px
+		box-shadow 0 0 0
+	padding: 40px
+	background: white
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24)
+	position: relative
+
+.basket-coner
+	+below(1280px)
+		right: 4px
+	+below(768px)
+		display: none
+	size 20px
+	transform rotate(45deg)
+	background: white
+	position: absolute
+	top -10px
+	right 52px
+	border-left 1px solid rgba(212, 210, 210, 0.24)
+	border-top 1px solid rgba(212, 210, 210, 0.24)
+
+.basket-close
+	position: absolute
+	top 20px
+	right: 20px
+	.icon
+		fill #a6a6a6
+		size 20px
+
+.basket-title
+	@extend .type--lg
+	margin-bottom: 20px
+	text-align: center
+
+//.icon
+.basket__head
+	+below(640px)
+		display: none
+	flex(between)
+	color #5a5a5a
+	margin-bottom: 20px
+
+.basket__head-name
+	width: 60%
+
+.basket__head-numb
+	width: 15%
+
+.basket__head-price
+	width: 18%
+	text-align: center
+
+.basket__head-remove
+	width: 5%
+	text-align: right
+
+.basket-cont
+	+below(640px)
+		height: auto !important
+		margin-bottom: 20px
+	margin-bottom: 40px
+	overflow hidden
+	position: relative
+	margin-right: -25px
+	padding-right: 25px
+
+.basket__row
+	+below(640px)
+		fl()
+		flex(mid)
+		fw()
+		position: relative
+	flex(between)
+	border-bottom:1px solid  #e6e6e6
+	padding: 20px 0
+
+.ps__scrollbar-y-rail
+	opacity: 0.6!important
+
+.basket__name
+	+below(640px)
+		width: 100%
+	width: 60%
+
+.basket__el
+	+below(640px)
+		fl()
+		flex(mid)
+	f()
+
+.basket__el-img
+	+below(640px)
+		size 100px
+		margin-right: 0
+	size 50px
+	bg-full()
+	margin-right: 20px
+
+.basket__el-info
+	+below(640px)
+		text-align: center
+		width: 100%
+	color #787878
+	width calc(100% - 50px - 20px)
+.basket__el-title
+	+below(640px)
+		font-size: 20px
+		font-weight:600
+	color black
+	margin-bottom: 10px
+
+.basket__numb
+	+below(640px)
+		width: 100%
+	width: 15%
+	text-align: center
+.basket__numb-text
+	+below(640px)
+		font-size: 16px
+		margin-bottom: 10px
+		width: 100%
+		text-align: center
+
+.basket__price
+	+below(640px)
+		width: 100%
+		text-align: center
+		font-size: 16px
+	width: 18%
+	text-align: right
+
+.basket__remove
+	+below(640px)
+		position: absolute
+		top 30px
+		right: 0px
+	width: 5%
+	margin-left: 30px
+	.icon
+		size 14px
+		cp()
+		tr(all)
+		&:hover
+			fill red
+.basket-total
+	+below(640px)
+		fl()
+	f()
+	justify-content: space-between
+
+.basket-total__price
+	+below(640px)
+		text-align: center
+		margin-bottom: 10px
+	@extend .type--md
+	font-weight:600
+
+.basket-total__get
+	f()
+	fl()
+.basket-total__btn
+	+below(640px)
+		margin-bottom: 10px
+	@extend .btn--mark
+	@extend .btn--md
+	margin-bottom: 30px
+
+.basket-total__link
+	+below(640px)
+		text-align: center
+	@extend .link--mark
+	text-align: right
+
