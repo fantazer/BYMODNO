@@ -822,8 +822,7 @@ body
 .blog-slider__el-img
 	+below(768px)
 		width: 100%
-
-	width: 60%
+	width: 55%
 	bg-full()
 
 .blog-slider__el-info
@@ -1212,5 +1211,305 @@ body
 		+below(768px)
 			padding: 10px
 		box-shadow 0 0 0
+
+.elements-icr-block
+	flex(mid)
+.incr
+	+below(768px)
+		margin-bottom: 20px
+	f()
+	justify-content: space-between
+	position relative
+	width 100px
+.incr__nav
+	flex(mid)
+	tr(background)
+	round()
+	size 30px
+	border 1px solid #dddddd
+	background white
+	.icon
+		size 12px
+		fill #b3b3b3
+	&:hover
+		cp()
+		background-color black
+		border 0
+		.icon
+			fill white
+	&:active
+		background-color black
+.incr__val
+	flex(mid)
+	background white
+	position relative
+	tr(all)
+	color #757575
+	font-family Lato
+	@extend .type--main
+	font-weight 400
+
+
+
+.payment__head
+	+below(640px)
+		display: none
+	flex(between)
+	color #5a5a5a
+	margin-bottom: 20px
+
+.payment__head-name
+	width: 55%
+
+.payment__head-numb
+	width: 15%
+	text-align: center
+
+.payment__head-price
+	width: 18%
+	text-align: right
+
+.payment__head-like
+	width: 5%
+	margin-left: 10%
+
+.payment__head-remove
+	width: 5%
+	text-align: right
+
+.payment-cont
+	+below(640px)
+		height: auto !important
+		margin-bottom: 40px
+	margin-bottom: 80px
+
+.payment__row
+	+below(640px)
+		fl()
+		flex(mid)
+		fw()
+		position: relative
+	flex(between)
+	border-bottom:1px solid  #e6e6e6
+	padding: 20px 0
+
+.payment__name
+	+below(640px)
+		width: 100%
+	width: 55%
+
+.payment__el
+	+below(640px)
+		fl()
+		flex(mid)
+	f()
+
+.payment__el-img
+	+below(640px)
+		size 100px
+		margin-right: 0
+	size 80px
+	bg-full()
+	margin-right: 20px
+
+.payment__el-info
+	+below(640px)
+		text-align: center
+		width: 100%
+	margin-bottom: 5px
+	color #787878
+	width calc(100% - 80px - 20px)
+
+.payment__el-title
+	+below(640px)
+		font-size: 20px
+		font-weight:600
+	@extend .type--md
+	font-weight 600
+	color black
+	margin-bottom: 10px
+
+.payment__numb
+	+below(640px)
+		width: 100%
+	width: 15%
+	text-align: center
+
+.payment__head-like
+	width: 5%
+//
+
+.payment__numb-text
+	+below(640px)
+		font-size: 16px
+		margin-bottom: 10px
+		width: 100%
+		text-align: center
+
+.payment__price
+	+below(640px)
+		width: 100%
+		text-align: center
+		font-size: 16px
+	@extend .type--md
+	font-weight 600
+	width: 18%
+	text-align: right
+
+.payment__remove
+	+below(640px)
+		position: absolute
+		top 30px
+		right: 0px
+	width: 5%
+	text-align: right
+	.icon
+		+below(768px)
+			size 20px
+		size 14px
+		cp()
+		tr(all)
+		&:hover
+			fill red
+
+.payment__like
+	+below(640px)
+		margin-left: 0
+		position: absolute
+		left 0px
+		top 30px
+	margin-left: 10%
+	width: 5%
+	text-align: center
+	cp()
+	.icon
+		+below(768px)
+			size: 20px
+		size 14px
+		&:hover
+			fill red
+
+
+.paymen-form
+	center(580px,0px)
+	.input
+		width: 100%
+		margin-bottom: 20px
+//.input
+
+.payment-tab
+	margin: 40px 0
+	flex(between)
+
+.payment-tab-head
+	@extend .type--main
+	color #5a5a5a
+	border-bottom:1px solid $border-color
+	up()
+	cp()
+
+.payment-tab-head_el--active
+	color black
+	border-bottom:1px solid black
+
+.payment-tab-head_el
+	text-align: center
+	width: 50%
+	padding: 20px 0
+
+.payment-delivery-text
+	margin-top: 20px
+	margin-bottom: 60px
+
+.payment-type
+	margin-bottom: 40px
+	.style-label
+		margin-bottom: 20px
+
+.payment-tab-cont
+	margin-bottom: 40px
+
+.payment-type__title
+	@extend .type--md
+	font-weight 600
+	margin-bottom: 30px
+
+.paymen-total
+	+below(768px)
+		margin-top: 20px
+		padding: 40px 20px
+	margin-top: 60px
+	margin-bottom: 60px
+	padding: 40px
+	background: #f3f3f3
+
+.paymen-total__row
+	+below(768px)
+		fw()
+	flex(between)
+	margin-bottom: 40px
+
+.paymen-total__input
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
+	width: 60%
+	.input
+		margin-bottom: 0
+
+.paymen-total__get
+	+below(768px)
+		width: 100%
+	@extend .btn--md
+	@extend .btn--light
+	padding: 20px 40px
+
+.payment-info
+	+below(768px)
+		margin-bottom: 20px
+	margin-bottom: 40px
+
+.payment-info__el
+	flex(between)
+	margin-bottom: 20px
+
+
+
+//.payment-info__val
+//.rub
+.payment-cost
+	+below(768px)
+		fw()
+	flex(between)
+	padding-bottom: 20px
+	margin-bottom: 20px
+	border-bottom:1px solid $border-color
+
+.payment-cost__val
+	+below(768px)
+		width: 100%
+		text-align: center
+
+		margin-bottom: 20px
+.payment-cost__val-info
+	font-size: 15px
+	margin-bottom: 5px
+
+.payment-cost__val-el
+	@extend .type--lg
+
+.payment-cost__get
+	+below(768px)
+		width: 100%
+	@extend .btn--md
+	@extend .btn--mark
+	padding: 20px 40px
+
+.payment-personal
+	color #828282
+	line-height: 1.6
+	a
+		color #828282
+
 
 @import "../module/**/*"

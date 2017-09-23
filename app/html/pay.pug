@@ -1,0 +1,112 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+
+.content
+	.main-cont
+		.content-tool
+			.breadcrumbs
+				-
+					var items = [
+					'Главная',
+					'Одежда',
+					'Жакеты и пиджаки',
+					'Жакеты',
+					'Жакет - Perfect Mango'
+					];
+				each item in items
+					a(href="#").breadcrumbs__el #{item}
+			a(href="#").back
+				+icon("dirrect","icon")
+				.back__text Вернуться в каталог
+		.page-title Оформление заказа
+
+	.main-cont
+			//payment block
+			.payment__head
+				.payment__head-name Наименование
+				.payment__head-numb Кол-во
+				.payment__head-price Цена
+				.payment__head-like
+				.payment__head-remove
+			.payment-cont
+				- for (var i=0;i<8;i++)
+					.payment__row
+						.payment__name
+							.payment__el
+								.payment__el-img(style="background-image:url('img/basket-item.jpg')")
+								.payment__el-info
+									.payment__el-title Кроссовки New Balance #{i}
+									.payment__el-info Размер 38
+									.payment__el-info Российский размер: 46-48
+						.payment__numb
+							.elements-icr-block
+								.incr
+									.incr__minus.incr__nav
+										+icon("minus","icon")
+									.incr__val
+										span 1
+										.incr__val-coner
+									.incr__plus.incr__nav
+										+icon("plus","icon")
+						.payment__price 14 900
+								.rub a
+						.payment__like
+							+icon("like","icon")
+						.payment__remove
+							+icon("garbage","icon")
+			//payment block-end
+
+			//payment-form
+			.paymen-form
+				form(action="#")
+					input(type="text" placeholder="Введите свой город*").input
+
+					.payment-tab
+						.payment-tab-head.payment-tab-head_el.payment-tab-head_el--active(data-tab="courier") Курьером
+						.payment-tab-head.payment-tab-head_el(data-tab="self") Самовывоз
+
+					.payment-tab-cont(data-tab="courier")
+						input(type="text" placeholder="Введите свой город*").input
+						.payment-delivery-text Сегодня в течение дня. Стоимость: 500 руб.
+						.payment-type
+							.payment-type__title Способ оплаты
+							+radio('Наличными курьеру')
+							+radio('Наложенный платеж')
+					input(type="text" placeholder="Ф.И.О.*").input
+					input(type="text" placeholder="Телефон*").input
+					input(type="text" placeholder="Email*").input
+
+				.paymen-total
+					.paymen-total__row
+						.paymen-total__input
+							input(type="text" placeholder="Купон").input
+						.paymen-total__get Применить
+					.payment-info
+						.payment-info__el
+							.payment-info__name Товаров на сумму
+							.payment-info__val 23 800
+								.rub a
+						.payment-info__el
+							.payment-info__name Доставка
+							.payment-info__val -500
+								.rub a
+						.payment-info__el
+							.payment-info__name Скидка
+							.payment-info__val 4 900
+								.rub a
+					.payment-cost
+						.payment-cost__val
+							.payment-cost__val-info Итого:
+							.payment-cost__val-el 19 400
+								.rub a
+						.payment-cost__get Оформить заказ
+					.payment-personal Нажав «Оформить заказ», вы соглашаетесь с
+						a(href="#") Условиями обработки персональных данных
+						| и даете свое согласие на обработку персональных данных на указанных условиях.
+
+
+	//payment-form-end
++footer()
+include ./block_html/_script.pug

@@ -13,6 +13,7 @@
 		"blog-item":"blog-item",
 		"contact":"contact",
 		"card":"card",
+		"error":"error",
 		"pay":"pay"
 	}
 }

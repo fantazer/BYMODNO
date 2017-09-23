@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 47.7175em 221.9em;
+    background-size: 47.7175em 233.9em;
 }
 
 .no-svg .icon:before {
@@ -98,8 +98,17 @@
 
 
 
-  .icon.like:before {
+  .icon.garbage:before {
       background-position: 0em -144.9em;
+      width: 5.9em;
+      height: 5.9em;
+  }
+
+
+
+
+  .icon.like:before {
+      background-position: 0em -150.8em;
       width: 2.8em;
       height: 2.6em;
   }
@@ -108,7 +117,7 @@
 
 
   .icon.mail:before {
-      background-position: 0em -147.5em;
+      background-position: 0em -153.4em;
       width: 1.7em;
       height: 1em;
   }
@@ -117,7 +126,7 @@
 
 
   .icon.map:before {
-      background-position: 0em -148.5em;
+      background-position: 0em -154.4em;
       width: 1em;
       height: 1.4031em;
   }
@@ -126,7 +135,7 @@
 
 
   .icon.mastercard:before {
-      background-position: 0em -150em;
+      background-position: 0em -155.9em;
       width: 5.4em;
       height: 4em;
   }
@@ -135,7 +144,7 @@
 
 
   .icon.menu:before {
-      background-position: 0em -154em;
+      background-position: 0em -159.9em;
       width: 45.9em;
       height: 45.9em;
   }
@@ -143,8 +152,17 @@
 
 
 
+  .icon.minus:before {
+      background-position: 0em -205.8em;
+      width: 4.2em;
+      height: 4.2em;
+  }
+
+
+
+
   .icon.phone:before {
-      background-position: 0em -199.9em;
+      background-position: 0em -210em;
       width: 1em;
       height: 1.6em;
   }
@@ -153,16 +171,16 @@
 
 
   .icon.plus:before {
-      background-position: 0em -201.5em;
-      width: 2.3em;
-      height: 2.3em;
+      background-position: 0em -211.6em;
+      width: 4.2em;
+      height: 4.2em;
   }
 
 
 
 
   .icon.profile:before {
-      background-position: 0em -203.8em;
+      background-position: 0em -215.8em;
       width: 2.1em;
       height: 2.6em;
   }
@@ -171,7 +189,7 @@
 
 
   .icon.search:before {
-      background-position: 0em -206.4em;
+      background-position: 0em -218.4em;
       width: 2.6em;
       height: 2.6em;
   }
@@ -180,7 +198,7 @@
 
 
   .icon.soc-facebook:before {
-      background-position: 0em -209em;
+      background-position: 0em -221em;
       width: 1em;
       height: 1.8em;
   }
@@ -189,7 +207,7 @@
 
 
   .icon.soc-instagram:before {
-      background-position: 0em -210.8em;
+      background-position: 0em -222.8em;
       width: 1.8em;
       height: 1.8em;
   }
@@ -198,7 +216,7 @@
 
 
   .icon.soc-twitter:before {
-      background-position: 0em -212.6em;
+      background-position: 0em -224.6em;
       width: 1.8em;
       height: 1.5em;
   }
@@ -207,7 +225,7 @@
 
 
   .icon.soc-vk:before {
-      background-position: 0em -214.1em;
+      background-position: 0em -226.1em;
       width: 2.1149999999999998em;
       height: 1.194em;
   }
@@ -216,7 +234,7 @@
 
 
   .icon.visa:before {
-      background-position: 0em -215.3em;
+      background-position: 0em -227.3em;
       width: 6.4em;
       height: 4em;
   }
@@ -225,7 +243,7 @@
 
 
   .icon.сart:before {
-      background-position: 0em -219.3em;
+      background-position: 0em -231.3em;
       width: 2.3em;
       height: 2.6em;
   }
