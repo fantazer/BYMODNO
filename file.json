@@ -12,6 +12,7 @@
 		"blog":"blog",
 		"blog-item":"blog-item",
 		"contact":"contact",
-		"card":"card"
+		"card":"card",
+		"pay":"pay"
 	}
 }
