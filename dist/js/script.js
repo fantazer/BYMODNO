@@ -1,7 +1,30 @@
 $(document).ready(function(){
 
-	//scroll temlate
+	//increment field
+		$('.incr__minus').click(function () {
+					var $input = $(this).parent().find('.incr__val span');
+					var count = parseInt($input.html()) - 1;
+					count = count < 1 ? 0 : count;
+					$input.html(count);
+			});
 
+		$('.incr__minus.incr--one').click(function () {
+					var $input = $(this).parent().find('.incr__val span');
+					var count = parseInt($input.html()) - 1;
+					count = count < 2 ? 1 : count;
+					$input.html(count);
+			});
+
+		$('.incr__plus').click(function () {
+				var $input = $(this).parent().find('.incr__val span');
+				var count = parseInt($input.html()) + 1;
+				count = count > 100 ? 100 : count;
+				$input.html(count);
+		});
+
+		//increment field end
+
+	//scroll template
 	$('.basket-cont').perfectScrollbar();
 
 

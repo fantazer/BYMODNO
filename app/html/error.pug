@@ -1,0 +1,36 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header()
+
+.content
+	.main-cont
+		.content-tool
+			.breadcrumbs
+				-
+					var items = [
+					'Главная',
+					'Одежда',
+					'Жакеты и пиджаки',
+					'Жакеты',
+					'Жакет - Perfect Mango'
+					];
+				each item in items
+					a(href="#").breadcrumbs__el #{item}
+			a(href="#").back
+				+icon("dirrect","icon")
+				.back__text Вернуться в каталог
+		.page-title Ошибка
+
+	.main-cont
+		.error
+			.error-img
+				img(src="img/404.png", alt="")
+			.error-info
+				.error-text Упс! Данная страница <br>	не существует
+				a(href="/").error-link Вернуться на главную
+
+
+	//payment-form-end
++footer()
+include ./block_html/_script.pug

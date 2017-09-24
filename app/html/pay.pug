@@ -24,38 +24,39 @@ include block_html/_include.pug
 
 	.main-cont
 			//payment block
-			.payment__head
-				.payment__head-name Наименование
-				.payment__head-numb Кол-во
-				.payment__head-price Цена
-				.payment__head-like
-				.payment__head-remove
-			.payment-cont
-				- for (var i=0;i<8;i++)
-					.payment__row
-						.payment__name
-							.payment__el
-								.payment__el-img(style="background-image:url('img/basket-item.jpg')")
-								.payment__el-info
-									.payment__el-title Кроссовки New Balance #{i}
-									.payment__el-info Размер 38
-									.payment__el-info Российский размер: 46-48
-						.payment__numb
-							.elements-icr-block
-								.incr
-									.incr__minus.incr__nav
-										+icon("minus","icon")
-									.incr__val
-										span 1
-										.incr__val-coner
-									.incr__plus.incr__nav
-										+icon("plus","icon")
-						.payment__price 14 900
-								.rub a
-						.payment__like
-							+icon("like","icon")
-						.payment__remove
-							+icon("garbage","icon")
+			.payment-main-cont
+				.payment__head
+					.payment__head-name Наименование
+					.payment__head-numb Кол-во
+					.payment__head-price Цена
+					.payment__head-like
+					.payment__head-remove
+				.payment-cont
+					- for (var i=0;i<8;i++)
+						.payment__row
+							.payment__name
+								.payment__el
+									.payment__el-img(style="background-image:url('img/basket-item.jpg')")
+									.payment__el-info
+										.payment__el-title Кроссовки New Balance #{i}
+										.payment__el-info Размер 38
+										.payment__el-info Российский размер: 46-48
+							.payment__numb
+								.elements-icr-block
+									.incr
+										.incr__minus.incr__nav
+											+icon("minus","icon")
+										.incr__val
+											span 1
+											.incr__val-coner
+										.incr__plus.incr__nav
+											+icon("plus","icon")
+							.payment__price 14 900
+									.rub a
+							.payment__like
+								+icon("like","icon")
+							.payment__remove
+								+icon("garbage","icon")
 			//payment block-end
 
 			//payment-form

@@ -21,12 +21,14 @@
 				//transform translateY(-100%)
 			.item__img--two
 				opacity 1
+		background: white
 		height: auto
 		.item__content
 			height: auto
 			//padding: 20px
 			z-index 20
 			//overflow inherit
+			background: white
 			width:auto
 			top initial
 			left initial
@@ -43,24 +45,26 @@
 			//transform translateY(0%)
 
 .item--active
-	.item__content
-		padding: 20px
-		z-index 20
-		//overflow inherit
-		width:calc(100% + 40px)
-		height 600px
-		top -20px
-		left -20px
-		z-index 20
-		box-shadow 0 1px 2px rgba(0, 0, 0, 0.21)
-	.item__img--one
-		opacity 0
-		//transform translateY(-100%)
-	.item__img--two
-		opacity 1
-	.item__construct
-		height: auto
-		//transform translateY(0%)
+	background: white
+	+above(1025px)
+		.item__content
+			padding: 20px
+			z-index 20
+			//overflow inherit
+			width:calc(100% + 40px)
+			height 600px
+			top -20px
+			left -20px
+			z-index 20
+			box-shadow 0 1px 2px rgba(0, 0, 0, 0.21)
+		.item__img--one
+			opacity 0
+			//transform translateY(-100%)
+		.item__img--two
+			opacity 1
+		.item__construct
+			height: auto
+			//transform translateY(0%)
 
 .item__content
 	//transition box-shadow, height .6s
