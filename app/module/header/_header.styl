@@ -1,4 +1,5 @@
 .head-top-wrap
+	line-height: 1.2
 	+below(1024px)
 		display: none
 	padding: 10px 0
@@ -26,6 +27,7 @@
 //.head-nav__el
 
 .head-phone
+	line-height: 1
 	f()
 	justify-content: center
 	margin-right: 6%
@@ -36,6 +38,7 @@
 	margin-left: auto
 
 .head-mail
+	line-height: 1
 	f()
 	justify-content: center
 	.icon
@@ -132,7 +135,7 @@
 		padding: 0
 		.main-cont
 			padding: 0
-	padding: 10px 0 40px 0
+	padding: 20px 0 40px 0
 	position: relative
 
 .head-toggle
@@ -253,12 +256,12 @@
 	position: relative
 //.head-tool__like
 .head-tool__cart
-	+below(768px)
+	+below(1024px)
 		position: static
 	position: relative
 
 .head-cart__val
-	+below(768px)
+	+below(1024px)
 		top 5px
 		right: 0px
 	round()
@@ -279,6 +282,7 @@
 	z-index 1100
 	width: 380px
 	display: none
+	box-shadow 0 2px 4px rgba(0, 0, 0, 0.24)
 	.soc-row
 		flex(mid)
 		margin-bottom: 30px
@@ -306,6 +310,8 @@
 	border-top 1px solid rgba(212, 210, 210, 0.24)
 
 .enter-close
+	+below(640px)
+		top: -5px
 	position: absolute
 	top 20px
 	right: 20px
@@ -363,13 +369,18 @@
 
 .basket
 	+below(1280px)
-		right: 0
-	+below(768px)
-		width: 100%
+		right: 5px
+	+below(1024px)
+		right: 10px
+		top calc(100%)
 	+below(640px)
+		right: 0
+		width: 100%
 		top 0
 		overflow-y scroll
 		max-height calc(100vh - 60px)
+		box-shadow 0 0 0
+	box-shadow 0 2px 4px rgba(0, 0, 0, 0.24)
 	position: absolute
 	top calc(100% + 30px)
 	right: -50px
@@ -387,7 +398,7 @@
 	display: block
 
 .basket-wrap
-	+below(768px)
+	+below(640px)
 		padding: 20px
 		box-shadow 0 0 0
 	padding: 40px
@@ -398,7 +409,7 @@
 .basket-coner
 	+below(1280px)
 		right: 4px
-	+below(768px)
+	+below(640px)
 		display: none
 	size 20px
 	transform rotate(45deg)

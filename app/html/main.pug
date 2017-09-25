@@ -3,7 +3,89 @@ include block_html/_include.pug
 
 +header()
 
+.main-baner
+	img(src="img/main-baner.jpg", alt="")
+
+.advant-wrap
+	.main-cont
+		.advant-cont
+			.advant__el
+				.advant__el-icon
+					+icon("advant-1","icon")
+				.advant__el-info Бесплатная доставка <br> по России и СНГ
+			.advant__el
+				.advant__el-icon
+					+icon("advant-2","icon")
+				.advant__el-info Безопасная оплата <br> любыми способами
+			.advant__el
+				.advant__el-icon
+					+icon("advant-3","icon")
+				.advant__el-info 100% подлинные <br> товары
+
 .content
+	.main-cont.main-cont--full
+		.categories
+			.categories__el.categories__lg(style="background-image:url('img/women.jpg')")
+				.categories-filter
+					a(href="#").categories-get Категория
+			.categories__md
+				.categories__el.categories__md-el(style="background-image:url('img/bag.jpg')")
+					.categories-filter
+						a(href="#").categories-get Категория
+				.categories__el.categories__md-el(style="background-image:url('img/shoes.jpg')")
+					.categories-filter
+						a(href="#").categories-get Категория
+	image
+	.canlike.canlike--sub-title.container--four
+		.main-cont
+			.canlike--title мы Рекомендуем
+			.canlike--title-sub Мы тщательно следим за новыми тенденциями <br> и призываем Вас присоединиться к нашей команде
+			.canlike-wrap
+				+item()
+				+item()
+				+item()
+				+item()
+
+	.main-cont.main-cont--full
+		.categories
+			.categories__md
+				a(href="#" style="background-image:url('img/sale-small-1.jpg')").categories__el.categories__md-el
+				a(href="#" style="background-image:url('img/sale-small-2.jpg')").categories__el.categories__md-el
+			a(href="#" style="background-image:url('img/sale-lg.jpg')").categories__lg
+
+	.canlike.canlike--sub-title.container--four
+		.main-cont
+			.canlike--title Хиты продаж
+			.canlike-wrap
+				+item()
+				+item()
+				+item()
+				+item()
+
+	.container-gray
+		.container-gray__title Модный блог
+		.main-cont
+			.blog-wrap.container--four
+				- for (var i=0;i<4;i++)
+					a(href="#").blog-el
+						.blog-el__img
+							//.blog-el__img-item(style="background-image:url('img/item-2.jpg')")
+							img(src="img/blog-item.jpg", alt="").blog-el__img-item
+						.blog-el__date 25 Октбяря, 2017
+						.blog-el__text #{i} способов носить обычную футболку,о которых вы еще не знали
+	.main-cont
+		.about
+			.about__col
+				.about__title Проект byModno
+				.about__text - это больше чем интернет магазин.	Это сеть магазинов, имеющих интернет-площадку для продажи своей продукции. У нас собственный филиал в Гонконге, который каждую неделю формирует новые коллекции. Мы работаем более чем с 200 азиатскими фабриками и дизайнерами, поэтому у нас есть возможность постоянно предлагать Вам что-то новое и самое интересное.
+
+			.about__col
+				.about__title Сеть магазинов
+				.about__text Так же у нас есть своя сеть магазинов в России. Если у Вас в городе уже открылся свой byMODNO то настоятельно рекомендуем Вам посетить именно его. Все наши сотрудники профессиональные стилисты look-makers, которые совершенно бесплатно подберут Вам самый крутой look, напоят Вас вкуснейшим кофе и подарят отличное настроение. Но не беда, если вы живете в другом месте, вся наша продукция уже собрана в образы и представлена здесь в сочетании с возможной обувью и аксессуарами. Приятного шопинга
+
+			.about__col
+				.about__title Опытная команда
+				.about__text Проект Modno - это сплоченная команда стилистов, байеров, look-make'ров, объединенная для реализации одной общей идеи. - Перевернуть стереотипы женщин, привыкшим к однотипным силуэтам и цветам. - Раскрыть свободу мышления относительно своего гардероба.- Научить любую женщину выглядеть на 150% ее возможностей, научить ее видеть себя по новому, научить ЛЮБИТЬ себя! Стильной может быть каждая женщина, просто доверьтесь нам! Подборка look'ов у нас в Салоне совершенно бесплатна!
 
 +footer()
 

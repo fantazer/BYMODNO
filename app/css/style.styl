@@ -29,7 +29,7 @@ body
 	@extend .type--main
 	font-family $v-font
 	//color $main-text-color
-	line-height 1.2
+	line-height 1.5
 	letter-spacing 0.01em
 	
 .main-cont
@@ -77,7 +77,8 @@ body
 		size 17px
 		fill #2f2f2f
 		margin-right: 10px
-//.back__text
+.back__text
+	line-height: 1.2
 // ==== content-tool-end ====
 
 .page-title
@@ -437,6 +438,8 @@ body
 		width: 60%
 		min-width 400px
 		text-align: center
+	+below(768px)
+		min-width 100%
 	@extend .type--xl
 	margin-bottom: 20px
 
@@ -584,6 +587,7 @@ body
 .card-tab__el
 	+below(640px)
 		font-size: 10px
+	line-height: 1
 	up()
 	cp()
 	text-align: center
@@ -621,14 +625,23 @@ body
 	display: block
 
 .card-attr__text
+	+below(640px)
+		text-align: center
 	margin-bottom: 40px
 
 .card-attr-row
+	+below(640px)
+		fw()
+		flex(mid)
+		fl()
 	f()
 	align-items: flex-end
 	margin-bottom: 20px
 
 .card-attr-title
+	+below(640px)
+		width: 100%
+		text-align: center
 	padding-right: 5px
 	display table-cell
 	white-space nowrap
@@ -639,11 +652,16 @@ body
 	align-items: flex-end
 
 .card-attr-dot
+	+below(640px)
+		display: none
 	display table-cell
 	width: 100%
 	border-bottom .5px dashed gray
 
 .card-attr-value
+	+below(640px)
+		width: 100%
+		text-align: center
 	width: 45%
 	padding-left: 5px
 
@@ -651,6 +669,8 @@ body
 	+below(1024px)
 		margin-bottom: 30px
 		justify-content center
+	+below(640px)
+		padding: 0
 	margin-top: 20px
 	padding: 0 20px
 	display grid
@@ -822,7 +842,7 @@ body
 .blog-slider__el-img
 	+below(768px)
 		width: 100%
-	width: 55%
+	width: 60%
 	bg-full()
 
 .blog-slider__el-info
@@ -861,6 +881,10 @@ body
 	margin-bottom: 70px
 
 .blog-el
+	+below(768px)
+		flex(mid)
+		fl()
+		fw()
 	&:hover
 		.blog-el__img-item
 			transform scale(1.1)
@@ -881,6 +905,8 @@ body
 	margin-bottom: 20px
 
 .blog-el__text
+	+below(768px)
+		text-align: center
 	font-weight:600
 	line-height: 1.6
 	color black
@@ -1087,9 +1113,11 @@ body
 .modal
 	+below(768px)
 		width: 100%
+		box-shadow 0 0 0
 	+below(640px)
 		top 0
 		left 0
+	box-shadow 0 2px 4px rgba(0, 0, 0, 0.24)
 	transform translate(-50%,-350%)
 	position: absolute
 	top 50%
@@ -1104,6 +1132,7 @@ body
 	+below(640px)
 		max-height calc(100vh - 40px)
 		overflow-y scroll
+		padding: 20px 5px
 		width: 100%!important
 	position: relative
 	padding: 40px
@@ -1127,11 +1156,16 @@ body
 	transform translate(-50%,-50%)
 
 .modal-close
+	+below(768px)
+		top 20px
+		right 20px
 	position: absolute
 	top: 30px
 	right: 30px
 	cp()
 	.icon
+		+below(768px)
+			size 18px
 		size 24px
 		fill rgba(0, 0, 0, 0.42)
 
@@ -1154,6 +1188,7 @@ body
 .modal-btn
 	+below(768px)
 		width: 100%!important
+		padding: 20px
 	@extend .btn--mark
 	@extend .btn--md
 	width: auto!important
@@ -1462,7 +1497,7 @@ body
 		width: 100%
 	@extend .btn--md
 	@extend .btn--light
-	padding: 20px 40px
+	padding: 14px 40px
 
 .payment-info
 	+below(768px)
@@ -1545,5 +1580,138 @@ body
 	margin-bottom: 80px
 	border-bottom: 0
 
+.register-person
+	color #828282
+	line-height: 1.6
 
+.advant-wrap
+	+below(768px)
+		display: none
+	padding: 30px 0
+	border-bottom:1px solid $border-color
+	margin-bottom: 60px
+
+.advant-cont
+	+below(768px)
+		margin-bottom: 30px
+	flex(around)
+
+.advant__el
+	flex(between)
+
+.advant__el-icon
+	round()
+	border:1px solid $border-color
+	size 60px
+	flex(mid)
+	margin-right: 20px
+	.icon
+		size 25px
+
+.categories
+	+below(768px)
+		margin-top: 20px
+	+below(640px)
+		fw()
+		fl()
+		flex(between)
+	f()
+	justify-content: space-between
+
+.categories__el
+	+below(640px)
+		width: 100%
+	position: relative
+	overflow hidden
+	&:hover
+		.categories-filter
+			transform translateY(0%)
+
+.categories__lg
+	+below(640px)
+		width: 100%
+		padding: 45% 20%
+	bg-full()
+	width: 58.5%
+	padding: 28% 20%
+
+.categories-filter
+	tr(all)
+	transform translateY(110%)
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0.51)
+	flex(mid)
+.categories-get
+	position: relative
+	@extend .btn--md
+	@extend .btn--light
+
+.categories__md
+	+below(640px)
+		width: 100%
+	width: 40%
+
+.categories__md-el
+	display: block
+	padding: 34% 20%
+	bg-full()
+	&:first-child
+		+below(768px)
+			margin-bottom: 15px
+		+below(640px)
+			margin-bottom: 0
+		margin-bottom: 20px
+
+.canlike--sub-title
+	border: 0
+	margin-bottom: 40px
+	.canlike--title
+		margin-bottom: 40px
+
+.canlike--title-sub
+	text-align: center
+	margin-bottom: 45px
+	color #5f5f5f
+	margin-top: -20px
+
+.container-gray
+	padding: 40px 0
+	background: #f6f6f6
+
+.container-gray__title
+	@extend .canlike--title
+
+.about
+	+below(768px)
+		display: none
+	f()
+	justify-content: space-between
+	padding: 60px 0
+
+.about__col
+	width: 28%
+
+.about__title
+	@extend .type--lg
+	margin-bottom: 40px
+	font-weight 500
+
+.about__text
+	line-height: 1.8
+
+.container--four
+	+below(1200px)
+		max-width 600px
+		margin: 0 auto
+		grid-template-columns repeat(2, 1fr)
+	+below(640px)
+		grid-template-columns repeat(1, 1fr)
+		max-width 320px
+.main-cont--full
+	+below(768px)
+		padding: 0!important
 @import "../module/**/*"
