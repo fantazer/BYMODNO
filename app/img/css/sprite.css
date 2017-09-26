@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 47.7175em 242.1em;
+    background-size: 47.7175em 244.1em;
 }
 
 .no-svg .icon:before {
@@ -260,8 +260,17 @@
 
 
 
-  .icon.visa:before {
+  .icon.star:before {
       background-position: 0em -235.5em;
+      width: 1.9481000000000002em;
+      height: 1.9481000000000002em;
+  }
+
+
+
+
+  .icon.visa:before {
+      background-position: 0em -237.5em;
       width: 6.4em;
       height: 4em;
   }
@@ -270,7 +279,7 @@
 
 
   .icon.сart:before {
-      background-position: 0em -239.5em;
+      background-position: 0em -241.5em;
       width: 2.3em;
       height: 2.6em;
   }
