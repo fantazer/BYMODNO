@@ -157,6 +157,9 @@ body
 		&:last-child()
 			margin-bottom: 0px
 .filter__size
+	+below(1024px)
+		flex(mid)
+
 	display: grid
 	grid-template-columns repeat(auto-fill, 40px)
 	grid-gap 10px
@@ -181,6 +184,9 @@ body
 	background: black
 
 .filter__color
+	+below(768px)
+		f()
+		fw()
 	justify-content center
 	display grid
 	grid-template-columns repeat(auto-fit, 42px)
@@ -201,6 +207,8 @@ body
 	.icon
 		fill black
 .filter__color-el
+	+below(768px)
+		margin: 5px
 	flex(mid)
 	tr(all)
 	size 42px
@@ -401,9 +409,12 @@ body
 		height: 1px
 		background: $border-color
 		position: absolute
+
 .card-head
 	+below(1024px)
 		margin-bottom: 0
+	+below(768px)
+		width: 100%
 	f()
 	fw()
 	justify-content: space-between
@@ -532,7 +543,7 @@ body
 		width: 60%
 	+below(768px)
 		width: 100%
-		min-width:auto
+		min-width:100%
 		padding:10px
 	width: 400px
 	padding-bottom: 45px
@@ -667,6 +678,8 @@ body
 
 .card-img-row
 	+below(1024px)
+		f()
+		fw()
 		margin-bottom: 30px
 		justify-content center
 	+below(640px)
@@ -685,6 +698,8 @@ body
 .card-img__el
 	+below(1024px)
 		border 1px solid $border-color
+		width: 80px
+		margin: 10px
 	bg-full()
 	cp()
 	position: relative
@@ -885,6 +900,7 @@ body
 		flex(mid)
 		fl()
 		fw()
+		margin-bottom: 20px
 	&:hover
 		.blog-el__img-item
 			transform scale(1.1)
@@ -1711,7 +1727,201 @@ body
 	+below(640px)
 		grid-template-columns repeat(1, 1fr)
 		max-width 320px
+
 .main-cont--full
 	+below(768px)
 		padding: 0!important
+
+//.main-cont
+.type-date
+	color $red
+	margin-bottom: 30px
+	text-align: center
+	up()
+
+.type-title
+	+below(768px)
+		margin-bottom: 20px
+	@extend .type--xl
+	center(675px,0px)
+	font-weight 500
+	text-align: center
+	margin-bottom: 30px
+
+.type-sub-title
+	+below(768px)
+		margin-bottom: 20px
+	@extend .type--lg
+	center(620px,0px)
+	font-weight 500
+	text-align: center
+	margin-bottom: 50px
+	color #727272
+
+.type-text
+	+below(768px)
+		margin-bottom: 20px
+	center(770px,10px)
+	margin-bottom: 70px
+
+.spantype-mark
+	background: $red
+	color white
+	padding: 0px 4px
+
+.type-quote
+	+below(768px)
+		margin-bottom: 20px
+		padding: 20px
+	padding: 40px 20%
+	margin-bottom: 70px
+	border 1px solid $border-color
+
+.type-quote__text
+	@extend .type--md
+	text-align: center
+	margin-bottom: 20px
+	font-weight 600
+
+.type-quote__name
+	color $red
+	text-align: center
+
+.type-table
+	+below(768px)
+		margin-bottom: 20px
+	max-width 640px
+	overflow scroll
+	border-radius 0
+	border 0
+	margin-bottom: 70px
+	thead
+		@extend .type--md
+		font-weight 600
+	td
+		border 0
+	tr
+		td
+			border-right 1px solid $border-color
+			padding: 20px
+			&:last-child
+				border-right 0
+		//background: white!important
+
+.type-table--main
+	center(710px,0)
+//.table
+.star-row
+	.icon
+		size 18px
+		fill red
+	width: 140px
+	flex(between)
+
+.star-row__el--empty
+	.icon
+		fill black
+
+.type-container
+	fw()
+	f()
+	justify-content: space-between
+	margin-bottom: 40px
+
+.type-col-6
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+	width: 45%
+
+.type-col-4
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+	width: 29%
+
+.type-block-mark
+	color white
+	padding: 25px
+	background: $red
+
+.type-block-mark__title
+	up()
+	@extend .type--md
+	margin-bottom: 25px
+	font-weight 600
+	color white
+//.type-img
+.type-img-row
+	+below(768px)
+		fw()
+		img
+			width: 100%
+	f()
+	justify-content: space-between
+
+.type-img-row__el
+	+below(768px)
+		width: 100%
+	width: 45%
+
+.type-img-row__content
+	+below(1024px)
+		padding: 20px
+	+below(768px)
+		width: 100%
+	width: 55%
+	padding: 0 8%
+	background: #f4f4f4
+	flex(mid)
+	fl()
+
+.type-img-row__title
+	+below(1024px)
+		font-size: 15px
+	@extend .type--md
+	font-weight 600
+	margin-bottom: 20px
+
+.type-baner
+	position: relative
+	margin-bottom: 70px
+
+.type-baner-filter
+	position: absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0.6)
+
+.type-baner-content
+	flex(mid)
+	fl()
+	position: absolute
+	top 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index 10
+
+.type-baner-title
+	+below(768px)
+		margin-bottom: 10px
+	text-align: center
+	@extend .type--md
+	font-weight 600
+	color rgba(255, 255, 255, 0.6)
+	margin-bottom: 30px
+
+.type-baner-text
+	@extend .type--lg
+	center(490px,10px)
+	font-weight 500
+	text-align: center
+	color white
 @import "../module/**/*"
