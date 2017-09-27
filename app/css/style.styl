@@ -1146,7 +1146,7 @@ body
 	+below(768px)
 		padding: 20px
 	+below(640px)
-		max-height calc(100vh - 40px)
+		max-height calc(100vh - 80px)
 		overflow-y scroll
 		padding: 20px 5px
 		width: 100%!important
@@ -1211,6 +1211,8 @@ body
 	margin-bottom: 0!important
 
 .modal-btn-row
+	+below(768px)
+		margin-bottom: 20px
 	flex(mid)
 	margin-bottom: 40px
 
@@ -1626,8 +1628,9 @@ body
 
 .categories
 	+below(768px)
-		margin-top: 20px
+		margin-top: 30px
 	+below(640px)
+		margin-top: 0
 		fw()
 		fl()
 		flex(between)
@@ -1644,6 +1647,8 @@ body
 			transform translateY(0%)
 
 .categories__lg
+	+below(768px)
+		width: 60%
 	+below(640px)
 		width: 100%
 		padding: 45% 20%
@@ -1672,14 +1677,18 @@ body
 	width: 40%
 
 .categories__md-el
+	+below(768px)
+		margin-bottom: 0
+		padding: 35% 20%
 	display: block
 	padding: 34% 20%
 	bg-full()
 	&:first-child
 		+below(768px)
-			margin-bottom: 15px
+			margin-bottom: 0px
 		+below(640px)
 			margin-bottom: 0
+			padding: 45% 20%
 		margin-bottom: 20px
 
 .canlike--sub-title
@@ -1924,4 +1933,11 @@ body
 	font-weight 500
 	text-align: center
 	color white
+
+.main-baner
+	+below(640px)
+		padding: 25%
+	width: 100%
+	padding: 15%
+	bg-full()
 @import "../module/**/*"
