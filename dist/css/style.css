@@ -4318,7 +4318,6 @@ body {
 }
 .type-table {
   max-width: 640px;
-  overflow: scroll;
   -webkit-border-radius: 0;
           border-radius: 0;
   border: 0;
@@ -4327,6 +4326,7 @@ body {
 @media only screen and (max-width: 768px) {
   .type-table {
     margin-bottom: 20px;
+    overflow: scroll;
   }
 }
 .type-table thead {
