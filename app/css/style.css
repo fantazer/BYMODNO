@@ -3071,8 +3071,8 @@ body {
 }
 @media only screen and (max-width: 640px) {
   .modal-content {
-    max-height: -webkit-calc(100vh - 40px);
-    max-height: calc(100vh - 40px);
+    max-height: -webkit-calc(100vh - 80px);
+    max-height: calc(100vh - 80px);
     overflow-y: scroll;
     padding: 20px 5px;
     width: 100% !important;
@@ -3183,6 +3183,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .modal-btn-row {
+    margin-bottom: 20px;
+  }
 }
 .modal-lengthpass {
   color: #747474;
@@ -3994,11 +3999,12 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .categories {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 }
 @media only screen and (max-width: 640px) {
   .categories {
+    margin-top: 0;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
@@ -4039,6 +4045,11 @@ body {
   background-position: center center;
   width: 58.5%;
   padding: 28% 20%;
+}
+@media only screen and (max-width: 768px) {
+  .categories__lg {
+    width: 60%;
+  }
 }
 @media only screen and (max-width: 640px) {
   .categories__lg {
@@ -4089,17 +4100,24 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
+@media only screen and (max-width: 768px) {
+  .categories__md-el {
+    margin-bottom: 0;
+    padding: 35% 20%;
+  }
+}
 .categories__md-el:first-child {
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 768px) {
   .categories__md-el:first-child {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
   }
 }
 @media only screen and (max-width: 640px) {
   .categories__md-el:first-child {
     margin-bottom: 0;
+    padding: 45% 20%;
   }
 }
 .canlike--sub-title {
@@ -4564,6 +4582,18 @@ body {
 @media only screen and (min-width: 490px) {
   .type-baner-text {
     width: 490px;
+  }
+}
+.main-baner {
+  width: 100%;
+  padding: 15%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media only screen and (max-width: 640px) {
+  .main-baner {
+    padding: 25%;
   }
 }
 .subscribe {
