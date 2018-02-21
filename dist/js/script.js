@@ -44,6 +44,7 @@ $(document).ready(function(){
 	};
 
 	var openModal = function () {
+
   	if(!$('.modal-layer').hasClass('modal-layer-show')){
 			$('.modal-layer').addClass('modal-layer-show');
 		}
@@ -58,6 +59,7 @@ $(document).ready(function(){
             width:'100%'
         });
 		}
+
 	};
 
 	$('.modal-get').click(function (){
@@ -72,9 +74,12 @@ $(document).ready(function(){
 				$(this).removeClass('modal__show')
 			}
 		});
+		var modalHeightCont = $('.modal.modal__show').height();
+		$('.modal-filter').height(modalHeightCont+30);
+		$('.modal-wrap').css('minHeight',modalHeightCont + 30);
 	});
 
-	$('.modal-close , .modal-filter, .toggle-close-modal').click(function (){
+	$('.modal-close ,modal-wrap , .modal-filter, .toggle-close-modal').click(function (){
 		closeModal();
 	});
 	//modal-end
@@ -440,7 +445,9 @@ $(document).ready(function(){
 	})();
 
 	$(window).resize(function(){
-
+		var modalHeightCont = $('.modal.modal__show').height();
+		$('.modal-filter').height(modalHeightCont+30);
+		$('.modal-wrap').css('minHeight',modalHeightCont + 30);
 	});
 
 	//resize function end
