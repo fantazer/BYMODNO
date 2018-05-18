@@ -129,6 +129,8 @@
 	overflow hidden
 	height: 280px
 	margin-bottom: 30px
+	+below(640px)
+		margin-bottom: 10px
 
 .list-wrap
 	/*+below(1200px)
@@ -136,8 +138,9 @@
 	+below(1024px)
 		justify-content center
 	+below(768px)
-		grid-template-columns: repeat(auto-fill, 260px)
+		grid-template-columns: repeat(2, 1fr)
 		margin-bottom: 30px
+
 	display grid
 	grid-template-columns: repeat(3, 1fr)
 	grid-gap 20px

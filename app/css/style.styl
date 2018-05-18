@@ -42,6 +42,9 @@ body
 	flex(between)
 	fw()
 	padding: 40px 0
+	+below(640px)
+		padding: 10px 0
+
 
 .breadcrumbs
 	+below(1024px)
@@ -87,6 +90,10 @@ body
 		margin-bottom: 25px
 	+below(768px)
 		font-size: 26px
+	+below(640px)
+		margin-bottom: 15px
+		line-height: 1
+		font-size: 22px
 	@extend .type--xl
 	font-weight 500
 	color black
@@ -308,6 +315,8 @@ body
 	+below(768px)
 		width: 100%
 		margin-bottom: 20px
+	+below(640px)
+		margin-bottom: 10px
 	f()
 	align-items: center
 
@@ -322,6 +331,8 @@ body
 		text-align: center
 		font-size: 18px
 		margin-bottom: 10px
+	+below(640px)
+		margin-bottom: 0
 	margin-left: auto
 	color #8f8f8f
 
@@ -761,6 +772,8 @@ body
 .list-toogle
 	+above(1025px)
 		display: none
+	+below(640px)
+		margin-bottom: 10px
 	flex(mid)
 	padding: 9px 0
 	box-shadow 0 1px 2px rgba(0, 0, 0, 0.21)
