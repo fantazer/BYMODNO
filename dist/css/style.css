@@ -6243,6 +6243,11 @@ filter__size:hover,
   top: 0;
   left: 0;
 }
+@media only screen and (max-width: 640px) {
+  .item__img {
+    background-size: contain;
+  }
+}
 .item__price {
   margin-bottom: 20px;
   display: -webkit-box;
