@@ -231,7 +231,12 @@ gulp.task('min:js',function(){
 // ########## make html ###############
 
 gulp.task('pug', function() {
-		gulp.src(['app/html/*.pug','app/module/**/*.pug',])
+		gulp.src(
+					[
+						'app/html/item.pug'
+						//'app/html/*.pug',
+						//'app/module/**/*.pug',
+					])
 				//.pipe(changed('app/', {extension: '.html'}))
 				//.pipe(cache('pug'))
 				.pipe(pugInheritance({basedir: 'app/html/',skip:'node_modules/'}))
@@ -415,7 +420,7 @@ gulp.task('listSvg',function(){
 
 //Watcher
 gulp.task('see',function(){
-		gulp.watch(['app/img/svg/**.*','!app/img/svg/defs.svg','!app/img/svg/sprite.svg'],['svg']);
+		/*gulp.watch(['app/img/svg/!**.*','!app/img/svg/defs.svg','!app/img/svg/sprite.svg'],['svg']);*/
 		gulp.watch(['./file.json'],['file','pug','stylus','include-pug']);
 		gulp.watch(['app/html/**/*.pug','app/module/**/*.pug'], ['pug']);
 		gulp.watch(['app/css/**/*.styl','app/module/**/*.styl'],['stylus']);

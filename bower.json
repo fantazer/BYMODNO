@@ -23,6 +23,8 @@
   },
   "devDependencies": {
     "jquery-nice-select": "^1.1.0",
-    "jQuery.mmenu": "5.7.8"
+    "jQuery.mmenu": "5.7.8",
+    "slick-carousel": "^1.8.1",
+    "jquery-simple-timer": "^1.0.1"
   }
 }

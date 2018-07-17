@@ -21,6 +21,10 @@ mixin header()
 	.head
 		.main-cont
 			.head-wrap
+				.head-logo
+					a(href="#").head-logo__icon
+						+icon("Logo--color","icon")
+					.head-logo__text Интернет-магазин модной женской одежды. Доставка курьером и примерка в Москве!
 				.head-search
 					a(href="#mobile-menu").head-toggle
 						+icon("menu","icon icon-menu")
@@ -30,10 +34,6 @@ mixin header()
 						+icon("search","icon icon--mobile")
 						form(action="#")
 							input(type="text" placeholder="Поиск").head-search__input.input
-				.head-logo
-					a(href="#").head-logo__icon
-						+icon("Logo--color","icon")
-					.head-logo__text Первый женский интернет-магазин <br> с онлайн стилистом и твоим образом
 				.head-tool
 					.head-tool__wrap
 						.head-tool__icon.head-tool__icon--profile

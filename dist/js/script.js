@@ -211,10 +211,10 @@ $(document).ready(function(){
 
 
 	//slider on card
-	$('.card-img__el').click(function(){
+	/*$('.card-img__el').click(function(){
 		var url = $(this).css('backgroundImage');
 		$('.card-img__lg').css('backgroundImage', url);
-	});
+	});*/
 
 	//tab on card
 	$('.card-tab__el').click(function(){
@@ -451,6 +451,61 @@ $(document).ready(function(){
 	});
 
 	//resize function end
+
+	//slider for item carousel
+
+		$('.card-img__main').slick({
+			slidesToShow: 2,
+			autoplay: false,
+			speed: 500,
+			vertical:false,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						arrows: false,
+						centerMode: true,
+						centerPadding: '40px',
+						slidesToShow: 3
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						arrows: false,
+						centerMode: true,
+						centerPadding: '40px',
+						slidesToShow: 1
+					}
+				}
+			]
+		});
+	$('.card-img__el').click(function(){
+		var current = $(this).data('index');
+		$('.card-img__main').slick('slickGoTo', current);
+
+	});
+
+
+	//slider for item carousel===end
+
+	//show all card val
+	$('.card-val-all').click(function(){
+		$('.card-val .card-attr-row').css('display','flex');
+		$(this).hide();
+	});
+	//show all card val===eтв
+
+	//timer
+	$('.timer').startTimer({
+		loop: true,
+		loopInterval: 3
+	});
+	$('<span class="timer-dot">:</span>').insertAfter('.jst-hours');
+	setInterval(function(){
+		$('.timer-dot').toggleClass('timer-dot--show');
+	},1000)
+	//timer===end
 })
 
 //cash SVG
