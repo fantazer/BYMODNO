@@ -37,13 +37,11 @@ body
 
 //==== content-tool ====
 .content-tool
-	+below(1024px)
-		padding: 20px 0
 	flex(between)
 	fw()
 	padding: 25px 0
 	+below(640px)
-		padding: 10px 0
+		padding: 20px 0
 
 .bread-wrap
 	border-bottom 1px solid rgba(0, 0, 0, 0.1)
@@ -426,8 +424,16 @@ body
 .card-head
 	+below(1024px)
 		margin-bottom: 0
+		max-width 768px
+		margin-left: auto
+		margin-right: auto
+		padding: 60px 0
 	+below(768px)
 		width: 100%
+		max-width 640px
+		padding-bottom: 30px
+	+below(640px)
+		padding-top: 0
 	f()
 	fw()
 	justify-content: space-between
@@ -440,13 +446,14 @@ body
 		margin-bottom: 0px
 		padding-bottom: 30px
 		background: #efefef
+		fl()
 	position: relative
 	width: 62%
 .card-head__img
 	+below(1024px)
-		width: 500px
+		width: 100%
 	+below(640px)
-		width: 320px
+		max-width: 480px
 	/*position: absolute
 	top 0
 	left 0*/
@@ -464,6 +471,8 @@ body
 		text-align: center
 	+below(768px)
 		min-width 100%
+	+below(640px)
+		margin-bottom: 0
 	@extend .type--xl
 	margin-bottom: 20px
 	font-weight: 900
@@ -528,8 +537,6 @@ body
 	margin-right: 20px
 	width: 65%
 .card-get
-	+below(768px)
-		margin-bottom: 30px
 	f()
 	margin-bottom: 20px
 
@@ -559,8 +566,8 @@ body
 	+below(768px)
 		width: 100%
 		min-width:100%
-		padding:10px
-	width: 400px
+		padding:30px 10px
+	max-width: 400px
 	padding-bottom: 45px
 
 .card-about
@@ -583,6 +590,9 @@ body
 .card-descr-warp
 	+below(1024px)
 		margin-bottom: 0
+	+below(640px)
+		margin-left: -10px
+		width:calc(100% + 20px)
 	margin-bottom: 100px
 
 /*.card-descr-cont
@@ -597,6 +607,9 @@ body
 	+below(1024px)
 		background: white
 		padding: 0 10px 30px 10px
+	+below(640px)
+		padding: 0 0 30px 0
+
 .card-filter__color
 	+below(1024px)
 		width: 48%
@@ -606,6 +619,8 @@ body
 	+below(1024px)
 		border-bottom 1px solid $border-color
 		height: auto
+	+below(640px)
+		overflow scroll
 	flex(between)
 	margin-bottom: 40px
 	height: 62px
@@ -645,6 +660,7 @@ body
 	width: 245px*/
 
 .card-attr
+	padding: 0 10px
 	display: none
 
 .card-attr--active
@@ -652,20 +668,21 @@ body
 
 .card-attr__text
 	+below(640px)
-		text-align: center
+		width: 100%
 	margin-bottom: 40px
 	width: 40%
 .card-attr-row
-	+below(640px)
+	+below(480px)
 		fw()
 		flex(mid)
 		fl()
+		margin-bottom: 10px
 	f()
 	align-items: flex-end
 	margin-bottom: 20px
 
 .card-attr-title
-	+below(640px)
+	+below(480px)
 		width: 100%
 		text-align: center
 	padding-right: 5px
@@ -678,14 +695,14 @@ body
 	align-items: flex-end
 
 .card-attr-dot
-	+below(640px)
+	+below(480px)
 		display: none
 	display table-cell
 	width: 100%
 	border-bottom .5px dashed gray
 
 .card-attr-value
-	+below(640px)
+	+below(480px)
 		width: 100%
 		text-align: center
 	width: 45%
@@ -699,6 +716,7 @@ body
 		justify-content center
 	+below(640px)
 		padding: 0
+		display: none
 	margin-top: 20px
 	//padding: 0 20px
 	display grid
@@ -1964,6 +1982,8 @@ body
 //.toggle-item
 //.main-cont
 .toggle-item__wrap
+	+below(640px)
+		display: none
 	flex(between)
 .toggle-item__el
 	f()
@@ -2028,6 +2048,8 @@ body
 	flex(between)
 	margin-bottom: 35px
 .card-advant__el
+	+below(768px)
+		flex(mid)
 	f()
 	align-items: center
 	width: 48%
@@ -2036,12 +2058,19 @@ body
 		size 32px
 		fill black
 .card-advant__text
+	+below(640px)
+		font-size: 10px
 	border-bottom: 1px dashed #302c2b;
 	display: inline-block
 	margin-left: 10px
 	margin-top: -5px
 
 .card-filter__how
+	+below(640px)
+		width: 100%
+		text-align: center
+		br
+			display: none
 	display: inline-block
 	u
 		text-decoration: none
@@ -2059,13 +2088,15 @@ body
 	@extend .btn--light
 	@extend .btn--md
 	width: 100%
-	padding: 15px 50px
+	padding: 15px
 	flex(mid)
 	.icon
 		size 23px
 		margin-left: 20px
 
 .card-color
+	+below(640px)
+		fw()
 	f()
 	.filter__color
 		grid-template-columns repeat(auto-fit, 30px)
@@ -2075,11 +2106,19 @@ body
 		size 14px
 	margin-bottom: 40px
 .card-color__text
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
+		text-align: center
 	width: 130px
 .card-color__list
+	+below(640px)
+		width: 100%
 	width: calc(100% - 150px)
 
 .card-val
+	+below(640px)
+		padding: 20px
 	padding: 35px 30px 50px 30px
 	border: 1px solid rgba(0, 0, 0, 0.15);
 	.card-attr-row
@@ -2089,12 +2128,17 @@ body
 		&:nth-child(2)
 			f()
 .card-val__title
+	+below(640px)
+		text-align: center
+		margin-bottom: 20px
 	font-size: 18px
 	font-weight:700
 	up()
 	margin-bottom: 30px
 
 .card-val-all
+	+below(640px)
+		text-align: center
 	color #0095c6
 	cp()
 	u
@@ -2102,17 +2146,31 @@ body
 		border-bottom: 1px dashed #0095c6
 
 .card-timer
+	+below(1024px)
+		width: 100%
+	+below(640px)
+		flex(mid)
+		fw()
+		fl()
 	padding: 25px
 	background-color #fff3ec
 	flex(between)
 	
-//.card-timer__info 
+.card-timer__info
+	+below(640px)
+		width: 100%
+		margin-bottom: 20px
 .card-timer__info-title
+	+below(640px)
+		text-align: center
 	up()
 	font-size 18px
 	font-weight 600
 	margin-bottom: 10px
 .card-timer__info-link
+	+below(640px)
+		text-align: center
+		display: block
 	color #0095c6
 	u
 		text-decoration: none
@@ -2120,6 +2178,8 @@ body
 .card-timer__val
 	f()
 .card-timer__val-clock
+	+below(640px)
+		font-size: 54px
 	color #070707
 	font-family Gotham
 	font-size 70px
@@ -2140,10 +2200,19 @@ body
 	opacity 1
 
 .insta
+	+below(768px)
+		padding: 30px 0
+	+below(640px)
+		max-width 320px
+		margin-left: auto
+		margin-right: auto
+		border 0
 	border 1px solid rgba(112, 112, 112, 0.15)
 	padding: 55px 0
 //.main-cont
 .insta-title
+	+below(768px)
+		margin-bottom: 30px
 	text-align: center
 	font-family "Gotham"
 	font-size 24px
@@ -2151,6 +2220,8 @@ body
 	up()
 	margin-bottom: 55px
 .insta-wrap
+	+below(640px)
+		grid-template-columns: repeat(1, 1fr)
 	grid-template-columns: repeat(3, 1fr)
 	display: grid
 	grid-gap: 20px
@@ -2175,6 +2246,8 @@ body
 	padding: 35px
 	//opacity 0
 .insta-info__title
+	+below(768px)
+		font-size: 16px
 	color white
 	text-align: center
 	font-size 24px
@@ -2204,6 +2277,8 @@ body
 		size 45px
 
 .card-tab-head--half
+	+below(1024px)
+		width: 100%
 	width: 60%
 	justify-content:baseline!important
 	.card-tab__el
@@ -2212,6 +2287,9 @@ body
 		font-weight:bold
 
 .card-attr__cont--half
+	+below(640px)
+		grid-template-columns 1fr
+
 	display: grid
 	grid-template-columns 45% 45%
 
@@ -2221,10 +2299,18 @@ body
 	border-bottom 1px solid #dbdbdb
 	&:last-child
 		border 0
+		padding-bottom:0
+		margin-bottom: 0
+
 .card-review__head
+	+below(640px)
+		fw()
 	flex(between)
-	margin-bottom: 30px
+	margin-bottom: 10px
 .card-review__info
+	+below(640px)
+		width: 100%
+		margin-bottom: 10px
 	f()
 	align-items: center
 .card-review__name
@@ -2243,23 +2329,34 @@ body
 .card-review__stars---false
 	.icon
 		fill #c7c7c7
-//.card-review__date
+.card-review__date
+	+below(640px)
+		width: 100%
 //.card-review__text
 .card-review__img
 	f()
+	fw()
 .card-review__img-el
+	+below(640px)
+		size 40px
 	bg-full()
 	size 80px
 	margin-right: 10px
 
 .card-attr-review
 	f()
+	fw()
 	justify-content: space-between
 	align-items: flex-start
 
 .card-attr-review-cont
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
 	width:calc(100% - 300px)
 .card-attr-review-add
+	+below(768px)
+		width: 100%
 	width: 210px
 //.card-review-add
 .card-review-add__title
@@ -2276,4 +2373,78 @@ body
 	@extend .btn--mark
 	width: 100%
 	padding: 20px
+
+.card-param
+	+below(640px)
+		padding: 10px
+		margin-top: 10px
+	padding: 20px 0
+	margin-top: 20px
+	border-top 1px solid rgba(112,112,112,0.15)
+	width: 100%
+.card-param__text
+	+below(640px)
+		text-align: center
+	text-align: right
+	margin-bottom: 10px
+	&:last-child
+		margin-bottom: 0
+.card-img__main-wrap
+	&:hover
+		.card-img__main-control
+				visibility: visible
+				opacity 1
+	position: relative
+.card-img__main-control
+	+below(1024px)
+		visibility visible
+		opacity 1
+	+below(640px)
+		display: none
+	tr(all)
+	width: 100%
+	position: absolute
+	z-index 10
+	top calc(50% - 10px)
+	visibility: hidden
+	opacity 0
+.card-img__main-control__el
+	flex(mid)
+	round()
+	size 36px
+	background: black
+	cp()
+	.icon
+		size 20px
+		fill white
+.card-img__main-control__el--prev
+	left -15px
+	position: absolute
+.card-img__main-control__el--next
+	right: -15px
+	position: absolute
+.card-img__main
+	height: 100%
+
+.trust
+	+below(640px)
+		display: none
+	flex(between)
+	padding: 60px 0 40px 0
+.trust__text
+	color #636363
+	font-family Gotham
+	font-size 24px
+	font-weight 500
+	text-align: right
+	width: 15%
+.trust__logo
+	flex(between)
+	width: 80%
+.trust__logo__el
+	width: 100%
+	flex-grow 1
+	flex(mid)
+	margin: 0 20px
+
 @import "../module/**/*"

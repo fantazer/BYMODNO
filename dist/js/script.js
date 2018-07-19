@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	
 	//increment field
 		$('.incr__minus').click(function () {
 					var $input = $(this).parent().find('.incr__val span');
@@ -459,31 +459,48 @@ $(document).ready(function(){
 			autoplay: false,
 			speed: 500,
 			vertical:false,
+			arrows:false,
 			responsive: [
-				{
-					breakpoint: 768,
-					settings: {
-						arrows: false,
-						centerMode: true,
-						centerPadding: '40px',
-						slidesToShow: 3
-					}
-				},
-				{
-					breakpoint: 480,
-					settings: {
-						arrows: false,
-						centerMode: true,
-						centerPadding: '40px',
-						slidesToShow: 1
-					}
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					infinite: true,
+
 				}
-			]
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 1,
+					dots:true
+      	}
+			}
+
+  ]
 		});
 	$('.card-img__el').click(function(){
 		var current = $(this).data('index');
 		$('.card-img__main').slick('slickGoTo', current);
 
+	});
+	$('.card-img__main-control__el--next').click(function(){
+		$(this).closest(".card-img__main-wrap").find(".card-img__main").slick('slickNext');
+	});
+
+	$('.card-img__main-control__el--prev').click(function(){
+		$(this).closest(".card-img__main-wrap").find(".card-img__main").slick('slickPrev');
 	});
 
 
@@ -504,8 +521,9 @@ $(document).ready(function(){
 	$('<span class="timer-dot">:</span>').insertAfter('.jst-hours');
 	setInterval(function(){
 		$('.timer-dot').toggleClass('timer-dot--show');
-	},1000)
+	},1000);
 	//timer===end
+
 })
 
 //cash SVG

@@ -20,8 +20,6 @@ include block_html/_include.pug
 				a(href="#").back
 					+icon("dirrect","icon")
 					.back__text Вернуться в каталог
-
-
 	.toggle-item
 		.main-cont
 			.toggle-item__wrap
@@ -35,18 +33,28 @@ include block_html/_include.pug
 					.toggle-item__text Костюм Адель с Брюками Беж
 					.toggle-item__icon
 						+icon("arrow-right","icon")
-
 	.main-cont.main-cont--gray
 		.card-head
 			.card-head__slider
 				.card-head__img
 					.card-img
-						.card-img__main
-							.card-img__carousel(style="background-image:url('img/item-1.jpg')")
-							.card-img__carousel(style="background-image:url('img/item-2.jpg')")
-							.card-img__carousel(style="background-image:url('img/item-6.jpg')")
-							.card-img__carousel(style="background-image:url('img/item-7.jpg')")
-							.card-img__carousel(style="background-image:url('img/item-5.jpg')")
+						.card-img__main-wrap
+							.card-img__main-control
+								.card-img__main-control__el.card-img__main-control__el--prev
+									+icon("arrow-left","icon")
+								.card-img__main-control__el.card-img__main-control__el--next
+									+icon("arrow-right","icon")
+							.card-img__main
+								.card-img__carousel-el
+									.card-img__carousel(style="background-image:url('img/item-1.jpg')")
+								.card-img__carousel-el
+									.card-img__carousel(style="background-image:url('img/item-2.jpg')")
+								.card-img__carousel-el
+									.card-img__carousel(style="background-image:url('img/item-6.jpg')")
+								.card-img__carousel-el
+									.card-img__carousel(style="background-image:url('img/item-7.jpg')")
+								.card-img__carousel-el
+									.card-img__carousel(style="background-image:url('img/item-5.jpg')")
 						.card-img-row
 							- for (var i=0;i<3;i++)
 								.card-img__el(style="background-image:url('img/item-2.jpg')" data-index="1")
@@ -57,6 +65,10 @@ include block_html/_include.pug
 									.card-img__filter
 								.card-img__el(style="background-image:url('img/item-5.jpg')" data-index="4")
 									.card-img__filter
+				.card-param
+					.card-param__text Рост модели: 174 см
+					.card-param__text Размер на модели: 44
+
 				.card-timer
 					.card-timer__info
 						.card-timer__info-title Этот товар <br> учавствует в акции!
@@ -238,7 +250,22 @@ include block_html/_include.pug
 				+item()
 				+item()
 				+item()
+	
 	.main-cont
+		.trust
+			.trust__text Нам <br> доверяют
+			.trust__logo
+				.trust__logo__el
+					img(src="img/trust-el-1.png", alt="название компании" title="Название компании")
+				.trust__logo__el
+					img(src="img/trust-el-2.png", alt="название компании" title="Название компании")
+				.trust__logo__el
+					img(src="img/trust-el-3.png", alt="название компании" title="Название компании")
+				.trust__logo__el
+					img(src="img/trust-el-4.png", alt="название компании" title="Название компании")
+				.trust__logo__el
+					img(src="img/trust-el-5.png", alt="название компании" title="Название компании")
+	//.main-cont
 		.links
 			-
 				var items = [

@@ -619,12 +619,36 @@
 					<div class="card-head__slider">
 						<div class="card-head__img">
 							<div class="card-img">
-								<div class="card-img__main">
-									<div class="card-img__carousel" style="background-image:url('img/item-1.jpg');"></div>
-									<div class="card-img__carousel" style="background-image:url('img/item-2.jpg');"></div>
-									<div class="card-img__carousel" style="background-image:url('img/item-6.jpg');"></div>
-									<div class="card-img__carousel" style="background-image:url('img/item-7.jpg');"></div>
-									<div class="card-img__carousel" style="background-image:url('img/item-5.jpg');"></div>
+								<div class="card-img__main-wrap">
+									<div class="card-img__main-control">
+										<div class="card-img__main-control__el card-img__main-control__el--prev">
+											<svg class="icon">
+												<use xlink:href="#arrow-left"></use>
+											</svg>
+										</div>
+										<div class="card-img__main-control__el card-img__main-control__el--next">
+											<svg class="icon">
+												<use xlink:href="#arrow-right"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="card-img__main">
+										<div class="card-img__carousel-el">
+											<div class="card-img__carousel" style="background-image:url('img/item-1.jpg');"></div>
+										</div>
+										<div class="card-img__carousel-el">
+											<div class="card-img__carousel" style="background-image:url('img/item-2.jpg');"></div>
+										</div>
+										<div class="card-img__carousel-el">
+											<div class="card-img__carousel" style="background-image:url('img/item-6.jpg');"></div>
+										</div>
+										<div class="card-img__carousel-el">
+											<div class="card-img__carousel" style="background-image:url('img/item-7.jpg');"></div>
+										</div>
+										<div class="card-img__carousel-el">
+											<div class="card-img__carousel" style="background-image:url('img/item-5.jpg');"></div>
+										</div>
+									</div>
 								</div>
 								<div class="card-img-row">
 									<div class="card-img__el" style="background-image:url('img/item-2.jpg');" data-index="1">
@@ -665,6 +689,10 @@
 									</div>
 								</div>
 							</div>
+						</div>
+						<div class="card-param">
+							<div class="card-param__text">Рост модели: 174 см</div>
+							<div class="card-param__text">Размер на модели: 44</div>
 						</div>
 						<div class="card-timer">
 							<div class="card-timer__info">
@@ -1499,27 +1527,55 @@
 				</div>
 			</div>
 			<div class="main-cont">
-				<div class="links">
-					<a class="links-el link--mark" href="#">Жакеты</a>
-					<a class="links-el link--mark" href="#">Пиджаки</a>
-					<a class="links-el link--mark" href="#">Длинные платья</a>
-					<a class="links-el link--mark" href="#">Короткие платья</a>
-					<a class="links-el link--mark" href="#">Юбки</a>
-					<a class="links-el link--mark" href="#">Красные платья</a>
-					<a class="links-el link--mark" href="#">Джинсы</a>
-					<a class="links-el link--mark" href="#">Распродажа</a>
-					<a class="links-el link--mark" href="#">Новинки</a>
-					<a class="links-el link--mark" href="#">Тапочки</a>
-					<a class="links-el link--mark" href="#">Шляпы</a>
-					<a class="links-el link--mark" href="#">Сарафаны</a>
-					<a class="links-el link--mark" href="#">Популярное</a>
-					<a class="links-el link--mark" href="#">Скидки</a>
-					<a class="links-el link--mark" href="#">Синий</a>
-					<a class="links-el link--mark" href="#">Желтый</a>
-					<a class="links-el link--mark" href="#">К лету</a>
-					<a class="links-el link--mark" href="#">Большой размер</a>
+				<div class="trust">
+					<div class="trust__text">Нам
+						<br> доверяют</div>
+					<div class="trust__logo">
+						<div class="trust__logo__el">
+							<img src="img/trust-el-1.png" alt="название компании" title="Название компании" />
+						</div>
+						<div class="trust__logo__el">
+							<img src="img/trust-el-2.png" alt="название компании" title="Название компании" />
+						</div>
+						<div class="trust__logo__el">
+							<img src="img/trust-el-3.png" alt="название компании" title="Название компании" />
+						</div>
+						<div class="trust__logo__el">
+							<img src="img/trust-el-4.png" alt="название компании" title="Название компании" />
+						</div>
+						<div class="trust__logo__el">
+							<img src="img/trust-el-5.png" alt="название компании" title="Название компании" />
+						</div>
+					</div>
 				</div>
 			</div>
+			<!--.main-cont
+	.links
+		-
+			var items = [
+			'Жакеты',
+			'Пиджаки',
+			'Длинные платья',
+			'Короткие платья',
+			'Юбки',
+			'Красные платья',
+			'Джинсы',
+			'Распродажа',
+			'Новинки',
+			'Тапочки',
+			'Шляпы',
+			'Сарафаны',
+			'Популярное',
+			'Скидки',
+			'Синий',
+			'Желтый',
+			'К лету',
+			'Большой размер'
+			];
+		each item in items
+			a(href="#").links-el.link--mark 
+	
+	-->
 		</div>
 		<!--block mobile-menu-->
 		<nav id="mobile-menu">
@@ -2066,8 +2122,8 @@
 		<script src="bower/jQuery.mmenu/dist/js/jquery.mmenu.all.min.umd.js"></script>
 		<script src="bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
 		<script src="bower/slick-carousel/slick/slick.js"></script>
-		<script src="bower/jquery-simple-timer/jquery.simple.timer.js"></script>
 		<!-- endbuild-->
+		<script src="js/jquery.simple.timer.js"></script>
 		<script src="js/script.js"></script>
 		<script src="js/script-edit.js"></script>
 	</body>
