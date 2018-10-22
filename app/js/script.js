@@ -460,6 +460,7 @@ $(document).ready(function(){
 			speed: 500,
 			vertical:false,
 			arrows:false,
+			variableWidth: true,
 			responsive: [
 			{
 				breakpoint: 1024,
@@ -487,7 +488,6 @@ $(document).ready(function(){
 					dots:true
       	}
 			}
-
   ]
 		});
 	$('.card-img__el').click(function(){
